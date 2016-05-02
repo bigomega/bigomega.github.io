@@ -1,0 +1,24 @@
+{
+  "name": "bigomega.github.io",
+  "version": "0.1.0",
+  "description": "Personal site",
+  "main": "index.js",
+  "scripts": {
+    "watch": "node-sass -w styles/style.scss styles/style.css",
+    "start": "python -m SimpleHTTPServer",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bigomega/bigomega.github.io.git"
+  },
+  "author": "bigΩmega",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bigomega/bigomega.github.io/issues"
+  },
+  "homepage": "https://github.com/bigomega/bigomega.github.io#readme",
+  "devDependencies": {
+    "node-sass": "^3.6.0"
+  }
+}
