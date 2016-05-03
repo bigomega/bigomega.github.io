@@ -1,0 +1,70 @@
+.header {
+  ul {
+    transition: 0.5s ease-out all;
+  }
+
+  &:not(.minimized) ul {
+    max-width: 100%;
+  }
+}
+
+.icon-container {
+  position: absolute;
+  top: 5em;
+  left: 8em;
+  transition: 0.5s ease-out all;
+
+  &:not(.placed-top) {
+    top: 6em;
+    left: calc(50% - 48px);
+  }
+}
+
+.center-text {
+  text-align: center;
+  margin: 0em 1.5em;
+  padding-top: 12em;
+}
+
+.social {
+  display: flex;
+  justify-content: space-around;
+  width: 10em;
+  margin: 0px auto;
+
+  .img {
+    width: 25px;
+    height: 25px;
+    background-image: url(/images/social-less.jpg);
+    background-size: 140px;
+
+  }
+
+  .email {
+    background-position: 1px 0px;
+    &:hover {
+      background-position: 1px 24px;
+    }
+  }
+
+  .twitter {
+    background-position: 64px 0px;
+    &:hover {
+      background-position: 64px 24px;
+    }
+  }
+
+  .skype {
+    background-position: 104px 0px;
+    &:hover {
+      background-position: 104px 24px;
+    }
+  }
+
+  .linkedin {
+    background-position: 26px 0px;
+    &:hover {
+      background-position: 26px 24px;
+    }
+  }
+}

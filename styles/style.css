@@ -1,0 +1,92 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+body {
+  margin: 0;
+  font-family: 'Raleway', helvetica, sans-serif; }
+
+a {
+  color: #333; }
+
+a:hover {
+  color: #8fc045; }
+
+.container {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto; }
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: 1280px; }
+  .header ul {
+    display: flex;
+    justify-content: space-around;
+    max-width: 40em;
+    margin: 1em 0em 1em auto; }
+  .header li {
+    list-style: none; }
+    .header li .active {
+      text-shadow: 0px 0px 3px #ccc;
+      color: #999; }
+
+.icon-holder {
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 3px solid #ccc;
+  transition: 200ms linear all; }
+  .icon-holder > img {
+    width: 100%; }
+  .icon-holder:hover {
+    border-color: #8fc045;
+    box-shadow: 0px 0px 20px 2px #8fc045; }
+
+.about .header ul {
+  transition: 0.5s ease-out all; }
+
+.about .header:not(.minimized) ul {
+  max-width: 100%; }
+
+.about .icon-container {
+  position: absolute;
+  top: 5em;
+  left: 8em;
+  transition: 0.5s ease-out all; }
+  .about .icon-container:not(.placed-top) {
+    top: 6em;
+    left: calc(50% - 48px); }
+
+.about .center-text {
+  text-align: center;
+  margin: 0em 1.5em;
+  padding-top: 12em; }
+
+.about .social {
+  display: flex;
+  justify-content: space-around;
+  width: 10em;
+  margin: 0px auto; }
+  .about .social .img {
+    width: 25px;
+    height: 25px;
+    background-image: url(/images/social-less.jpg);
+    background-size: 140px; }
+  .about .social .email {
+    background-position: 1px 0px; }
+    .about .social .email:hover {
+      background-position: 1px 24px; }
+  .about .social .twitter {
+    background-position: 64px 0px; }
+    .about .social .twitter:hover {
+      background-position: 64px 24px; }
+  .about .social .skype {
+    background-position: 104px 0px; }
+    .about .social .skype:hover {
+      background-position: 104px 24px; }
+  .about .social .linkedin {
+    background-position: 26px 0px; }
+    .about .social .linkedin:hover {
+      background-position: 26px 24px; }

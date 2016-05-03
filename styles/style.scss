@@ -1,1 +1,9 @@
-ul {}
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+$primary: #8fc045;
+
+@import "common";
+
+.about {
+  @import "about";
+}
