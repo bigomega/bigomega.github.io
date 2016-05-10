@@ -11,6 +11,7 @@ setTimeout(function() {
     'I\’m a designer who can code.'
     , 'Designer by skill, Hacker by nature and Artist by heart.'
     , 'Geek. Gamer. Rookie artist. Weird thinker and a bathroom singer.'
+    , 'A passionate Designer with craving towards Art and inclination towards Programming.'
   ]
   $('#desc').html(desc[Math.floor(Math.random() * desc.length)])
 })()
@@ -54,7 +55,10 @@ $(function() {
 
   $('.ilt-option')
     .mouseover(function() {
-      $('.ilt').css({ top: $(this).index() * 20 + '%' })
+      $('.ilt').css({
+        top: $(this).index() * 20 + '%',
+        // background: '#' + 'ff77bb-34D0FF-D0854B-FEFA59-bf78ff'.split('-')[$(this).index()],
+      })
     })
     .click(function() {
       var submenu = $(this).attr('data-id')

@@ -134,8 +134,7 @@ img.dp-icon {
       padding: 5px 10px;
       box-sizing: border-box;
       border-radius: 100px;
-      border-bottom: 3px solid;
-      transition: background 0.5s ease;
+      border-bottom: 3px solid #577728;
       background: #8fc045; }
       .about .ilt-section .ilt.animate {
         -webkit-animation: ilt_rotate 7s ease-in-out infinite alternate;
