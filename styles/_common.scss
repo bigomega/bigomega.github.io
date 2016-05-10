@@ -14,7 +14,7 @@
   }
 }
 
-@mixin animation($animations) {
+@mixin animation($animations...) {
   -webkit-animation: $animations;
   -moz-animation:    $animations;
   -o-animation:      $animations;
@@ -51,7 +51,6 @@ a:hover {
   top: 0;
   z-index: 12;
   width: 100%;
-  max-width: 1280px;
   background: #fff;
   box-shadow: 0px 10px 30px 10px #fff;
 

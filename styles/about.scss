@@ -120,11 +120,11 @@
     box-sizing: border-box;
     border-radius: 100px;
     border-bottom: 3px solid;
-    background: #8FFAFF;
+    transition: background 0.5s ease;
     background: $primary;
 
     &.animate {
-      @include animation(ilt_rotate 7s ease-in-out infinite alternate);
+      @include animation(/* ilt_color_change 7s ease-in-out infinite alternate,  */ilt_rotate 7s ease-in-out infinite alternate);
     }
 
 
@@ -141,7 +141,12 @@
   .ilt-option {
     cursor: pointer;
     padding-top: 5px;
-    padding-bottom: 1em;
+    margin-bottom: 1em;
+
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 1em;
+    }
   }
 }
 @media (max-width: 600px), (max-height: 950px) {
@@ -150,7 +155,11 @@
     margin-top: 2em;
 
     .ilt-option {
-      padding-bottom: 0.3em;
+      margin-bottom: 0.3em;
+
+      &:last-child {
+        padding-bottom: 0.3em;
+      }
     }
   }
 }
@@ -226,6 +235,24 @@
   // --------
   // 12.5%
   // --------
+}
+
+@include keyframes(ilt_color_change) {
+  0%   { background: $palette-1; }
+
+  10%  { background: $palette-1; }
+  15%  { background: $palette-2; }
+
+  35%  { background: $palette-2; }
+  40%  { background: $palette-3; }
+
+  60%  { background: $palette-3; }
+  65%  { background: $palette-4; }
+
+  85%  { background: $palette-4; }
+  90%  { background: $palette-5; }
+
+  100% { background: $palette-5; }
 }
 
 
