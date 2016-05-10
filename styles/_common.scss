@@ -72,7 +72,7 @@ a:hover {
     }
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 600px), (max-height: 950px) {
   .header {
     box-shadow: none;
   }

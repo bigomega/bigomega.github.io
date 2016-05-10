@@ -32,7 +32,7 @@
     position: absolute;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 600px), (max-height: 950px) {
   .icon-container {
     top: 3.7em;
 
@@ -134,7 +134,7 @@
   }
 
   .ilt-holder {
-    margin-left: 3.6em;
+    margin-left: 3.8em;
   }
 
   .ilt-option {
@@ -151,7 +151,7 @@
 @media (max-width: 600px), (max-height: 950px) {
   .ilt-section {
     font-size: 1.5em;
-    margin-top: 2em;
+    margin-top: 1.5em;
 
     .ilt-option {
       margin-bottom: 0.3em;
