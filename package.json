@@ -4,7 +4,8 @@
   "description": "Personal site",
   "main": "index.js",
   "scripts": {
-    "watch": "node-sass -w styles/style.scss styles/style.css",
+    "sass": "node-sass styles/style.scss styles/style.css",
+    "watch": "node-sass -w --include-path styles styles/style.scss styles/style.css",
     "start": "python -m SimpleHTTPServer",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
