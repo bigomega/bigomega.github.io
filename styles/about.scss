@@ -1,12 +1,4 @@
-.header {
-  ul {
-    transition: 0.35s ease-out all;
-  }
-
-  &:not(.minimized) ul {
-    max-width: 100%;
-  }
-}
+$dp-hides-width: 720px;
 
 .icon-container {
   position: fixed;
@@ -22,17 +14,19 @@
   }
 
   &.placed-top {
+    z-index: 20;
+
     .icon-holder{
       left: 8em;
     }
   }
 }
-@media (max-width: 720px) {
+@media (max-width: $dp-hides-width) {
   .icon-container {
     position: absolute;
   }
 }
-@media (max-width: 600px), (max-height: 950px) {
+@media (max-width: $dp-hides-width), (max-height: 950px) {
   .icon-container {
     top: 3.7em;
 
@@ -56,7 +50,7 @@
   margin: 0em 1.5em;
   padding-top: 12em;
 }
-@media (max-width: 600px), (max-height: 950px) {
+@media (max-width: $dp-hides-width), (max-height: 950px) {
   .center-text {
     padding-top: 8em;
   }
@@ -148,7 +142,7 @@
     }
   }
 }
-@media (max-width: 600px), (max-height: 950px) {
+@media (max-width: $dp-hides-width), (max-height: 950px) {
   .ilt-section {
     font-size: 1.5em;
     margin-top: 1.5em;
@@ -200,11 +194,61 @@
   }
 }
 
-.explore {
-  min-height: 900px;
-  background: $primary;
+.me-love {
+  .sub-navigation {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 6em;
+    padding-left: 260px;
+
+    .nav-item {
+      display: flex;
+      align-items: center;
+
+      &.active {
+        cursor: text;
+      }
+
+      img {
+        width: 2em;
+        height: 2em;
+        margin-right: 10px;
+      }
+    }
+
+  }
+}
+@media (max-width: $dp-hides-width) {
+  .me-love {
+    .sub-navigation {
+      padding-left: 0;
+      padding-top: 5em;
+    }
+  }
+}
+@media (max-width: 900px) {
+  .me-love {
+    .sub-navigation {
+      .nav-item {
+        img {
+          display: none;
+        }
+      }
+    }
+  }
 }
 
+.explore {
+  min-height: 800px;
+  background: $primary;
+  background-size: cover;
+  background-position: 50%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(38, 51, 17, 0.6)), url('/images/river-view-full.jpg');
+
+  .sub-navigation a:not(.active):not(:hover) {
+    color: #fff;
+  }
+}
 
 @include keyframes(ilt_rotate) {
   0%   { top: 0% }

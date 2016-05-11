@@ -14,6 +14,21 @@ setTimeout(function() {
     , 'A passionate Designer with craving towards Art and inclination towards Programming.'
   ]
   $('#desc').html(desc[Math.floor(Math.random() * desc.length)])
+
+  // Render subnavigation
+  $('.me-love .sub-navigation').each(function() {
+    var selected = $(this).parent().parent().attr('id')
+    var arr = ['explore', 'express', 'solve', 'play', 'scribble'].map(function(cat) {
+      return '\
+        <a class="nav-item'+(cat === selected ? ' active': '')+'" data-id="'+cat+'" href="#'+cat+'">\
+          <img src="/images/head.png" alt="'+cat+'" />\
+          <span>'+cat+'</span>\
+        </a>\
+      '
+    })
+    $(this).html(arr)
+  })
+
 })()
 
 $(function() {
@@ -60,12 +75,18 @@ $(function() {
         // background: '#' + 'ff77bb-34D0FF-D0854B-FEFA59-bf78ff'.split('-')[$(this).index()],
       })
     })
-    .click(function() {
+
+  $('.ilt-option, .sub-navigation .nav-item')
+    .click(function(event) {
       var submenu = $(this).attr('data-id')
-      window.location.hash = submenu
-      $('body').scrollTop(0)
+
+      // $('body').scrollTop(0)
       $('body').animate({
         scrollTop: $('#' + submenu).offset().top,
-      }, 1000)
+      }, 1000, function() {
+        window.location.hash = submenu
+      })
+
+      event.preventDefault()
     })
 })
