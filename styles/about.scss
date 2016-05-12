@@ -9,6 +9,7 @@ $dp-hides-width: 720px;
 
   .icon-holder{
     position: absolute;
+    top: 0;
     left: calc(50% - 48px);
     transition: 0.35s ease-out all;
   }
@@ -18,17 +19,25 @@ $dp-hides-width: 720px;
 
     .icon-holder{
       left: 8em;
+      top: 5em;
     }
   }
 }
 @media (max-width: $dp-hides-width) {
   .icon-container {
     position: absolute;
+
+    &.placed-top {
+      z-index: 2;
+      .icon-holder{
+        top: 0;
+      }
+    }
   }
 }
 @media (max-width: $dp-hides-width), (max-height: 950px) {
   .icon-container {
-    top: 3.7em;
+    top: 4.1em;
 
     .icon-holder {
       left: calc(50% - 38px)
@@ -135,6 +144,7 @@ $dp-hides-width: 720px;
     cursor: pointer;
     padding-top: 5px;
     margin-bottom: 1em;
+    text-transform: capitalize;
 
     &:last-child {
       margin-bottom: 0;
@@ -200,19 +210,17 @@ $dp-hides-width: 720px;
     justify-content: space-around;
     padding-top: 6em;
     padding-left: 260px;
+    text-transform: capitalize;
 
     .nav-item {
       display: flex;
       align-items: center;
+      position: relative;
+
 
       &.active {
         cursor: text;
-      }
-
-      img {
-        width: 2em;
-        height: 2em;
-        margin-right: 10px;
+        display: block;
       }
     }
 
@@ -226,27 +234,27 @@ $dp-hides-width: 720px;
     }
   }
 }
-@media (max-width: 900px) {
-  .me-love {
-    .sub-navigation {
-      .nav-item {
-        img {
-          display: none;
-        }
-      }
-    }
+@media (min-width: 900px) {
+  .me-love .sub-navigation .nav-item:first-letter {
+    font-family: Helvetica, monospace;
+    font-size: 100px;
+    font-weight: 800;
+    vertical-align: middle;
+    line-height: 70px;
+    display: inline-block;
+    text-transform: uppercase;
   }
 }
 
-.explore {
+#explore {
   min-height: 800px;
-  background: $primary;
+  // background: $palette-1;
   background-size: cover;
   background-position: 50%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(38, 51, 17, 0.6)), url('/images/river-view-full.jpg');
+  // background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(38, 51, 17, 0.6)), url('/images/river-view-full.jpg');
 
   .sub-navigation a:not(.active):not(:hover) {
-    color: #fff;
+    // color: #fff;
   }
 }
 

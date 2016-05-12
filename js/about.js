@@ -20,10 +20,7 @@ setTimeout(function() {
     var selected = $(this).parent().parent().attr('id')
     var arr = ['explore', 'express', 'solve', 'play', 'scribble'].map(function(cat) {
       return '\
-        <a class="nav-item'+(cat === selected ? ' active': '')+'" data-id="'+cat+'" href="#'+cat+'">\
-          <img src="/images/head.png" alt="'+cat+'" />\
-          <span>'+cat+'</span>\
-        </a>\
+        <a class="nav-item'+(cat === selected ? ' active': '')+'" data-id="'+cat+'" href="#'+cat+'">'+cat+'</a>\
       '
     })
     $(this).html(arr)
@@ -78,7 +75,7 @@ $(function() {
 
   $('.ilt-option, .sub-navigation .nav-item')
     .click(function(event) {
-      var submenu = $(this).attr('data-id')
+      var submenu = $(this).html().toLowerCase()
 
       // $('body').scrollTop(0)
       $('body').animate({

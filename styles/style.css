@@ -12,13 +12,12 @@ body {
 
 a {
   color: #333; }
+  a:hover {
+    color: #8fc045; }
   a.active {
     text-decoration: none;
     text-shadow: 0px 0px 3px #ccc;
-    color: #999; }
-
-a:hover {
-  color: #8fc045; }
+    color: #8fc045; }
 
 .container {
   position: relative;
@@ -68,18 +67,24 @@ img.dp-icon {
     z-index: 2; }
     .about .icon-container .icon-holder {
       position: absolute;
+      top: 0;
       left: calc(50% - 48px);
       transition: 0.35s ease-out all; }
     .about .icon-container.placed-top {
       z-index: 20; }
       .about .icon-container.placed-top .icon-holder {
-        left: 8em; }
+        left: 8em;
+        top: 5em; }
   @media (max-width: 720px) {
     .about .icon-container {
-      position: absolute; } }
+      position: absolute; }
+      .about .icon-container.placed-top {
+        z-index: 2; }
+        .about .icon-container.placed-top .icon-holder {
+          top: 0; } }
   @media (max-width: 720px), (max-height: 950px) {
     .about .icon-container {
-      top: 3.7em; }
+      top: 4.1em; }
       .about .icon-container .icon-holder {
         left: calc(50% - 38px); }
     .about img.dp-icon {
@@ -149,7 +154,8 @@ img.dp-icon {
     .about .ilt-section .ilt-option {
       cursor: pointer;
       padding-top: 5px;
-      margin-bottom: 1em; }
+      margin-bottom: 1em;
+      text-transform: capitalize; }
       .about .ilt-section .ilt-option:last-child {
         margin-bottom: 0;
         padding-bottom: 1em; }
@@ -193,31 +199,32 @@ img.dp-icon {
     display: flex;
     justify-content: space-around;
     padding-top: 6em;
-    padding-left: 260px; }
+    padding-left: 260px;
+    text-transform: capitalize; }
     .about .me-love .sub-navigation .nav-item {
       display: flex;
-      align-items: center; }
+      align-items: center;
+      position: relative; }
       .about .me-love .sub-navigation .nav-item.active {
-        cursor: text; }
-      .about .me-love .sub-navigation .nav-item img {
-        width: 2em;
-        height: 2em;
-        margin-right: 10px; }
+        cursor: text;
+        display: block; }
   @media (max-width: 720px) {
     .about .me-love .sub-navigation {
       padding-left: 0;
       padding-top: 5em; } }
-  @media (max-width: 900px) {
-    .about .me-love .sub-navigation .nav-item img {
-      display: none; } }
-  .about .explore {
+  @media (min-width: 900px) {
+    .about .me-love .sub-navigation .nav-item:first-letter {
+      font-family: Helvetica, monospace;
+      font-size: 100px;
+      font-weight: 800;
+      vertical-align: middle;
+      line-height: 70px;
+      display: inline-block;
+      text-transform: uppercase; } }
+  .about #explore {
     min-height: 800px;
-    background: #8fc045;
     background-size: cover;
-    background-position: 50%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(38, 51, 17, 0.6)), url("/images/river-view-full.jpg"); }
-    .about .explore .sub-navigation a:not(.active):not(:hover) {
-      color: #fff; }
+    background-position: 50%; }
 
 @-webkit-keyframes ilt_rotate {
   0% {

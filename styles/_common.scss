@@ -35,16 +35,17 @@ a {
   color: #333;
   // transition: 0.125s linear all;
 
+  &:hover {
+    color: $primary;
+  }
+
   &.active {
     text-decoration: none;
     text-shadow: 0px 0px 3px #ccc;
-    color: #999;
+    color: $primary;
   }
 }
 
-a:hover {
-  color: $primary;
-}
 
 .container {
   position: relative;
