@@ -9,9 +9,9 @@ setTimeout(function() {
 ;(function() {
   var desc = [
     'I\’m a designer who can code.'
-    , 'Designer by skill, Hacker by nature and Artist by heart.'
+    // , 'Designer by skill, Hacker by nature and Artist by heart.'
     , 'Geek. Gamer. Rookie artist. Weird thinker and a bathroom singer.'
-    , 'A passionate Designer with craving towards Art and inclination towards Programming.'
+    , 'I\'m a passionate Designer with craving towards Art and inclination towards Programming.'
   ]
   $('#desc').html(desc[Math.floor(Math.random() * desc.length)])
 
@@ -73,16 +73,16 @@ $(function() {
       })
     })
 
-  $('.ilt-option, .sub-navigation .nav-item')
+  $('.ilt-option')
     .click(function(event) {
       var submenu = $(this).html().toLowerCase()
 
       // $('body').scrollTop(0)
       $('body').animate({
-        scrollTop: $('#' + submenu).offset().top,
-      }, 1000, function() {
-        window.location.hash = submenu
-      })
+          scrollTop: $('#' + submenu).offset().top,
+        }, 750, function() {
+          window.location.hash = submenu
+        })
 
       event.preventDefault()
     })

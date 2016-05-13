@@ -23,18 +23,6 @@ $dp-hides-width: 720px;
     }
   }
 }
-@media (max-width: $dp-hides-width) {
-  .icon-container {
-    position: absolute;
-
-    &.placed-top {
-      z-index: 2;
-      .icon-holder{
-        top: 0;
-      }
-    }
-  }
-}
 @media (max-width: $dp-hides-width), (max-height: 950px) {
   .icon-container {
     top: 4.1em;
@@ -48,10 +36,31 @@ $dp-hides-width: 720px;
     width: 70px;
   }
 }
+@media (max-width: $dp-hides-width) {
+  .icon-container {
+    position: absolute;
+    top: 1em;
+
+    &.placed-top {
+      z-index: 2;
+      .icon-holder{
+        top: 0;
+      }
+    }
+  }
+}
 
 .first-section {
   position: relative;
   min-height: 47em;
+   .container {
+      height: 100%;
+   }
+}
+@media (max-width: $dp-hides-width) {
+  .first-section {
+    min-height: auto;
+  }
 }
 
 .center-text {
@@ -62,6 +71,15 @@ $dp-hides-width: 720px;
 @media (max-width: $dp-hides-width), (max-height: 950px) {
   .center-text {
     padding-top: 8em;
+  }
+}
+@media (max-width: $dp-hides-width) {
+  .center-text {
+    padding-top: 5em;
+
+    h3 {
+      margin-top: -0.5em;
+    }
   }
 }
 
@@ -155,7 +173,7 @@ $dp-hides-width: 720px;
 @media (max-width: $dp-hides-width), (max-height: 950px) {
   .ilt-section {
     font-size: 1.5em;
-    margin-top: 1.5em;
+    margin-top: 1em;
 
     .ilt-option {
       margin-bottom: 0.3em;
@@ -208,8 +226,8 @@ $dp-hides-width: 720px;
   .sub-navigation {
     display: flex;
     justify-content: space-around;
-    padding-top: 6em;
-    padding-left: 260px;
+    padding-top: 5em;
+    padding-left: 17em;
     text-transform: capitalize;
 
     .nav-item {
@@ -221,6 +239,7 @@ $dp-hides-width: 720px;
       &.active {
         cursor: text;
         display: block;
+        font-size: 160%;
       }
     }
 
@@ -230,19 +249,24 @@ $dp-hides-width: 720px;
   .me-love {
     .sub-navigation {
       padding-left: 0;
-      padding-top: 5em;
+      padding-top: 1em;
     }
   }
 }
 @media (min-width: 900px) {
+  .me-love .sub-navigation {
+    padding-top: 4em;
+  }
   .me-love .sub-navigation .nav-item:first-letter {
-    font-family: Helvetica, monospace;
-    font-size: 100px;
+    font-size: 4em;
+    margin-right: 0.05em;
     font-weight: 800;
     vertical-align: middle;
-    line-height: 70px;
+    line-height: 1em;
     display: inline-block;
     text-transform: uppercase;
+    color: lighten($primary, 20%);
+    text-shadow: 0 0 7px darken($primary, 0%), 0 0 7px darken($primary, 0%);
   }
 }
 
@@ -250,11 +274,89 @@ $dp-hides-width: 720px;
   min-height: 800px;
   // background: $palette-1;
   background-size: cover;
-  background-position: 50%;
-  // background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(38, 51, 17, 0.6)), url('/images/river-view-full.jpg');
+  background-position: 0 70%;
+  @include gradient-vertical-img(white, 5%, transparent, 50%, url("/images/river-view-full4.jpg"));
 
   .sub-navigation a:not(.active):not(:hover) {
     // color: #fff;
+  }
+}
+@media (min-width: 1290px) {
+  #explore {
+    background-position: 50%;
+    @include gradient-vertical-img(white, 5%, transparent, 50%, url("/images/river-view-full.jpg"));
+  }
+}
+@media (max-width: $dp-hides-width) {
+  #explore {
+    background-image: url("/images/river-view-full3.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+  }
+}
+
+#express {
+  min-height: 800px;
+
+  > .container {
+    height: 100%;
+  }
+  .float-img-holder {
+    width: 35%;
+    height: calc(100% - 12em);
+    margin-top: 12em;
+    display: flex;
+    position: absolute;
+    top: 0;
+    align-items: center;
+
+    img {
+      width: 100%;
+    }
+  }
+  .text-container-holder {
+    width: 65%;
+    margin-left: 35%;
+    height: calc(100% - 12em);
+    margin-top: 12em;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 3em;
+    box-sizing: border-box;
+
+    .text-container {
+      padding: 1.3em;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      width: 100%;
+    }
+  }
+}
+@media (max-width: $dp-hides-width) {
+  #express {
+    min-height: auto;
+    .float-img-holder {
+      position: static;
+      width: 100%;
+      height: 250px;
+      justify-content: center;
+      padding: 1.5em 0;
+      margin-top: 0;
+
+      img {
+        width: auto;
+        height: 100%;
+      }
+    }
+
+    .text-container-holder {
+      position: static;
+      margin: 0;
+      height: auto;
+      width: 100%;
+    }
   }
 }
 

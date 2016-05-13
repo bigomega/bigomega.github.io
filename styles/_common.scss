@@ -21,6 +21,14 @@
   animation:         $animations;
 }
 
+@mixin gradient-vertical-img($start-color: #555, $start-percent: 0%, $end-color: #333,  $end-percent: 100%, $img: '') {
+  background-image: -webkit-linear-gradient(top, $start-color $start-percent, $end-color $end-percent), $img;  // Safari 5.1-6, Chrome 10+
+  background-image: -o-linear-gradient(top, $start-color $start-percent, $end-color $end-percent), $img;  // Opera 12
+  background-image: linear-gradient(to bottom, $start-color $start-percent, $end-color $end-percent), $img; // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=0); // IE9 and down
+}
+
 // CSS Start
 ::-moz-selection { background: lighten($primary, 20%)}
 ::selection { background: lighten($primary, 20%); }
@@ -80,6 +88,18 @@ a {
 
   li {
     list-style: none;
+  }
+}
+@media (max-width: 720px) {
+  .header {
+    bottom: 0;
+    top: auto;
+    border-bottom: none;
+    border-top: 1px solid #aaa;
+
+    ul {
+      padding: 0;
+    }
   }
 }
 

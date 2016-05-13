@@ -45,6 +45,15 @@ a {
   .header li {
     list-style: none; }
 
+@media (max-width: 720px) {
+  .header {
+    bottom: 0;
+    top: auto;
+    border-bottom: none;
+    border-top: 1px solid #aaa; }
+    .header ul {
+      padding: 0; } }
+
 img.dp-icon {
   display: inline-block;
   width: 90px;
@@ -75,13 +84,6 @@ img.dp-icon {
       .about .icon-container.placed-top .icon-holder {
         left: 8em;
         top: 5em; }
-  @media (max-width: 720px) {
-    .about .icon-container {
-      position: absolute; }
-      .about .icon-container.placed-top {
-        z-index: 2; }
-        .about .icon-container.placed-top .icon-holder {
-          top: 0; } }
   @media (max-width: 720px), (max-height: 950px) {
     .about .icon-container {
       top: 4.1em; }
@@ -90,9 +92,22 @@ img.dp-icon {
     .about img.dp-icon {
       height: 70px;
       width: 70px; } }
+  @media (max-width: 720px) {
+    .about .icon-container {
+      position: absolute;
+      top: 1em; }
+      .about .icon-container.placed-top {
+        z-index: 2; }
+        .about .icon-container.placed-top .icon-holder {
+          top: 0; } }
   .about .first-section {
     position: relative;
     min-height: 47em; }
+    .about .first-section .container {
+      height: 100%; }
+  @media (max-width: 720px) {
+    .about .first-section {
+      min-height: auto; } }
   .about .center-text {
     text-align: center;
     margin: 0em 1.5em;
@@ -100,6 +115,11 @@ img.dp-icon {
   @media (max-width: 720px), (max-height: 950px) {
     .about .center-text {
       padding-top: 8em; } }
+  @media (max-width: 720px) {
+    .about .center-text {
+      padding-top: 5em; }
+      .about .center-text h3 {
+        margin-top: -0.5em; } }
   .about .social {
     display: flex;
     justify-content: space-around;
@@ -162,7 +182,7 @@ img.dp-icon {
   @media (max-width: 720px), (max-height: 950px) {
     .about .ilt-section {
       font-size: 1.5em;
-      margin-top: 1.5em; }
+      margin-top: 1em; }
       .about .ilt-section .ilt-option {
         margin-bottom: 0.3em; }
         .about .ilt-section .ilt-option:last-child {
@@ -198,8 +218,8 @@ img.dp-icon {
   .about .me-love .sub-navigation {
     display: flex;
     justify-content: space-around;
-    padding-top: 6em;
-    padding-left: 260px;
+    padding-top: 5em;
+    padding-left: 17em;
     text-transform: capitalize; }
     .about .me-love .sub-navigation .nav-item {
       display: flex;
@@ -207,24 +227,95 @@ img.dp-icon {
       position: relative; }
       .about .me-love .sub-navigation .nav-item.active {
         cursor: text;
-        display: block; }
+        display: block;
+        font-size: 160%; }
   @media (max-width: 720px) {
     .about .me-love .sub-navigation {
       padding-left: 0;
-      padding-top: 5em; } }
+      padding-top: 1em; } }
   @media (min-width: 900px) {
+    .about .me-love .sub-navigation {
+      padding-top: 4em; }
     .about .me-love .sub-navigation .nav-item:first-letter {
-      font-family: Helvetica, monospace;
-      font-size: 100px;
+      font-size: 4em;
+      margin-right: 0.05em;
       font-weight: 800;
       vertical-align: middle;
-      line-height: 70px;
+      line-height: 1em;
       display: inline-block;
-      text-transform: uppercase; } }
+      text-transform: uppercase;
+      color: #bdda91;
+      text-shadow: 0 0 7px #8fc045, 0 0 7px #8fc045; } }
   .about #explore {
     min-height: 800px;
     background-size: cover;
-    background-position: 50%; }
+    background-position: 0 70%;
+    background-image: -webkit-linear-gradient(top, white 5%, transparent 50%), url("/images/river-view-full4.jpg");
+    background-image: -o-linear-gradient(top, white 5%, transparent 50%), url("/images/river-view-full4.jpg");
+    background-image: linear-gradient(to bottom, white 5%, transparent 50%), url("/images/river-view-full4.jpg");
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#00000000', GradientType=0); }
+  @media (min-width: 1290px) {
+    .about #explore {
+      background-position: 50%;
+      background-image: -webkit-linear-gradient(top, white 5%, transparent 50%), url("/images/river-view-full.jpg");
+      background-image: -o-linear-gradient(top, white 5%, transparent 50%), url("/images/river-view-full.jpg");
+      background-image: linear-gradient(to bottom, white 5%, transparent 50%), url("/images/river-view-full.jpg");
+      background-repeat: repeat-x;
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#00000000', GradientType=0); } }
+  @media (max-width: 720px) {
+    .about #explore {
+      background-image: url("/images/river-view-full3.jpg");
+      background-repeat: no-repeat;
+      background-position: 0 50%; } }
+  .about #express {
+    min-height: 800px; }
+    .about #express > .container {
+      height: 100%; }
+    .about #express .float-img-holder {
+      width: 35%;
+      height: calc(100% - 12em);
+      margin-top: 12em;
+      display: flex;
+      position: absolute;
+      top: 0;
+      align-items: center; }
+      .about #express .float-img-holder img {
+        width: 100%; }
+    .about #express .text-container-holder {
+      width: 65%;
+      margin-left: 35%;
+      height: calc(100% - 12em);
+      margin-top: 12em;
+      position: absolute;
+      top: 0;
+      display: flex;
+      align-items: center;
+      padding: 0 3em;
+      box-sizing: border-box; }
+      .about #express .text-container-holder .text-container {
+        padding: 1.3em;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        width: 100%; }
+  @media (max-width: 720px) {
+    .about #express {
+      min-height: auto; }
+      .about #express .float-img-holder {
+        position: static;
+        width: 100%;
+        height: 250px;
+        justify-content: center;
+        padding: 1.5em 0;
+        margin-top: 0; }
+        .about #express .float-img-holder img {
+          width: auto;
+          height: 100%; }
+      .about #express .text-container-holder {
+        position: static;
+        margin: 0;
+        height: auto;
+        width: 100%; } }
 
 @-webkit-keyframes ilt_rotate {
   0% {
