@@ -1,4 +1,13 @@
-$('.first-section, .me-love').css({ height: $(window).height() })
+function setHeight() {
+  $('.first-section').css({ height: $(window).height() })
+  if ($(window).width() > 720) {
+    $('.me-love').css({ height: $(window).height() })
+  } else {
+    $('.me-love').css({ height: '' })
+  }
+}
+
+setHeight()
 
 // Initiate ILT animation
 setTimeout(function() {
@@ -8,7 +17,7 @@ setTimeout(function() {
 // Randomize description
 ;(function() {
   var desc = [
-    'Basically I\’m a designer who can code.'
+    'I\’m a designer who can code.'
     // , 'Designer by skill, Hacker by nature and Artist by heart.'
     , 'Geek. Gamer. Rookie artist. Weird thinker and a bathroom singer.'
     , 'I\'m a passionate Designer with craving towards Art and inclination towards Programming.'
@@ -18,7 +27,7 @@ setTimeout(function() {
   // Render subnavigation
   $('.me-love .sub-navigation').each(function() {
     var selected = $(this).parent().parent().attr('id')
-    var arr = ['explore', 'express', 'solve', 'play', 'scribble'].map(function(cat) {
+    var arr = ['explore', 'express', 'solve', 'play'].map(function(cat) {
       return '\
         <a class="nav-item'+(cat === selected ? ' active': '')+'" data-id="'+cat+'" href="#'+cat+'">'+cat+'</a>\
       '
@@ -30,9 +39,7 @@ setTimeout(function() {
 
 $(function() {
 
-  $(window).on('resize', function(event) {
-    $('.first-section, .me-love').css({ height: $(window).height() })
-  })
+  $(window).on('resize', setHeight)
 
   var top = true
   $(window).on('scroll resize', function(event) {
@@ -68,7 +75,7 @@ $(function() {
   $('.ilt-option')
     .mouseover(function() {
       $('.ilt').css({
-        top: $(this).index() * 20 + '%',
+        top: $(this).index() * 25 + '%',
         // background: '#' + 'ff77bb-34D0FF-D0854B-FEFA59-bf78ff'.split('-')[$(this).index()],
       })
     })

@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,600);
 
 $primary: #8fc045;
 $palette-1: #FF78BC;
@@ -12,5 +12,5 @@ $palette-5: #BF78FF;
 @import "common";
 
 .about {
-  @import "about";
+  @import "_about";
 }
