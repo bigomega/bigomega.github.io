@@ -470,6 +470,34 @@ $dp-hides-width: 720px;
   }
 }
 
+#solve {
+  min-height: 800px;
+}
+
+#play {
+  min-height: 60em;
+
+  .float-img-holder {
+    box-sizing: border-box;
+  }
+}
+@media (min-width: 860px) {
+  #play {
+    .float-img-holder {
+      padding-left: 3em;
+    }
+  }
+}
+@media (max-width: $dp-hides-width) {
+  #play {
+    margin-bottom: 5em;
+
+    .float-img-holder {
+      height: 360px;
+    }
+  }
+}
+
 @include keyframes(ilt_rotate) {
   0%   { top: 0% }
 

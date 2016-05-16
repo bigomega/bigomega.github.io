@@ -372,6 +372,20 @@ img.dp-icon {
     .about #express {
       min-height: auto;
       margin-bottom: 3em; } }
+  .about #solve {
+    min-height: 800px; }
+  .about #play {
+    min-height: 60em; }
+    .about #play .float-img-holder {
+      box-sizing: border-box; }
+  @media (min-width: 860px) {
+    .about #play .float-img-holder {
+      padding-left: 3em; } }
+  @media (max-width: 720px) {
+    .about #play {
+      margin-bottom: 5em; }
+      .about #play .float-img-holder {
+        height: 360px; } }
 
 @-webkit-keyframes ilt_rotate {
   0% {
