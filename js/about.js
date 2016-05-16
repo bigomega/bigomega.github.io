@@ -8,7 +8,7 @@ setTimeout(function() {
 // Randomize description
 ;(function() {
   var desc = [
-    'I\’m a designer who can code.'
+    'Basically I\’m a designer who can code.'
     // , 'Designer by skill, Hacker by nature and Artist by heart.'
     , 'Geek. Gamer. Rookie artist. Weird thinker and a bathroom singer.'
     , 'I\'m a passionate Designer with craving towards Art and inclination towards Programming.'
