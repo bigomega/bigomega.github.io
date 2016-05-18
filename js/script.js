@@ -27,10 +27,24 @@ function navigate(page, cb) {
   // Change header
   $('.header .link').removeClass('active')
   $('.header .link[data-nav='+page+']').addClass('active')
+  if (page === 'home') {
+    set_desc()
+  }
 
   window.location.hash = page
 }
 
+function set_desc() {
+  var desc = [
+    'I\’m a designer who loves to code.'
+    , 'Geek. Gamer. Rookie artist. Weird thinker and a bathroom singer.'
+    , 'I\'m a passionate Designer with craving towards Art and inclination towards Programming.'
+  ]
+  var selected = desc[Math.floor(Math.random() * desc.length)]
+  $('#desc').html(selected + '<br/>An erratic perfectionist.')
+}
+
+// Set height
 setHeight()
 
 // Initiate ILT animation
@@ -39,12 +53,7 @@ setTimeout(function() {
 }, 4000)
 
 // Randomize description
-var desc = [
-  'I\’m a designer who loves to code.'
-  , 'Geek. Gamer. Rookie artist. Weird thinker and a bathroom singer.'
-  , 'I\'m a passionate Designer with craving towards Art and inclination towards Programming.'
-]
-$('#desc').html(desc[Math.floor(Math.random() * desc.length)])
+set_desc()
 
 // Render "about" subnavigation
 $('.me-love .sub-navigation').each(function() {

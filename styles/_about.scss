@@ -55,7 +55,7 @@
       border: 1px solid #ccc;
       border-radius: 3px;
       width: 100%;
-      font-size: 1.5em;
+      font-size: 1.3em;
       line-height: 1.5em;
 
       span {
@@ -226,12 +226,10 @@
 
   .float-img-holder {
     box-sizing: border-box;
-  }
-}
-@media (min-width: 860px) {
-  #play {
-    .float-img-holder {
-      padding-left: 3em;
+
+    img {
+      max-width: 300px;
+      margin: 0 auto;
     }
   }
 }
@@ -240,7 +238,11 @@
     margin-bottom: 5em;
 
     .float-img-holder {
-      height: 360px;
+      height: 200px;
+
+      img {
+        max-width: none;
+      }
     }
   }
 }

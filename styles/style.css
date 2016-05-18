@@ -303,7 +303,7 @@ a,
     border: 1px solid #ccc;
     border-radius: 3px;
     width: 100%;
-    font-size: 1.5em;
+    font-size: 1.3em;
     line-height: 1.5em; }
     .me-love .text-container-holder .text-container span {
       font-weight: 600;
@@ -417,16 +417,17 @@ a,
   min-height: 60em; }
   #play .float-img-holder {
     box-sizing: border-box; }
-
-@media (min-width: 860px) {
-  #play .float-img-holder {
-    padding-left: 3em; } }
+    #play .float-img-holder img {
+      max-width: 300px;
+      margin: 0 auto; }
 
 @media (max-width: 720px) {
   #play {
     margin-bottom: 5em; }
     #play .float-img-holder {
-      height: 360px; } }
+      height: 200px; }
+      #play .float-img-holder img {
+        max-width: none; } }
 
 @-webkit-keyframes ilt_rotate {
   0% {
