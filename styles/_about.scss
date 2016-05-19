@@ -1,21 +1,43 @@
+.icon-container.about {
+  z-index: 20;
+
+  .icon-holder{
+    left: 8em;
+    top: 5em;
+
+  }
+}
+@media (max-width: $dp-hides-width) {
+  .icon-container.about {
+    .icon-holder{
+      left: calc(50% - 38px);
+      opacity: 0;
+      top: -100px;
+      z-index: -1;
+    }
+  }
+}
+
 .me-love {
   .sub-navigation {
-    display: flex;
-    justify-content: space-around;
-    padding-top: 5em;
-    padding-left: 17em;
+    text-align: center;
+    padding-top: 1.5em;
     text-transform: capitalize;
+    display: block;
+    font-size: 3em;
 
-    .nav-item {
-      display: flex;
-      align-items: center;
-      position: relative;
+    .subnav {
+      text-decoration: none;
+      color: #ccc;
+      font-size: 0.5em;
+      margin: 0 5px;
 
+      &:hover {
+        color: $primary
+      }
 
-      &.active {
-        cursor: text;
-        display: block;
-        font-size: 160%;
+      &.disabled {
+        opacity: 0;
       }
     }
   }
@@ -73,8 +95,11 @@
 @media (max-width: $dp-hides-width) {
   .me-love {
     .sub-navigation {
-      padding-left: 0;
       padding-top: 1em;
+      font-size: 2em;
+      .subnav {
+        font-size: 1em;
+      }
     }
 
     .float-img-holder {
@@ -102,22 +127,6 @@
         font-size: 1em;
       }
     }
-  }
-}
-@media (min-width: 800px) {
-  .me-love .sub-navigation {
-    padding-top: 4em;
-  }
-  .me-love .sub-navigation .nav-item:first-letter {
-    font-size: 4em;
-    margin-right: 0.05em;
-    font-weight: 600;
-    vertical-align: middle;
-    line-height: 1em;
-    display: inline-block;
-    text-transform: uppercase;
-    color: lighten($primary, 20%);
-    text-shadow: 0 0 7px darken($primary, 0%), 0 0 7px darken($primary, 0%);
   }
 }
 
@@ -188,7 +197,7 @@
     background-position: 0 50%;
 
     .text-container-holder {
-      padding-top: 3em;
+      padding-top: 2em;
       padding-bottom: 27em;
     }
 
@@ -219,6 +228,7 @@
 
 #solve {
   min-height: 800px;
+  background: $palette-3;
 }
 
 #play {

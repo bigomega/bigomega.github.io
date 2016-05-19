@@ -27,6 +27,8 @@ function navigate(page, cb) {
   // Change header
   $('.header .link').removeClass('active')
   $('.header .link[data-nav='+page+']').addClass('active')
+
+  // change description
   if (page === 'home') {
     set_desc()
   }
@@ -58,12 +60,13 @@ set_desc()
 // Render "about" subnavigation
 $('.me-love .sub-navigation').each(function() {
   var selected = $(this).parent().parent().attr('id')
-  var arr = ['explore', 'express', 'solve', 'play'].map(function(cat) {
-    return '\
-      <div class="nav-item link'+(cat === selected ? ' active': '')+'">'+cat+'</div>\
-    '
-  })
-  $(this).html(arr)
+  var subnav_list = ['explore', 'express', 'solve', 'play']
+  var index = subnav_list.indexOf(selected)
+  $(this).html('\
+    <span class="nav-item link subnav '+(index < 1 ? 'disabled' : '')+'" data-subnav="'+subnav_list[index - 1]+'">▲</span>\
+    <span class="nav-item link active" data-subnav="'+selected+'">'+selected+'</span>\
+    <span class="nav-item link subnav '+(index >= subnav_list.length - 1 ? 'disabled' : '')+'" data-subnav="'+subnav_list[index + 1]+'">▼</span>\
+  ')
 })
 
 $(function() {
@@ -123,9 +126,9 @@ $(function() {
       event.preventDefault()
     })
 
-    $('.me-love .sub-navigation .nav-item').click(function() {
+    $('.me-love .sub-navigation .nav-item:not(.disabled)').click(function() {
       $('body').animate({
-        scrollTop: $('#' + $(this).html()).offset().top,
+        scrollTop: $('#' + $(this).attr('data-subnav')).offset().top,
       }, 750)
     })
 

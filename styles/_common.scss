@@ -56,6 +56,10 @@ a,
     text-shadow: 0px 0px 3px #ccc;
     color: $primary;
   }
+
+  &.disabled {
+    color: #ccc;
+  }
 }
 
 
@@ -71,7 +75,7 @@ a,
   z-index: 10;
   width: 100%;
   background: #fff;
-  border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid #ccc;
 
   &.minimized {
     background: rgba(255, 255, 255, 0.7);
@@ -137,18 +141,8 @@ a,
       }
     }
   }
-
-  &.about {
-    z-index: 20;
-
-    .icon-holder{
-      left: 8em;
-      top: 5em;
-
-    }
-  }
 }
-@media (max-width: $dp-hides-width), (max-height: 950px) {
+@media (max-width: $dp-hides-width) {
   .icon-container {
     top: 4.1em;
 
@@ -166,15 +160,6 @@ a,
   .icon-container {
     position: absolute;
     top: 1em;
-
-    &.about {
-      .icon-holder{
-        left: calc(50% - 38px);
-        opacity: 0;
-        top: -100px;
-        z-index: -1;
-      }
-    }
   }
 }
 
