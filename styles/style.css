@@ -87,6 +87,12 @@ a,
       .icon-container .icon-holder .dp-icon:hover {
         border-color: #8fc045;
         box-shadow: 0px 0px 20px 2px #8fc045; }
+    .icon-container .icon-holder .dp-extras {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: all 0.5s linear; }
 
 @media (max-width: 720px) {
   .icon-container {
@@ -307,6 +313,49 @@ a,
     .me-love .text-container-holder .text-container {
       font-size: 1em; } }
 
+.icon-container.about .icon-holder .dp-extras {
+  opacity: 1;
+  width: 90px;
+  height: 90px;
+  border-radius: 100px;
+  border: 10px solid #444;
+  left: -3px;
+  top: -3px;
+  -webkit-animation: explore_zoom 8s ease-in-out infinite;
+  -moz-animation: explore_zoom 8s ease-in-out infinite;
+  -o-animation: explore_zoom 8s ease-in-out infinite;
+  animation: explore_zoom 8s ease-in-out infinite; }
+  .icon-container.about .icon-holder .dp-extras:before {
+    content: ' ';
+    width: 10px;
+    height: 20px;
+    background: #fff;
+    position: absolute;
+    left: 80px;
+    top: 80px;
+    transform: rotate(45deg); }
+  .icon-container.about .icon-holder .dp-extras:after {
+    content: ' ';
+    width: 100px;
+    height: 20px;
+    background: #444;
+    position: absolute;
+    left: 60px;
+    top: 105px;
+    transform: rotate(45deg);
+    z-index: -1; }
+  .icon-container.about .icon-holder .dp-extras .div1 {
+    width: 90px;
+    height: 90px;
+    border-radius: 100px;
+    background: url(/images/profile-128.jpg);
+    background-size: 100%;
+    background-position: 50%;
+    -webkit-animation: explore_zoom_img 8s ease-in-out infinite;
+    -moz-animation: explore_zoom_img 8s ease-in-out infinite;
+    -o-animation: explore_zoom_img 8s ease-in-out infinite;
+    animation: explore_zoom_img 8s ease-in-out infinite; }
+
 #explore {
   min-height: 55em;
   background-size: cover;
@@ -459,43 +508,146 @@ a,
   100% {
     top: 75%; } }
 
-/*animated scroll arrow animation*/
-@-webkit-keyframes fade_move_down {
-  0% {
-    -webkit-transform: translate(0, -10px);
-    opacity: 0; }
-  50% {
-    opacity: 1; }
-  100% {
-    -webkit-transform: translate(0, 10px);
-    opacity: 0; } }
+@-webkit-keyframes explore_zoom {
+  35% {
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  45% {
+    -moz-transform: scale(1.3);
+    -o-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3); }
+  65% {
+    -moz-transform: scale(1.3);
+    -o-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3); }
+  75% {
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
 
-@-moz-keyframes fade_move_down {
-  0% {
-    -webkit-transform: translate(0, -10px);
-    opacity: 0; }
-  50% {
-    opacity: 1; }
-  100% {
-    -webkit-transform: translate(0, 10px);
-    opacity: 0; } }
+@-moz-keyframes explore_zoom {
+  35% {
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  45% {
+    -moz-transform: scale(1.3);
+    -o-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3); }
+  65% {
+    -moz-transform: scale(1.3);
+    -o-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3); }
+  75% {
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
 
-@-o-keyframes fade_move_down {
-  0% {
-    -webkit-transform: translate(0, -10px);
-    opacity: 0; }
-  50% {
-    opacity: 1; }
-  100% {
-    -webkit-transform: translate(0, 10px);
-    opacity: 0; } }
+@-o-keyframes explore_zoom {
+  35% {
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  45% {
+    -moz-transform: scale(1.3);
+    -o-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3); }
+  65% {
+    -moz-transform: scale(1.3);
+    -o-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3); }
+  75% {
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
 
-@keyframes fade_move_down {
-  0% {
-    -webkit-transform: translate(0, -10px);
-    opacity: 0; }
-  50% {
-    opacity: 1; }
-  100% {
-    -webkit-transform: translate(0, 10px);
-    opacity: 0; } }
+@keyframes explore_zoom {
+  35% {
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  45% {
+    -moz-transform: scale(1.3);
+    -o-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3); }
+  65% {
+    -moz-transform: scale(1.3);
+    -o-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3); }
+  75% {
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
+@-webkit-keyframes explore_zoom_img {
+  35% {
+    background-size: 100%; }
+  45% {
+    background-size: 150%; }
+  65% {
+    background-size: 150%; }
+  75% {
+    background-size: 100%; } }
+
+@-moz-keyframes explore_zoom_img {
+  35% {
+    background-size: 100%; }
+  45% {
+    background-size: 150%; }
+  65% {
+    background-size: 150%; }
+  75% {
+    background-size: 100%; } }
+
+@-o-keyframes explore_zoom_img {
+  35% {
+    background-size: 100%; }
+  45% {
+    background-size: 150%; }
+  65% {
+    background-size: 150%; }
+  75% {
+    background-size: 100%; } }
+
+@keyframes explore_zoom_img {
+  35% {
+    background-size: 100%; }
+  45% {
+    background-size: 150%; }
+  65% {
+    background-size: 150%; }
+  75% {
+    background-size: 100%; } }
