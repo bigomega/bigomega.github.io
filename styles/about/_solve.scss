@@ -14,280 +14,65 @@
   min-height: 800px;
   // background: $palette-3;
 
-  .dd-header {
-    height: 90px;
-    margin-top: 2em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    @include transition(opacity 0.5s 0.5s linear);
-    opacity: 0;
+  .sub-navigation .active {
+    text-shadow: 0 0 20px #fff,0 0 20px #fff,0 0 20px #fff,0 0 20px #fff,0 0 20px #fff,0 0 20px #fff,0 0 20px #fff,0 0 20px #fff,0 0 20px #fff,0 0 20px #fff,0 0 20px #fff,0 0 20px #fff,0 0 20px #fff,0 0 20px #fff,0 0 20px #fff,0 0 20px #fff,0 0 20px #fff,0 0 20px #fff,0 0 20px #fff;
+  }
+  .bg:before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: calc(100% - 4px);
+    border: 2px solid #000;
+    background: #fff;
+    z-index: -2;
+  }
+  .bg:after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 50%;
+    background: #333;
+    z-index: -2;
+  }
 
-    .design-header {
-      font-size: 4em;
-      font-weight: 600;
-      width: 370px;
+  .bg2 {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    top: 0;
+    z-index: -1;
+    @include transform(rotateY(180deg));
+
+    &:after {
+      background: #000;
+    }
+  }
+
+  .double-text-container-holder {
+    margin-top: 7em;
+    font-size: 1.3em;
+    line-height: 1.5em;
+
+    .text-container {
+      width: 50%;
+      padding: 3em;
       box-sizing: border-box;
-      padding-left: 160px;
-      position: relative;
-      opacity: 0;
+      float: left;
+
+      &.second {
+        color: #fff;
+      }
 
       span {
-        position: absolute;
-        width: 45px;
-        height: 90px;
-        background: #000;
-        border-radius: 0px 90px 90px 0;
-        border: 3px solid #000;
-        box-sizing: border-box;
-        padding-left: 63px;
-        display: block;
-        left: 81px;
-        top: -8px;
-
-        &:before {
-          content: '';
-          width: 15px;
-          height: 15px;
-          border-radius: 50px;
-          border: 2px solid #000;
-          position: absolute;
-          bottom: 15px;
-          background: #fff;
-          left: -10px;
-        }
-      }
-    }
-    .develop-header {
-      font-size: 4em;
-      width: 370px;
-      box-sizing: border-box;
-      padding-left: 130px;
-      color: #fff;
-      text-shadow: 0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000;
-      letter-spacing: 3px;
-      position: relative;
-      opacity: 0;
-
-      span {
-        position: absolute;
-        width: 45px;
-        height: 90px;
-        background: #fff;
-        border-radius: 0px 90px 90px 0;
-        border: 3px solid #000;
-        box-sizing: border-box;
-        padding-left: 63px;
-        display: block;
-        left: 51px;
-        top: -8px;
-
-        &:before {
-          content: '';
-          width: 15px;
-          height: 15px;
-          border-radius: 50px;
-          border: 2px solid #fff;
-          position: absolute;
-          bottom: 15px;
-          background: #000;
-          left: -10px;
-        }
-      }
-    }
-
-    &.animate {
-      opacity: 1;
-
-      .design-header,
-      .develop-header {
-        opacity: 1;
-        @include transition(opacity 0.2s 2.8s linear);
-      }
-
-      .design-header span:before {
-        @include transition(left .2s 8.8s linear, bottom 0.5s 11.5s linear);
-        left: -30px;
-        bottom: -10px;
-        @include animation(yy_revolve 2s 9s ease-in-out infinite reverse, yy_top_bot 4s 12s linear infinite alternate);
-      }
-      .develop-header span:before {
-        @include transition(left .2s 7.8s linear, bottom 0.5s 11.5s linear);
-        left: -30px;
-        bottom: -10px;
-        @include animation(yy_revolve 2s 8s ease-in-out infinite, yy_top_bot 4s 12s linear infinite alternate);
-      }
-    }
-
-    .yin-yang {
-      width: 90px;
-      height: 90px;
-      position: relative;
-      @include transition(all .5s .35s linear);
-      // @include transform(rotate(-180deg));
-
-      &:before {
-        content: '';
-        position: absolute;
-        width: 90px;
-        height: 90px;
-        border-radius: 90px;
-        background: url(/images/profile-128.jpg);
-        background-size: contain;
-        @include transform(rotate(180deg));
-        box-shadow: 0 0 0 3px #ccc;
-      }
-
-
-      .d1 { /* white side */
-        position: absolute;
-        width: 45px;
-        height: 90px;
-        background: #fff;
-        border-radius: 0px 90px 90px 0;
-        border: 3px solid #000;
-        box-sizing: border-box;
-        left: 0;
-        top: 0;
-        @include transition(all .5s linear);
-        @include transform(rotate(180deg));
-
-        &:before { /* Black dot, for later use */
-          content: '';
-          width: 15px;
-          height: 15px;
-          border-radius: 50px;
-          border: 0px solid #fff;
-          position: absolute;
-          bottom: 14px;
-          background: #000;
-          left: -6px;
-          @include transition(all .5s linear);
-        }
-      }
-
-      .d2 { /* Black side */
-        position: absolute;
-        width: 45px;
-        height: 90px;
-        background: #000;
-        border-radius: 0px 90px 90px 0;
-        border: 3px solid #000;
-        box-sizing: border-box;
-        left: 45px;
-        top: 0;
-        @include transition(all .5s linear);
-
-        &:before { /* Black dot, because I'm on top */
-          content: '';
-          width: 15px;
-          height: 15px;
-          border-radius: 50px;
-          border: 13px solid #fff;
-          position: absolute;
-          top: 1px;
-          background: #000;
-          left: -25px;
-          @include transition(all .5s linear);
-        }
-
-        &:after { /* White dot for my parent */
-          content: '';
-          width: 15px;
-          height: 15px;
-          border-radius: 50px;
-          border: 13px solid #000;
-          position: absolute;
-          bottom: 1px;
-          background: #fff;
-          left: -25px;
-          @include transition(all .5s linear);
-        }
-      }
-
-      &.split { /* .yin-yang */
-        @include transition(all .5s linear);
-        @include transform(rotate(180deg));
-        // @include transform(rotate(360deg));
-
-        .d1 {
-          opacity: 0;
-          position: absolute;
-          padding-left: 63px;
-          @include transition(all .5s .35s linear, padding-left .5s linear, opacity 0s 1s linear);
-          left: -120px;
-
-          &:before {
-            border-width: 2px;
-            width: 15px;
-            height: 15px;
-            left: -10px;
-            bottom: 15px;
-          }
-        }
-
-        .d2 {
-          opacity: 0;
-          position: absolute;
-          padding-left: 63px;
-          @include transition(all .5s .35s linear, padding-left .5s linear, opacity 0s 1s linear);
-          left: 310px;
-          @include transform(rotate(180deg));
-
-          &:before {
-            // opacity: 0;
-            @include transform(scaleX(0));
-          }
-
-          &:after {
-            border-width: 2px;
-            width: 15px;
-            height: 15px;
-            left: -10px;
-            bottom: 15px;
-          }
-        }
+        font-weight: 600;
+        font-size: 1.2em;
       }
     }
   }
-}
 
-@media (max-width: 830px) { /* 370 + 370 + 90 */
-  #solve .dd-header {
-    width: 120%;
-    @include transform(scale(0.8));
-    position: relative;
-    left: -10.5%;
-  }
-}
-@media (max-width: $dp-hides-width) {
-  #solve {
-    .dd-header {
-      margin-top: 0em;
-      width: 330%;
-      @include transform(scale(0.4));
-      position: relative;
-      left: -118%;
-      opacity: 1;
 
-      .design-header,
-      .develop-header {
-        opacity: 1;
-      }
-    }
-  }
 }
+@import "solve_animation";
 
-@include keyframes(yy_revolve) {
-  0% { left: -30px; z-index: 1; }
-
-  49% { z-index: 1; }
-  50% { left: 70px; z-index: -1; }
-
-  99% { z-index: -1; }
-  100% { left: -30px; z-index: 1; }
-}
-@include keyframes(yy_top_bot) {
-  0% { bottom: -10px; }
-  100% { bottom: 75px; }
-}

@@ -48,14 +48,14 @@ onResize()
 $(window).on('resize', onResize)
 
 
-$(window).on("load", function() {
+// $(window).on("load", function() {
   var hash = window.location.hash.substr(1)
   if (['about', 'work', 'connect'].indexOf(hash) > -1) {
     setTimeout(function(){ navigate(hash) }, 500)
   } else {
     navigate('home')
   }
-})
+// })
 
 $('[data-nav]').click(function(event) {
   navigate($(this).attr('data-nav'))
@@ -67,7 +67,7 @@ function set_desc() {
   var desc = [
     'I\’m a designer who loves to code.'
     , 'Geek. Gamer. Rookie artist. Weird thinker and a bathroom singer.'
-    , 'I\'m a passionate Designer with craving towards Art and inclination towards Programming.'
+    , 'I\'m a passionate Designer with craze towards Art and impulse towards Programming.'
   ]
   var selected = desc[Math.floor(Math.random() * desc.length)]
   $('#desc').html(selected + '<br/>An erratic perfectionist.')
@@ -152,7 +152,6 @@ function setAboutScroll() {
     play: $('#play').height() + $('#play').offset().top
   }
   $(window).on('scroll.about', function(e) {
-console.log($('.icon-holder').position().top)
     if (e.currentTarget.scrollY + 280 < submenu_offsets.explore) {
       page !== 'about' && $('.icon-container').attr('class', 'icon-container about')
       page = 'about'

@@ -521,10 +521,10 @@ a,
   border: 10px solid #444;
   left: -3px;
   top: -3px;
-  -webkit-animation: explore_zoom 8s -2s ease-in-out infinite;
-  -moz-animation: explore_zoom 8s -2s ease-in-out infinite;
-  -o-animation: explore_zoom 8s -2s ease-in-out infinite;
-  animation: explore_zoom 8s -2s ease-in-out infinite; }
+  -webkit-animation: explore_zoom 8s -1.5s ease-in-out infinite;
+  -moz-animation: explore_zoom 8s -1.5s ease-in-out infinite;
+  -o-animation: explore_zoom 8s -1.5s ease-in-out infinite;
+  animation: explore_zoom 8s -1.5s ease-in-out infinite; }
   .icon-container.about .icon-holder .dp-extras:before {
     content: ' ';
     width: 10px;
@@ -560,10 +560,19 @@ a,
     background: url(/images/profile-small.jpg);
     background-size: 100%;
     background-position: 50%;
-    -webkit-animation: explore_zoom_img 8s -2s ease-in-out infinite;
-    -moz-animation: explore_zoom_img 8s -2s ease-in-out infinite;
-    -o-animation: explore_zoom_img 8s -2s ease-in-out infinite;
-    animation: explore_zoom_img 8s -2s ease-in-out infinite; }
+    -webkit-animation: explore_zoom_img 8s -1.5s ease-in-out infinite;
+    -moz-animation: explore_zoom_img 8s -1.5s ease-in-out infinite;
+    -o-animation: explore_zoom_img 8s -1.5s ease-in-out infinite;
+    animation: explore_zoom_img 8s -1.5s ease-in-out infinite; }
+  .icon-container.about .icon-holder .dp-extras .div2 {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    left: 15px;
+    top: 12px;
+    border-radius: 100px;
+    box-shadow: -10px -3px 0 0 #fff;
+    opacity: 0.3; }
 
 #explore {
   min-height: 55em;
@@ -623,61 +632,81 @@ a,
     -o-transform: scale(1);
     -ms-transform: scale(1);
     -webkit-transform: scale(1);
-    transform: scale(1); }
+    transform: scale(1);
+    left: -3px;
+    top: -3px; }
   35% {
     -moz-transform: scale(1.3);
     -o-transform: scale(1.3);
     -ms-transform: scale(1.3);
     -webkit-transform: scale(1.3);
-    transform: scale(1.3); }
+    transform: scale(1.3);
+    left: -3px;
+    top: -3px; }
   40% {
     -moz-transform: scale(1.3);
     -o-transform: scale(1.3);
     -ms-transform: scale(1.3);
     -webkit-transform: scale(1.3);
-    transform: scale(1.3); }
+    transform: scale(1.3);
+    left: -3px;
+    top: -3px; }
   45% {
     -moz-transform: scale(1);
     -o-transform: scale(1);
     -ms-transform: scale(1);
     -webkit-transform: scale(1);
-    transform: scale(1); }
+    transform: scale(1);
+    left: -3px;
+    top: -3px; }
   65% {
     -moz-transform: scale(1);
     -o-transform: scale(1);
     -ms-transform: scale(1);
     -webkit-transform: scale(1);
-    transform: scale(1); }
+    transform: scale(1);
+    left: -3px;
+    top: -3px; }
   70% {
     -moz-transform: scale(1.4);
     -o-transform: scale(1.4);
     -ms-transform: scale(1.4);
     -webkit-transform: scale(1.4);
-    transform: scale(1.4); }
+    transform: scale(1.4);
+    left: 16px;
+    top: -10px; }
   72% {
     -moz-transform: scale(1.4);
     -o-transform: scale(1.4);
     -ms-transform: scale(1.4);
     -webkit-transform: scale(1.4);
-    transform: scale(1.4); }
+    transform: scale(1.4);
+    left: 16px;
+    top: -10px; }
   75% {
     -moz-transform: scale(1.7);
     -o-transform: scale(1.7);
     -ms-transform: scale(1.7);
     -webkit-transform: scale(1.7);
-    transform: scale(1.7); }
+    transform: scale(1.7);
+    left: -18px;
+    top: -13px; }
   90% {
     -moz-transform: scale(1.7);
     -o-transform: scale(1.7);
     -ms-transform: scale(1.7);
     -webkit-transform: scale(1.7);
-    transform: scale(1.7); }
+    transform: scale(1.7);
+    left: -18px;
+    top: -13px; }
   100% {
     -moz-transform: scale(1);
     -o-transform: scale(1);
     -ms-transform: scale(1);
     -webkit-transform: scale(1);
-    transform: scale(1); } }
+    transform: scale(1);
+    left: -3px;
+    top: -3px; } }
 
 @-moz-keyframes explore_zoom {
   30% {
@@ -685,61 +714,81 @@ a,
     -o-transform: scale(1);
     -ms-transform: scale(1);
     -webkit-transform: scale(1);
-    transform: scale(1); }
+    transform: scale(1);
+    left: -3px;
+    top: -3px; }
   35% {
     -moz-transform: scale(1.3);
     -o-transform: scale(1.3);
     -ms-transform: scale(1.3);
     -webkit-transform: scale(1.3);
-    transform: scale(1.3); }
+    transform: scale(1.3);
+    left: -3px;
+    top: -3px; }
   40% {
     -moz-transform: scale(1.3);
     -o-transform: scale(1.3);
     -ms-transform: scale(1.3);
     -webkit-transform: scale(1.3);
-    transform: scale(1.3); }
+    transform: scale(1.3);
+    left: -3px;
+    top: -3px; }
   45% {
     -moz-transform: scale(1);
     -o-transform: scale(1);
     -ms-transform: scale(1);
     -webkit-transform: scale(1);
-    transform: scale(1); }
+    transform: scale(1);
+    left: -3px;
+    top: -3px; }
   65% {
     -moz-transform: scale(1);
     -o-transform: scale(1);
     -ms-transform: scale(1);
     -webkit-transform: scale(1);
-    transform: scale(1); }
+    transform: scale(1);
+    left: -3px;
+    top: -3px; }
   70% {
     -moz-transform: scale(1.4);
     -o-transform: scale(1.4);
     -ms-transform: scale(1.4);
     -webkit-transform: scale(1.4);
-    transform: scale(1.4); }
+    transform: scale(1.4);
+    left: 16px;
+    top: -10px; }
   72% {
     -moz-transform: scale(1.4);
     -o-transform: scale(1.4);
     -ms-transform: scale(1.4);
     -webkit-transform: scale(1.4);
-    transform: scale(1.4); }
+    transform: scale(1.4);
+    left: 16px;
+    top: -10px; }
   75% {
     -moz-transform: scale(1.7);
     -o-transform: scale(1.7);
     -ms-transform: scale(1.7);
     -webkit-transform: scale(1.7);
-    transform: scale(1.7); }
+    transform: scale(1.7);
+    left: -18px;
+    top: -13px; }
   90% {
     -moz-transform: scale(1.7);
     -o-transform: scale(1.7);
     -ms-transform: scale(1.7);
     -webkit-transform: scale(1.7);
-    transform: scale(1.7); }
+    transform: scale(1.7);
+    left: -18px;
+    top: -13px; }
   100% {
     -moz-transform: scale(1);
     -o-transform: scale(1);
     -ms-transform: scale(1);
     -webkit-transform: scale(1);
-    transform: scale(1); } }
+    transform: scale(1);
+    left: -3px;
+    top: -3px; } }
 
 @-o-keyframes explore_zoom {
   30% {
@@ -747,61 +796,81 @@ a,
     -o-transform: scale(1);
     -ms-transform: scale(1);
     -webkit-transform: scale(1);
-    transform: scale(1); }
+    transform: scale(1);
+    left: -3px;
+    top: -3px; }
   35% {
     -moz-transform: scale(1.3);
     -o-transform: scale(1.3);
     -ms-transform: scale(1.3);
     -webkit-transform: scale(1.3);
-    transform: scale(1.3); }
+    transform: scale(1.3);
+    left: -3px;
+    top: -3px; }
   40% {
     -moz-transform: scale(1.3);
     -o-transform: scale(1.3);
     -ms-transform: scale(1.3);
     -webkit-transform: scale(1.3);
-    transform: scale(1.3); }
+    transform: scale(1.3);
+    left: -3px;
+    top: -3px; }
   45% {
     -moz-transform: scale(1);
     -o-transform: scale(1);
     -ms-transform: scale(1);
     -webkit-transform: scale(1);
-    transform: scale(1); }
+    transform: scale(1);
+    left: -3px;
+    top: -3px; }
   65% {
     -moz-transform: scale(1);
     -o-transform: scale(1);
     -ms-transform: scale(1);
     -webkit-transform: scale(1);
-    transform: scale(1); }
+    transform: scale(1);
+    left: -3px;
+    top: -3px; }
   70% {
     -moz-transform: scale(1.4);
     -o-transform: scale(1.4);
     -ms-transform: scale(1.4);
     -webkit-transform: scale(1.4);
-    transform: scale(1.4); }
+    transform: scale(1.4);
+    left: 16px;
+    top: -10px; }
   72% {
     -moz-transform: scale(1.4);
     -o-transform: scale(1.4);
     -ms-transform: scale(1.4);
     -webkit-transform: scale(1.4);
-    transform: scale(1.4); }
+    transform: scale(1.4);
+    left: 16px;
+    top: -10px; }
   75% {
     -moz-transform: scale(1.7);
     -o-transform: scale(1.7);
     -ms-transform: scale(1.7);
     -webkit-transform: scale(1.7);
-    transform: scale(1.7); }
+    transform: scale(1.7);
+    left: -18px;
+    top: -13px; }
   90% {
     -moz-transform: scale(1.7);
     -o-transform: scale(1.7);
     -ms-transform: scale(1.7);
     -webkit-transform: scale(1.7);
-    transform: scale(1.7); }
+    transform: scale(1.7);
+    left: -18px;
+    top: -13px; }
   100% {
     -moz-transform: scale(1);
     -o-transform: scale(1);
     -ms-transform: scale(1);
     -webkit-transform: scale(1);
-    transform: scale(1); } }
+    transform: scale(1);
+    left: -3px;
+    top: -3px; } }
 
 @keyframes explore_zoom {
   30% {
@@ -809,61 +878,81 @@ a,
     -o-transform: scale(1);
     -ms-transform: scale(1);
     -webkit-transform: scale(1);
-    transform: scale(1); }
+    transform: scale(1);
+    left: -3px;
+    top: -3px; }
   35% {
     -moz-transform: scale(1.3);
     -o-transform: scale(1.3);
     -ms-transform: scale(1.3);
     -webkit-transform: scale(1.3);
-    transform: scale(1.3); }
+    transform: scale(1.3);
+    left: -3px;
+    top: -3px; }
   40% {
     -moz-transform: scale(1.3);
     -o-transform: scale(1.3);
     -ms-transform: scale(1.3);
     -webkit-transform: scale(1.3);
-    transform: scale(1.3); }
+    transform: scale(1.3);
+    left: -3px;
+    top: -3px; }
   45% {
     -moz-transform: scale(1);
     -o-transform: scale(1);
     -ms-transform: scale(1);
     -webkit-transform: scale(1);
-    transform: scale(1); }
+    transform: scale(1);
+    left: -3px;
+    top: -3px; }
   65% {
     -moz-transform: scale(1);
     -o-transform: scale(1);
     -ms-transform: scale(1);
     -webkit-transform: scale(1);
-    transform: scale(1); }
+    transform: scale(1);
+    left: -3px;
+    top: -3px; }
   70% {
     -moz-transform: scale(1.4);
     -o-transform: scale(1.4);
     -ms-transform: scale(1.4);
     -webkit-transform: scale(1.4);
-    transform: scale(1.4); }
+    transform: scale(1.4);
+    left: 16px;
+    top: -10px; }
   72% {
     -moz-transform: scale(1.4);
     -o-transform: scale(1.4);
     -ms-transform: scale(1.4);
     -webkit-transform: scale(1.4);
-    transform: scale(1.4); }
+    transform: scale(1.4);
+    left: 16px;
+    top: -10px; }
   75% {
     -moz-transform: scale(1.7);
     -o-transform: scale(1.7);
     -ms-transform: scale(1.7);
     -webkit-transform: scale(1.7);
-    transform: scale(1.7); }
+    transform: scale(1.7);
+    left: -18px;
+    top: -13px; }
   90% {
     -moz-transform: scale(1.7);
     -o-transform: scale(1.7);
     -ms-transform: scale(1.7);
     -webkit-transform: scale(1.7);
-    transform: scale(1.7); }
+    transform: scale(1.7);
+    left: -18px;
+    top: -13px; }
   100% {
     -moz-transform: scale(1);
     -o-transform: scale(1);
     -ms-transform: scale(1);
     -webkit-transform: scale(1);
-    transform: scale(1); } }
+    transform: scale(1);
+    left: -3px;
+    top: -3px; } }
 
 @-webkit-keyframes explore_zoom_img {
   30% {
@@ -1008,10 +1097,10 @@ a,
     position: absolute;
     left: 100px;
     top: -10px;
-    -webkit-animation: paint_brush 3s -0.6s linear infinite;
-    -moz-animation: paint_brush 3s -0.6s linear infinite;
-    -o-animation: paint_brush 3s -0.6s linear infinite;
-    animation: paint_brush 3s -0.6s linear infinite; }
+    -webkit-animation: paint_brush 3s -0.6s linear infinite alternate;
+    -moz-animation: paint_brush 3s -0.6s linear infinite alternate;
+    -o-animation: paint_brush 3s -0.6s linear infinite alternate;
+    animation: paint_brush 3s -0.6s linear infinite alternate; }
 
 #express {
   min-height: 60em; }
@@ -1145,20 +1234,14 @@ a,
     left: 100px;
     top: -10px; }
   46% {
-    left: 60px;
-    top: -70px; }
-  48% {
     left: 40px;
     top: -60px; }
   50% {
     left: 60px;
     top: -50px; }
-  52% {
+  54% {
     left: 40px;
     top: -40px; }
-  54% {
-    left: 60px;
-    top: -30px; }
   62% {
     left: 100px;
     top: -10px; }
@@ -1174,20 +1257,14 @@ a,
     left: 100px;
     top: -10px; }
   46% {
-    left: 60px;
-    top: -70px; }
-  48% {
     left: 40px;
     top: -60px; }
   50% {
     left: 60px;
     top: -50px; }
-  52% {
+  54% {
     left: 40px;
     top: -40px; }
-  54% {
-    left: 60px;
-    top: -30px; }
   62% {
     left: 100px;
     top: -10px; }
@@ -1203,20 +1280,14 @@ a,
     left: 100px;
     top: -10px; }
   46% {
-    left: 60px;
-    top: -70px; }
-  48% {
     left: 40px;
     top: -60px; }
   50% {
     left: 60px;
     top: -50px; }
-  52% {
+  54% {
     left: 40px;
     top: -40px; }
-  54% {
-    left: 60px;
-    top: -30px; }
   62% {
     left: 100px;
     top: -10px; }
@@ -1232,20 +1303,14 @@ a,
     left: 100px;
     top: -10px; }
   46% {
-    left: 60px;
-    top: -70px; }
-  48% {
     left: 40px;
     top: -60px; }
   50% {
     left: 60px;
     top: -50px; }
-  52% {
+  54% {
     left: 40px;
     top: -40px; }
-  54% {
-    left: 60px;
-    top: -30px; }
   62% {
     left: 100px;
     top: -10px; }
@@ -1269,289 +1334,324 @@ a,
 
 #solve {
   min-height: 800px; }
-  #solve .dd-header {
-    height: 90px;
-    margin-top: 2em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    -moz-transition: opacity 0.5s 0.5s linear;
-    -o-transition: opacity 0.5s 0.5s linear;
-    -webkit-transition: opacity 0.5s 0.5s linear;
-    transition: opacity 0.5s 0.5s linear;
+  #solve .sub-navigation .active {
+    text-shadow: 0 0 20px #fff,0 0 20px #fff,0 0 20px #fff,0 0 20px #fff,0 0 20px #fff,0 0 20px #fff,0 0 20px #fff,0 0 20px #fff,0 0 20px #fff,0 0 20px #fff,0 0 20px #fff,0 0 20px #fff,0 0 20px #fff,0 0 20px #fff,0 0 20px #fff,0 0 20px #fff,0 0 20px #fff,0 0 20px #fff,0 0 20px #fff; }
+  #solve .bg:before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: calc(100% - 4px);
+    border: 2px solid #000;
+    background: #fff;
+    z-index: -2; }
+  #solve .bg:after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 50%;
+    background: #333;
+    z-index: -2; }
+  #solve .bg2 {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    top: 0;
+    z-index: -1;
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg); }
+    #solve .bg2:after {
+      background: #000; }
+  #solve .double-text-container-holder {
+    margin-top: 7em;
+    font-size: 1.3em;
+    line-height: 1.5em; }
+    #solve .double-text-container-holder .text-container {
+      width: 50%;
+      padding: 3em;
+      box-sizing: border-box;
+      float: left; }
+      #solve .double-text-container-holder .text-container.second {
+        color: #fff; }
+      #solve .double-text-container-holder .text-container span {
+        font-weight: 600;
+        font-size: 1.2em; }
+
+#solve .dd-header {
+  height: 90px;
+  margin-top: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-transition: opacity 0.5s 0.5s linear;
+  -o-transition: opacity 0.5s 0.5s linear;
+  -webkit-transition: opacity 0.5s 0.5s linear;
+  transition: opacity 0.5s 0.5s linear;
+  opacity: 0; }
+  #solve .dd-header .design-header,
+  #solve .dd-header .develop-header {
+    font-size: 4em;
+    font-weight: 600;
+    letter-spacing: 4px;
+    width: 370px;
+    box-sizing: border-box;
+    position: relative;
     opacity: 0; }
-    #solve .dd-header .design-header {
-      font-size: 4em;
-      font-weight: 600;
-      width: 370px;
+    #solve .dd-header .design-header span,
+    #solve .dd-header .develop-header span {
+      position: absolute;
+      width: 45px;
+      height: 90px;
+      border-radius: 0px 90px 90px 0;
       box-sizing: border-box;
-      padding-left: 160px;
-      position: relative;
-      opacity: 0; }
-      #solve .dd-header .design-header span {
+      padding-left: 63px;
+      display: block;
+      top: -8px; }
+      #solve .dd-header .design-header span:before,
+      #solve .dd-header .develop-header span:before {
+        content: '';
+        width: 15px;
+        height: 15px;
+        border-radius: 50px;
         position: absolute;
-        width: 45px;
-        height: 90px;
-        background: #000;
-        border-radius: 0px 90px 90px 0;
-        border: 3px solid #000;
-        box-sizing: border-box;
-        padding-left: 63px;
-        display: block;
-        left: 81px;
-        top: -8px; }
-        #solve .dd-header .design-header span:before {
-          content: '';
-          width: 15px;
-          height: 15px;
-          border-radius: 50px;
-          border: 2px solid #000;
-          position: absolute;
-          bottom: 15px;
-          background: #fff;
-          left: -10px; }
-    #solve .dd-header .develop-header {
-      font-size: 4em;
-      width: 370px;
-      box-sizing: border-box;
-      padding-left: 130px;
-      color: #fff;
-      text-shadow: 0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000;
-      letter-spacing: 3px;
-      position: relative;
-      opacity: 0; }
-      #solve .dd-header .develop-header span {
-        position: absolute;
-        width: 45px;
-        height: 90px;
-        background: #fff;
-        border-radius: 0px 90px 90px 0;
-        border: 3px solid #000;
-        box-sizing: border-box;
-        padding-left: 63px;
-        display: block;
-        left: 51px;
-        top: -8px; }
-        #solve .dd-header .develop-header span:before {
-          content: '';
-          width: 15px;
-          height: 15px;
-          border-radius: 50px;
-          border: 2px solid #fff;
-          position: absolute;
-          bottom: 15px;
-          background: #000;
-          left: -10px; }
-    #solve .dd-header.animate {
-      opacity: 1; }
-      #solve .dd-header.animate .design-header,
-      #solve .dd-header.animate .develop-header {
-        opacity: 1;
-        -moz-transition: opacity 0.2s 2.8s linear;
-        -o-transition: opacity 0.2s 2.8s linear;
-        -webkit-transition: opacity 0.2s 2.8s linear;
-        transition: opacity 0.2s 2.8s linear; }
-      #solve .dd-header.animate .design-header span:before {
-        -moz-transition: left 0.2s 8.8s linear, bottom 0.5s 11.5s linear;
-        -o-transition: left 0.2s 8.8s linear, bottom 0.5s 11.5s linear;
-        -webkit-transition: left 0.2s 8.8s linear, bottom 0.5s 11.5s linear;
-        transition: left 0.2s 8.8s linear, bottom 0.5s 11.5s linear;
-        left: -30px;
-        bottom: -10px;
-        -webkit-animation: yy_revolve 2s 9s ease-in-out infinite reverse, yy_top_bot 4s 12s linear infinite alternate;
-        -moz-animation: yy_revolve 2s 9s ease-in-out infinite reverse, yy_top_bot 4s 12s linear infinite alternate;
-        -o-animation: yy_revolve 2s 9s ease-in-out infinite reverse, yy_top_bot 4s 12s linear infinite alternate;
-        animation: yy_revolve 2s 9s ease-in-out infinite reverse, yy_top_bot 4s 12s linear infinite alternate; }
-      #solve .dd-header.animate .develop-header span:before {
-        -moz-transition: left 0.2s 7.8s linear, bottom 0.5s 11.5s linear;
-        -o-transition: left 0.2s 7.8s linear, bottom 0.5s 11.5s linear;
-        -webkit-transition: left 0.2s 7.8s linear, bottom 0.5s 11.5s linear;
-        transition: left 0.2s 7.8s linear, bottom 0.5s 11.5s linear;
-        left: -30px;
-        bottom: -10px;
-        -webkit-animation: yy_revolve 2s 8s ease-in-out infinite, yy_top_bot 4s 12s linear infinite alternate;
-        -moz-animation: yy_revolve 2s 8s ease-in-out infinite, yy_top_bot 4s 12s linear infinite alternate;
-        -o-animation: yy_revolve 2s 8s ease-in-out infinite, yy_top_bot 4s 12s linear infinite alternate;
-        animation: yy_revolve 2s 8s ease-in-out infinite, yy_top_bot 4s 12s linear infinite alternate; }
-    #solve .dd-header .yin-yang {
+        bottom: 15px;
+        left: -10px; }
+  #solve .dd-header .design-header {
+    color: #000;
+    padding-left: 160px;
+    text-shadow: 0 0 5px #fff,0 0 5px #fff,0 0 5px #fff,0 0 5px #fff,0 0 5px #fff,0 0 5px #fff,0 0 5px #fff,0 0 5px #fff,0 0 5px #fff,0 0 5px #fff,0 0 5px #fff,0 0 5px #fff,0 0 5px #fff,0 0 5px #fff,0 0 5px #fff,0 0 5px #fff,0 0 5px #fff,0 0 5px #fff,0 0 5px #fff; }
+    #solve .dd-header .design-header span {
+      border: 3px solid #fff;
+      background: #000;
+      left: 81px; }
+      #solve .dd-header .design-header span:before {
+        border: 2px solid #000;
+        background: #fff; }
+  #solve .dd-header .develop-header {
+    color: #fff;
+    padding-left: 130px;
+    text-shadow: 0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000,0 0 5px #000; }
+    #solve .dd-header .develop-header span {
+      border: 3px solid #000;
+      background: #fff;
+      left: 51px; }
+      #solve .dd-header .develop-header span:before {
+        border: 2px solid #fff;
+        background: #000; }
+  #solve .dd-header.animate {
+    opacity: 1; }
+    #solve .dd-header.animate .design-header,
+    #solve .dd-header.animate .develop-header {
+      opacity: 1;
+      -moz-transition: opacity 0.2s 2.8s linear;
+      -o-transition: opacity 0.2s 2.8s linear;
+      -webkit-transition: opacity 0.2s 2.8s linear;
+      transition: opacity 0.2s 2.8s linear; }
+    #solve .dd-header.animate .design-header span:before {
+      -moz-transition: left 0.2s 8.8s linear, bottom 0.5s 11.5s linear;
+      -o-transition: left 0.2s 8.8s linear, bottom 0.5s 11.5s linear;
+      -webkit-transition: left 0.2s 8.8s linear, bottom 0.5s 11.5s linear;
+      transition: left 0.2s 8.8s linear, bottom 0.5s 11.5s linear;
+      left: -30px;
+      bottom: -10px;
+      -webkit-animation: yy_revolve 2s 9s ease-in-out infinite reverse, yy_top_bot 4s 12s linear infinite alternate;
+      -moz-animation: yy_revolve 2s 9s ease-in-out infinite reverse, yy_top_bot 4s 12s linear infinite alternate;
+      -o-animation: yy_revolve 2s 9s ease-in-out infinite reverse, yy_top_bot 4s 12s linear infinite alternate;
+      animation: yy_revolve 2s 9s ease-in-out infinite reverse, yy_top_bot 4s 12s linear infinite alternate; }
+    #solve .dd-header.animate .develop-header span:before {
+      -moz-transition: left 0.2s 7.8s linear, bottom 0.5s 11.5s linear;
+      -o-transition: left 0.2s 7.8s linear, bottom 0.5s 11.5s linear;
+      -webkit-transition: left 0.2s 7.8s linear, bottom 0.5s 11.5s linear;
+      transition: left 0.2s 7.8s linear, bottom 0.5s 11.5s linear;
+      left: -30px;
+      bottom: -10px;
+      -webkit-animation: yy_revolve 2s 8s ease-in-out infinite, yy_top_bot 4s 12s linear infinite alternate;
+      -moz-animation: yy_revolve 2s 8s ease-in-out infinite, yy_top_bot 4s 12s linear infinite alternate;
+      -o-animation: yy_revolve 2s 8s ease-in-out infinite, yy_top_bot 4s 12s linear infinite alternate;
+      animation: yy_revolve 2s 8s ease-in-out infinite, yy_top_bot 4s 12s linear infinite alternate; }
+  #solve .dd-header .yin-yang {
+    width: 90px;
+    height: 90px;
+    position: relative;
+    -moz-transition: all 0.5s 0.35s linear;
+    -o-transition: all 0.5s 0.35s linear;
+    -webkit-transition: all 0.5s 0.35s linear;
+    transition: all 0.5s 0.35s linear; }
+    #solve .dd-header .yin-yang:before {
+      content: '';
+      position: absolute;
       width: 90px;
       height: 90px;
-      position: relative;
-      -moz-transition: all 0.5s 0.35s linear;
-      -o-transition: all 0.5s 0.35s linear;
-      -webkit-transition: all 0.5s 0.35s linear;
-      transition: all 0.5s 0.35s linear; }
-      #solve .dd-header .yin-yang:before {
+      border-radius: 90px;
+      background: url(/images/profile-128.jpg);
+      background-size: contain;
+      -moz-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+      box-shadow: 0 0 0 3px #ccc; }
+    #solve .dd-header .yin-yang .d1 {
+      /* white side */
+      position: absolute;
+      width: 45px;
+      height: 90px;
+      background: #fff;
+      border-radius: 0px 90px 90px 0;
+      border: 3px solid #000;
+      box-sizing: border-box;
+      left: 0;
+      top: 0;
+      -moz-transition: all 0.5s linear, padding-left 0.5s 0.25s linear;
+      -o-transition: all 0.5s linear, padding-left 0.5s 0.25s linear;
+      -webkit-transition: all 0.5s linear, padding-left 0.5s 0.25s linear;
+      transition: all 0.5s linear, padding-left 0.5s 0.25s linear;
+      -moz-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg); }
+      #solve .dd-header .yin-yang .d1:before {
+        /* Black dot, for later use */
         content: '';
+        width: 15px;
+        height: 15px;
+        border-radius: 50px;
+        border: 0px solid #fff;
         position: absolute;
-        width: 90px;
-        height: 90px;
-        border-radius: 90px;
-        background: url(/images/profile-128.jpg);
-        background-size: contain;
-        -moz-transform: rotate(180deg);
-        -o-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
-        -webkit-transform: rotate(180deg);
-        transform: rotate(180deg);
-        box-shadow: 0 0 0 3px #ccc; }
-      #solve .dd-header .yin-yang .d1 {
-        /* white side */
-        position: absolute;
-        width: 45px;
-        height: 90px;
-        background: #fff;
-        border-radius: 0px 90px 90px 0;
-        border: 3px solid #000;
-        box-sizing: border-box;
-        left: 0;
-        top: 0;
-        -moz-transition: all 0.5s linear;
-        -o-transition: all 0.5s linear;
-        -webkit-transition: all 0.5s linear;
-        transition: all 0.5s linear;
-        -moz-transform: rotate(180deg);
-        -o-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
-        -webkit-transform: rotate(180deg);
-        transform: rotate(180deg); }
-        #solve .dd-header .yin-yang .d1:before {
-          /* Black dot, for later use */
-          content: '';
-          width: 15px;
-          height: 15px;
-          border-radius: 50px;
-          border: 0px solid #fff;
-          position: absolute;
-          bottom: 14px;
-          background: #000;
-          left: -6px;
-          -moz-transition: all 0.5s linear;
-          -o-transition: all 0.5s linear;
-          -webkit-transition: all 0.5s linear;
-          transition: all 0.5s linear; }
-      #solve .dd-header .yin-yang .d2 {
-        /* Black side */
-        position: absolute;
-        width: 45px;
-        height: 90px;
+        bottom: 14px;
         background: #000;
-        border-radius: 0px 90px 90px 0;
-        border: 3px solid #000;
-        box-sizing: border-box;
-        left: 45px;
-        top: 0;
+        left: -6px;
         -moz-transition: all 0.5s linear;
         -o-transition: all 0.5s linear;
         -webkit-transition: all 0.5s linear;
         transition: all 0.5s linear; }
-        #solve .dd-header .yin-yang .d2:before {
-          /* Black dot, because I'm on top */
-          content: '';
-          width: 15px;
-          height: 15px;
-          border-radius: 50px;
-          border: 13px solid #fff;
-          position: absolute;
-          top: 1px;
-          background: #000;
-          left: -25px;
-          -moz-transition: all 0.5s linear;
-          -o-transition: all 0.5s linear;
-          -webkit-transition: all 0.5s linear;
-          transition: all 0.5s linear; }
-        #solve .dd-header .yin-yang .d2:after {
-          /* White dot for my parent */
-          content: '';
-          width: 15px;
-          height: 15px;
-          border-radius: 50px;
-          border: 13px solid #000;
-          position: absolute;
-          bottom: 1px;
-          background: #fff;
-          left: -25px;
-          -moz-transition: all 0.5s linear;
-          -o-transition: all 0.5s linear;
-          -webkit-transition: all 0.5s linear;
-          transition: all 0.5s linear; }
-      #solve .dd-header .yin-yang.split {
-        /* .yin-yang */
+    #solve .dd-header .yin-yang .d2 {
+      /* Black side */
+      position: absolute;
+      width: 45px;
+      height: 90px;
+      background: #000;
+      border-radius: 0px 90px 90px 0;
+      border: 3px solid #fff;
+      box-sizing: border-box;
+      left: 45px;
+      top: 0;
+      -moz-transition: all 0.5s linear, padding-left 0.5s 0.25s linear;
+      -o-transition: all 0.5s linear, padding-left 0.5s 0.25s linear;
+      -webkit-transition: all 0.5s linear, padding-left 0.5s 0.25s linear;
+      transition: all 0.5s linear, padding-left 0.5s 0.25s linear; }
+      #solve .dd-header .yin-yang .d2:before {
+        /* Black dot, because I'm on top */
+        content: '';
+        width: 15px;
+        height: 15px;
+        border-radius: 50px;
+        border: 13px solid #fff;
+        position: absolute;
+        top: 1px;
+        background: #000;
+        left: -25px;
         -moz-transition: all 0.5s linear;
         -o-transition: all 0.5s linear;
         -webkit-transition: all 0.5s linear;
-        transition: all 0.5s linear;
+        transition: all 0.5s linear; }
+      #solve .dd-header .yin-yang .d2:after {
+        /* White dot for my parent */
+        content: '';
+        width: 15px;
+        height: 15px;
+        border-radius: 50px;
+        border: 13px solid #000;
+        position: absolute;
+        bottom: 1px;
+        background: #fff;
+        left: -25px;
+        -moz-transition: all 0.5s linear;
+        -o-transition: all 0.5s linear;
+        -webkit-transition: all 0.5s linear;
+        transition: all 0.5s linear; }
+    #solve .dd-header .yin-yang.split {
+      /* .yin-yang */
+      -moz-transition: all 0.5s linear;
+      -o-transition: all 0.5s linear;
+      -webkit-transition: all 0.5s linear;
+      transition: all 0.5s linear;
+      -moz-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg); }
+      #solve .dd-header .yin-yang.split .d1 {
+        opacity: 0;
+        position: absolute;
+        padding-left: 63px;
+        -moz-transition: all 0.5s 0.35s linear, padding-left 0.5s linear, opacity 0s 1s linear;
+        -o-transition: all 0.5s 0.35s linear, padding-left 0.5s linear, opacity 0s 1s linear;
+        -webkit-transition: all 0.5s 0.35s linear, padding-left 0.5s linear, opacity 0s 1s linear;
+        transition: all 0.5s 0.35s linear, padding-left 0.5s linear, opacity 0s 1s linear;
+        left: -120px; }
+        #solve .dd-header .yin-yang.split .d1:before {
+          border-width: 2px;
+          width: 15px;
+          height: 15px;
+          left: -10px;
+          bottom: 15px; }
+      #solve .dd-header .yin-yang.split .d2 {
+        opacity: 0;
+        position: absolute;
+        padding-left: 63px;
+        -moz-transition: all 0.5s 0.35s linear, padding-left 0.5s linear, opacity 0s 1s linear;
+        -o-transition: all 0.5s 0.35s linear, padding-left 0.5s linear, opacity 0s 1s linear;
+        -webkit-transition: all 0.5s 0.35s linear, padding-left 0.5s linear, opacity 0s 1s linear;
+        transition: all 0.5s 0.35s linear, padding-left 0.5s linear, opacity 0s 1s linear;
+        left: 310px;
         -moz-transform: rotate(180deg);
         -o-transform: rotate(180deg);
         -ms-transform: rotate(180deg);
         -webkit-transform: rotate(180deg);
         transform: rotate(180deg); }
-        #solve .dd-header .yin-yang.split .d1 {
-          opacity: 0;
-          position: absolute;
-          padding-left: 63px;
-          -moz-transition: all 0.5s 0.35s linear, padding-left 0.5s linear, opacity 0s 1s linear;
-          -o-transition: all 0.5s 0.35s linear, padding-left 0.5s linear, opacity 0s 1s linear;
-          -webkit-transition: all 0.5s 0.35s linear, padding-left 0.5s linear, opacity 0s 1s linear;
-          transition: all 0.5s 0.35s linear, padding-left 0.5s linear, opacity 0s 1s linear;
-          left: -120px; }
-          #solve .dd-header .yin-yang.split .d1:before {
-            border-width: 2px;
-            width: 15px;
-            height: 15px;
-            left: -10px;
-            bottom: 15px; }
-        #solve .dd-header .yin-yang.split .d2 {
-          opacity: 0;
-          position: absolute;
-          padding-left: 63px;
-          -moz-transition: all 0.5s 0.35s linear, padding-left 0.5s linear, opacity 0s 1s linear;
-          -o-transition: all 0.5s 0.35s linear, padding-left 0.5s linear, opacity 0s 1s linear;
-          -webkit-transition: all 0.5s 0.35s linear, padding-left 0.5s linear, opacity 0s 1s linear;
-          transition: all 0.5s 0.35s linear, padding-left 0.5s linear, opacity 0s 1s linear;
-          left: 310px;
-          -moz-transform: rotate(180deg);
-          -o-transform: rotate(180deg);
-          -ms-transform: rotate(180deg);
-          -webkit-transform: rotate(180deg);
-          transform: rotate(180deg); }
-          #solve .dd-header .yin-yang.split .d2:before {
-            -moz-transform: scaleX(0);
-            -o-transform: scaleX(0);
-            -ms-transform: scaleX(0);
-            -webkit-transform: scaleX(0);
-            transform: scaleX(0); }
-          #solve .dd-header .yin-yang.split .d2:after {
-            border-width: 2px;
-            width: 15px;
-            height: 15px;
-            left: -10px;
-            bottom: 15px; }
+        #solve .dd-header .yin-yang.split .d2:before {
+          -moz-transform: scaleX(0);
+          -o-transform: scaleX(0);
+          -ms-transform: scaleX(0);
+          -webkit-transform: scaleX(0);
+          transform: scaleX(0); }
+        #solve .dd-header .yin-yang.split .d2:after {
+          border-width: 2px;
+          width: 15px;
+          height: 15px;
+          left: -10px;
+          bottom: 15px; }
 
 @media (max-width: 830px) {
   /* 370 + 370 + 90 */
   #solve .dd-header {
     width: 120%;
+    position: relative;
+    left: -10.5%;
     -moz-transform: scale(0.8);
     -o-transform: scale(0.8);
     -ms-transform: scale(0.8);
     -webkit-transform: scale(0.8);
-    transform: scale(0.8);
-    position: relative;
-    left: -10.5%; } }
+    transform: scale(0.8); } }
 
 @media (max-width: 720px) {
   #solve .dd-header {
     margin-top: 0em;
     width: 330%;
+    position: relative;
+    left: -118%;
+    opacity: 1;
     -moz-transform: scale(0.4);
     -o-transform: scale(0.4);
     -ms-transform: scale(0.4);
     -webkit-transform: scale(0.4);
-    transform: scale(0.4);
-    position: relative;
-    left: -118%;
-    opacity: 1; }
+    transform: scale(0.4); }
     #solve .dd-header .design-header,
     #solve .dd-header .develop-header {
       opacity: 1; } }
