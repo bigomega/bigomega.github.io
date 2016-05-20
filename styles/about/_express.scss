@@ -15,7 +15,7 @@
     position: absolute;
     left: 100px;
     top: -10px;
-    @include animation(paint_brush 3s -0.8s linear infinite);
+    @include animation(paint_brush 3s -0.6s linear infinite);
   }
 }
 #express {

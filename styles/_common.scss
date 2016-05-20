@@ -29,7 +29,7 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=0); // IE9 and down
 }
 
-@mixin transform($transforms) {
+@mixin transform($transforms...) {
      -moz-transform: $transforms;
        -o-transform: $transforms;
       -ms-transform: $transforms;
@@ -37,12 +37,19 @@
           transform: $transforms;
 }
 
-@mixin transform-origin ($origin) {
+@mixin transform-origin($origin) {
     moz-transform-origin: $origin;
        -o-transform-origin: $origin;
       -ms-transform-origin: $origin;
   -webkit-transform-origin: $origin;
           transform-origin: $origin;
+}
+
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
 }
 
 // CSS Start
@@ -60,7 +67,7 @@ a,
   cursor: pointer;
   color: #333;
   text-decoration: underline;
-  // transition: 0.125s linear all;
+  // @include transition(0.125s linear all);
 
   &:hover {
     color: $primary;
@@ -107,7 +114,7 @@ a,
     max-width: 100%;
     margin-left: auto;
     padding-right: 40px;
-    transition: 0.35s ease-out all;
+    @include transition(0.35s ease-out all);
   }
 
   li {
@@ -134,14 +141,14 @@ a,
   left: 0;
   width: 100%;
   z-index: 2;
-  transition: 0.5s ease-out all;
+  @include transition(0.5s ease-out all);
 
   .icon-holder{
     position: absolute;
     top: 0;
     left: calc(50% - 48px);
     opacity: 1;
-    transition: 0.5s ease-out all;
+    @include transition(0.5s ease-out all);
 
     .dp-icon {
       display: inline-block;
@@ -150,7 +157,7 @@ a,
       overflow: hidden;
       border-radius: 50%;
       border: 3px solid #ccc;
-      transition: 200ms linear all;
+      @include transition(200ms linear all);
       &:hover {
         border-color: $primary;
         box-shadow: 0px 0px 20px 2px $primary;
@@ -162,7 +169,64 @@ a,
       top: 0;
       left: 0;
       opacity: 0;
-      transition: all 0.5s linear;
+      @include transition(all 0.5s linear);
+    }
+  }
+
+  &.start {
+    .icon-holder {
+      top: 8em;
+      left: calc(50% - 60px);
+
+      .dp-icon {
+        width: 120px;
+        height: 120px;
+        border-width: 0;
+      }
+
+      .dp-extras {
+        width: 150px;
+        height: 150px;
+        left: -15px;
+        top: -15px;
+        border-radius: 200px;
+        background: #ccc;
+        opacity: 1;
+        z-index: -1;
+        overflow: hidden;
+
+        .div1 {
+          width: 75px;
+          height: 75px;
+          border-radius: 70px 0 0 0px;
+          position: absolute;
+          left: 0;
+          top: 0;
+          background: $primary;
+          @include transform-origin(bottom right);
+          @include transition(all 0.5s linear);
+          @include animation(loader 1.5s linear infinite);
+        }
+
+        .div2 {
+          width: 120px;
+          height: 120px;
+          border-radius: 200px;
+          position: absolute;
+          left: 15px;
+          top: 15px;
+          background: #666;
+          text-align: center;
+          padding-top: 47px;
+          box-sizing: border-box;
+          font-size: 1.3em;
+          color: #8FC045;
+
+          &:before {
+            content: 'Loading...'
+          }
+        }
+      }
     }
   }
 }
@@ -185,6 +249,12 @@ a,
 .page {
   display: none;
 }
-#home {
-  display: block;
+
+#hidden-images {
+  display: none;
+}
+
+@include keyframes(loader) {
+  from { @include transform(rotate(0deg)); }
+  to { @include transform(rotate(360deg)); }
 }

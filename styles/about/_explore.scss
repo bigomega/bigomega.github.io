@@ -6,7 +6,7 @@
   border: 10px solid #444;
   left: -3px;
   top: -3px;
-  @include animation(explore_zoom 10s -2s ease-in-out infinite);
+  @include animation(explore_zoom 8s -2s ease-in-out infinite);
 
 
   &:before {
@@ -17,7 +17,7 @@
     position: absolute;
     left: 80px;
     top: 80px;
-    transform: rotate(45deg);
+    @include transform(rotate(45deg));
   }
 
   &:after {
@@ -28,7 +28,7 @@
     position: absolute;
     left: 60px;
     top: 105px;
-    transform: rotate(45deg);
+    @include transform(rotate(45deg));
     z-index: -1;
   }
 
@@ -40,7 +40,7 @@
     background: url(/images/profile-small.jpg);
     background-size: 100%;
     background-position: 50%;
-    @include animation(explore_zoom_img 10s -2s ease-in-out infinite);
+    @include animation(explore_zoom_img 8s -2s ease-in-out infinite);
   }
 }
 

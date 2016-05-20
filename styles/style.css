@@ -50,6 +50,9 @@ a,
     max-width: 100%;
     margin-left: auto;
     padding-right: 40px;
+    -moz-transition: 0.35s ease-out all;
+    -o-transition: 0.35s ease-out all;
+    -webkit-transition: 0.35s ease-out all;
     transition: 0.35s ease-out all; }
   .header li {
     list-style: none; }
@@ -69,12 +72,18 @@ a,
   left: 0;
   width: 100%;
   z-index: 2;
+  -moz-transition: 0.5s ease-out all;
+  -o-transition: 0.5s ease-out all;
+  -webkit-transition: 0.5s ease-out all;
   transition: 0.5s ease-out all; }
   .icon-container .icon-holder {
     position: absolute;
     top: 0;
     left: calc(50% - 48px);
     opacity: 1;
+    -moz-transition: 0.5s ease-out all;
+    -o-transition: 0.5s ease-out all;
+    -webkit-transition: 0.5s ease-out all;
     transition: 0.5s ease-out all; }
     .icon-container .icon-holder .dp-icon {
       display: inline-block;
@@ -83,6 +92,9 @@ a,
       overflow: hidden;
       border-radius: 50%;
       border: 3px solid #ccc;
+      -moz-transition: 200ms linear all;
+      -o-transition: 200ms linear all;
+      -webkit-transition: 200ms linear all;
       transition: 200ms linear all; }
       .icon-container .icon-holder .dp-icon:hover {
         border-color: #8fc045;
@@ -92,7 +104,63 @@ a,
       top: 0;
       left: 0;
       opacity: 0;
+      -moz-transition: all 0.5s linear;
+      -o-transition: all 0.5s linear;
+      -webkit-transition: all 0.5s linear;
       transition: all 0.5s linear; }
+  .icon-container.start .icon-holder {
+    top: 8em;
+    left: calc(50% - 60px); }
+    .icon-container.start .icon-holder .dp-icon {
+      width: 120px;
+      height: 120px;
+      border-width: 0; }
+    .icon-container.start .icon-holder .dp-extras {
+      width: 150px;
+      height: 150px;
+      left: -15px;
+      top: -15px;
+      border-radius: 200px;
+      background: #ccc;
+      opacity: 1;
+      z-index: -1;
+      overflow: hidden; }
+      .icon-container.start .icon-holder .dp-extras .div1 {
+        width: 75px;
+        height: 75px;
+        border-radius: 70px 0 0 0px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #8fc045;
+        moz-transform-origin: bottom right;
+        -o-transform-origin: bottom right;
+        -ms-transform-origin: bottom right;
+        -webkit-transform-origin: bottom right;
+        transform-origin: bottom right;
+        -moz-transition: all 0.5s linear;
+        -o-transition: all 0.5s linear;
+        -webkit-transition: all 0.5s linear;
+        transition: all 0.5s linear;
+        -webkit-animation: loader 1.5s linear infinite;
+        -moz-animation: loader 1.5s linear infinite;
+        -o-animation: loader 1.5s linear infinite;
+        animation: loader 1.5s linear infinite; }
+      .icon-container.start .icon-holder .dp-extras .div2 {
+        width: 120px;
+        height: 120px;
+        border-radius: 200px;
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        background: #666;
+        text-align: center;
+        padding-top: 47px;
+        box-sizing: border-box;
+        font-size: 1.3em;
+        color: #8FC045; }
+        .icon-container.start .icon-holder .dp-extras .div2:before {
+          content: 'Loading...'; }
 
 @media (max-width: 720px) {
   .icon-container {
@@ -107,8 +175,64 @@ a,
 .page {
   display: none; }
 
-#home {
-  display: block; }
+#hidden-images {
+  display: none; }
+
+@-webkit-keyframes loader {
+  from {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@-moz-keyframes loader {
+  from {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@-o-keyframes loader {
+  from {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes loader {
+  from {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
 
 .first-section {
   position: relative;
@@ -397,10 +521,10 @@ a,
   border: 10px solid #444;
   left: -3px;
   top: -3px;
-  -webkit-animation: explore_zoom 10s -2s ease-in-out infinite;
-  -moz-animation: explore_zoom 10s -2s ease-in-out infinite;
-  -o-animation: explore_zoom 10s -2s ease-in-out infinite;
-  animation: explore_zoom 10s -2s ease-in-out infinite; }
+  -webkit-animation: explore_zoom 8s -2s ease-in-out infinite;
+  -moz-animation: explore_zoom 8s -2s ease-in-out infinite;
+  -o-animation: explore_zoom 8s -2s ease-in-out infinite;
+  animation: explore_zoom 8s -2s ease-in-out infinite; }
   .icon-container.about .icon-holder .dp-extras:before {
     content: ' ';
     width: 10px;
@@ -409,6 +533,10 @@ a,
     position: absolute;
     left: 80px;
     top: 80px;
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
     transform: rotate(45deg); }
   .icon-container.about .icon-holder .dp-extras:after {
     content: ' ';
@@ -418,6 +546,10 @@ a,
     position: absolute;
     left: 60px;
     top: 105px;
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
     z-index: -1; }
   .icon-container.about .icon-holder .dp-extras .div1 {
@@ -428,10 +560,10 @@ a,
     background: url(/images/profile-small.jpg);
     background-size: 100%;
     background-position: 50%;
-    -webkit-animation: explore_zoom_img 10s -2s ease-in-out infinite;
-    -moz-animation: explore_zoom_img 10s -2s ease-in-out infinite;
-    -o-animation: explore_zoom_img 10s -2s ease-in-out infinite;
-    animation: explore_zoom_img 10s -2s ease-in-out infinite; }
+    -webkit-animation: explore_zoom_img 8s -2s ease-in-out infinite;
+    -moz-animation: explore_zoom_img 8s -2s ease-in-out infinite;
+    -o-animation: explore_zoom_img 8s -2s ease-in-out infinite;
+    animation: explore_zoom_img 8s -2s ease-in-out infinite; }
 
 #explore {
   min-height: 55em;
@@ -876,10 +1008,10 @@ a,
     position: absolute;
     left: 100px;
     top: -10px;
-    -webkit-animation: paint_brush 3s -0.8s linear infinite;
-    -moz-animation: paint_brush 3s -0.8s linear infinite;
-    -o-animation: paint_brush 3s -0.8s linear infinite;
-    animation: paint_brush 3s -0.8s linear infinite; }
+    -webkit-animation: paint_brush 3s -0.6s linear infinite;
+    -moz-animation: paint_brush 3s -0.6s linear infinite;
+    -o-animation: paint_brush 3s -0.6s linear infinite;
+    animation: paint_brush 3s -0.6s linear infinite; }
 
 #express {
   min-height: 60em; }
@@ -1130,6 +1262,9 @@ a,
   top: 4em;
   opacity: 0;
   visibility: hidden;
+  -moz-transition: left 0.5s linear, opacity 0.5s linear 0.5s, visibility 0.5s linear 1s;
+  -o-transition: left 0.5s linear, opacity 0.5s linear 0.5s, visibility 0.5s linear 1s;
+  -webkit-transition: left 0.5s linear, opacity 0.5s linear 0.5s, visibility 0.5s linear 1s;
   transition: left 0.5s linear, opacity 0.5s linear 0.5s, visibility 0.5s linear 1s; }
 
 #solve {
@@ -1140,6 +1275,9 @@ a,
     display: flex;
     justify-content: center;
     align-items: center;
+    -moz-transition: opacity 0.5s 0.5s linear;
+    -o-transition: opacity 0.5s 0.5s linear;
+    -webkit-transition: opacity 0.5s 0.5s linear;
     transition: opacity 0.5s 0.5s linear;
     opacity: 0; }
     #solve .dd-header .design-header {
@@ -1209,28 +1347,40 @@ a,
       #solve .dd-header.animate .design-header,
       #solve .dd-header.animate .develop-header {
         opacity: 1;
+        -moz-transition: opacity 0.2s 2.8s linear;
+        -o-transition: opacity 0.2s 2.8s linear;
+        -webkit-transition: opacity 0.2s 2.8s linear;
         transition: opacity 0.2s 2.8s linear; }
       #solve .dd-header.animate .design-header span:before {
-        transition: left .2s 8.8s linear, bottom 0.5s 11.5s linear;
+        -moz-transition: left 0.2s 8.8s linear, bottom 0.5s 11.5s linear;
+        -o-transition: left 0.2s 8.8s linear, bottom 0.5s 11.5s linear;
+        -webkit-transition: left 0.2s 8.8s linear, bottom 0.5s 11.5s linear;
+        transition: left 0.2s 8.8s linear, bottom 0.5s 11.5s linear;
         left: -30px;
         bottom: -10px;
-        -webkit-animation: yy_revolve 2s 9s ease-in-out infinite, yy_top_bot 4s 12s linear infinite alternate;
-        -moz-animation: yy_revolve 2s 9s ease-in-out infinite, yy_top_bot 4s 12s linear infinite alternate;
-        -o-animation: yy_revolve 2s 9s ease-in-out infinite, yy_top_bot 4s 12s linear infinite alternate;
-        animation: yy_revolve 2s 9s ease-in-out infinite, yy_top_bot 4s 12s linear infinite alternate; }
+        -webkit-animation: yy_revolve 2s 9s ease-in-out infinite reverse, yy_top_bot 4s 12s linear infinite alternate;
+        -moz-animation: yy_revolve 2s 9s ease-in-out infinite reverse, yy_top_bot 4s 12s linear infinite alternate;
+        -o-animation: yy_revolve 2s 9s ease-in-out infinite reverse, yy_top_bot 4s 12s linear infinite alternate;
+        animation: yy_revolve 2s 9s ease-in-out infinite reverse, yy_top_bot 4s 12s linear infinite alternate; }
       #solve .dd-header.animate .develop-header span:before {
-        transition: left .2s 7.8s linear, bottom 0.5s 11.5s linear;
+        -moz-transition: left 0.2s 7.8s linear, bottom 0.5s 11.5s linear;
+        -o-transition: left 0.2s 7.8s linear, bottom 0.5s 11.5s linear;
+        -webkit-transition: left 0.2s 7.8s linear, bottom 0.5s 11.5s linear;
+        transition: left 0.2s 7.8s linear, bottom 0.5s 11.5s linear;
         left: -30px;
         bottom: -10px;
-        -webkit-animation: yy_revolve 2s 8s ease-in-out infinite reverse, yy_top_bot 4s 12s linear infinite alternate;
-        -moz-animation: yy_revolve 2s 8s ease-in-out infinite reverse, yy_top_bot 4s 12s linear infinite alternate;
-        -o-animation: yy_revolve 2s 8s ease-in-out infinite reverse, yy_top_bot 4s 12s linear infinite alternate;
-        animation: yy_revolve 2s 8s ease-in-out infinite reverse, yy_top_bot 4s 12s linear infinite alternate; }
+        -webkit-animation: yy_revolve 2s 8s ease-in-out infinite, yy_top_bot 4s 12s linear infinite alternate;
+        -moz-animation: yy_revolve 2s 8s ease-in-out infinite, yy_top_bot 4s 12s linear infinite alternate;
+        -o-animation: yy_revolve 2s 8s ease-in-out infinite, yy_top_bot 4s 12s linear infinite alternate;
+        animation: yy_revolve 2s 8s ease-in-out infinite, yy_top_bot 4s 12s linear infinite alternate; }
     #solve .dd-header .yin-yang {
       width: 90px;
       height: 90px;
       position: relative;
-      transition: all .5s .35s linear; }
+      -moz-transition: all 0.5s 0.35s linear;
+      -o-transition: all 0.5s 0.35s linear;
+      -webkit-transition: all 0.5s 0.35s linear;
+      transition: all 0.5s 0.35s linear; }
       #solve .dd-header .yin-yang:before {
         content: '';
         position: absolute;
@@ -1239,6 +1389,10 @@ a,
         border-radius: 90px;
         background: url(/images/profile-128.jpg);
         background-size: contain;
+        -moz-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
         transform: rotate(180deg);
         box-shadow: 0 0 0 3px #ccc; }
       #solve .dd-header .yin-yang .d1 {
@@ -1252,7 +1406,14 @@ a,
         box-sizing: border-box;
         left: 0;
         top: 0;
-        transition: all .5s linear;
+        -moz-transition: all 0.5s linear;
+        -o-transition: all 0.5s linear;
+        -webkit-transition: all 0.5s linear;
+        transition: all 0.5s linear;
+        -moz-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
         transform: rotate(180deg); }
         #solve .dd-header .yin-yang .d1:before {
           /* Black dot, for later use */
@@ -1265,7 +1426,10 @@ a,
           bottom: 14px;
           background: #000;
           left: -6px;
-          transition: all .5s linear; }
+          -moz-transition: all 0.5s linear;
+          -o-transition: all 0.5s linear;
+          -webkit-transition: all 0.5s linear;
+          transition: all 0.5s linear; }
       #solve .dd-header .yin-yang .d2 {
         /* Black side */
         position: absolute;
@@ -1277,7 +1441,10 @@ a,
         box-sizing: border-box;
         left: 45px;
         top: 0;
-        transition: all .5s linear; }
+        -moz-transition: all 0.5s linear;
+        -o-transition: all 0.5s linear;
+        -webkit-transition: all 0.5s linear;
+        transition: all 0.5s linear; }
         #solve .dd-header .yin-yang .d2:before {
           /* Black dot, because I'm on top */
           content: '';
@@ -1289,7 +1456,10 @@ a,
           top: 1px;
           background: #000;
           left: -25px;
-          transition: all .5s linear; }
+          -moz-transition: all 0.5s linear;
+          -o-transition: all 0.5s linear;
+          -webkit-transition: all 0.5s linear;
+          transition: all 0.5s linear; }
         #solve .dd-header .yin-yang .d2:after {
           /* White dot for my parent */
           content: '';
@@ -1301,15 +1471,29 @@ a,
           bottom: 1px;
           background: #fff;
           left: -25px;
-          transition: all .5s linear; }
+          -moz-transition: all 0.5s linear;
+          -o-transition: all 0.5s linear;
+          -webkit-transition: all 0.5s linear;
+          transition: all 0.5s linear; }
       #solve .dd-header .yin-yang.split {
-        transition: all .5s linear;
+        /* .yin-yang */
+        -moz-transition: all 0.5s linear;
+        -o-transition: all 0.5s linear;
+        -webkit-transition: all 0.5s linear;
+        transition: all 0.5s linear;
+        -moz-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
         transform: rotate(180deg); }
         #solve .dd-header .yin-yang.split .d1 {
           opacity: 0;
           position: absolute;
           padding-left: 63px;
-          transition: all .5s .35s linear, padding-left .5s linear, opacity 0s 1s linear;
+          -moz-transition: all 0.5s 0.35s linear, padding-left 0.5s linear, opacity 0s 1s linear;
+          -o-transition: all 0.5s 0.35s linear, padding-left 0.5s linear, opacity 0s 1s linear;
+          -webkit-transition: all 0.5s 0.35s linear, padding-left 0.5s linear, opacity 0s 1s linear;
+          transition: all 0.5s 0.35s linear, padding-left 0.5s linear, opacity 0s 1s linear;
           left: -120px; }
           #solve .dd-header .yin-yang.split .d1:before {
             border-width: 2px;
@@ -1321,10 +1505,21 @@ a,
           opacity: 0;
           position: absolute;
           padding-left: 63px;
-          transition: all .5s .35s linear, padding-left .5s linear, opacity 0s 1s linear;
+          -moz-transition: all 0.5s 0.35s linear, padding-left 0.5s linear, opacity 0s 1s linear;
+          -o-transition: all 0.5s 0.35s linear, padding-left 0.5s linear, opacity 0s 1s linear;
+          -webkit-transition: all 0.5s 0.35s linear, padding-left 0.5s linear, opacity 0s 1s linear;
+          transition: all 0.5s 0.35s linear, padding-left 0.5s linear, opacity 0s 1s linear;
           left: 310px;
+          -moz-transform: rotate(180deg);
+          -o-transform: rotate(180deg);
+          -ms-transform: rotate(180deg);
+          -webkit-transform: rotate(180deg);
           transform: rotate(180deg); }
           #solve .dd-header .yin-yang.split .d2:before {
+            -moz-transform: scaleX(0);
+            -o-transform: scaleX(0);
+            -ms-transform: scaleX(0);
+            -webkit-transform: scaleX(0);
             transform: scaleX(0); }
           #solve .dd-header .yin-yang.split .d2:after {
             border-width: 2px;
@@ -1337,6 +1532,10 @@ a,
   /* 370 + 370 + 90 */
   #solve .dd-header {
     width: 120%;
+    -moz-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -webkit-transform: scale(0.8);
     transform: scale(0.8);
     position: relative;
     left: -10.5%; } }
@@ -1345,6 +1544,10 @@ a,
   #solve .dd-header {
     margin-top: 0em;
     width: 330%;
+    -moz-transform: scale(0.4);
+    -o-transform: scale(0.4);
+    -ms-transform: scale(0.4);
+    -webkit-transform: scale(0.4);
     transform: scale(0.4);
     position: relative;
     left: -118%;

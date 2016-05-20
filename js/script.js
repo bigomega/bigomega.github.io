@@ -18,7 +18,12 @@ function navigate(page, cb) {
   if (page === 'home') {
     set_desc()
   } else if (page === 'about') {
-    cb = function() { setAboutScroll() && typeof(cb) === 'function' && cb() }
+    cb = (function(oldCb) {
+      return function() {
+        setAboutScroll()
+        typeof(oldCb) === 'function' && oldCb()
+      }
+    })(cb)
   }
   // animate dp
   $('.icon-container').attr('class', 'icon-container '+page)
@@ -42,10 +47,15 @@ function navigate(page, cb) {
 onResize()
 $(window).on('resize', onResize)
 
-var hash = window.location.hash.substr(1)
-if (['about', 'work', 'connect'].indexOf(hash) > -1) {
-  setTimeout(function(){ navigate(hash) }, 500)
-}
+
+$(window).on("load", function() {
+  var hash = window.location.hash.substr(1)
+  if (['about', 'work', 'connect'].indexOf(hash) > -1) {
+    setTimeout(function(){ navigate(hash) }, 500)
+  } else {
+    navigate('home')
+  }
+})
 
 $('[data-nav]').click(function(event) {
   navigate($(this).attr('data-nav'))
