@@ -168,7 +168,8 @@ a,
 }
 @media (max-width: $dp-hides-width) {
   .icon-container {
-    top: 4.1em;
+    position: absolute;
+    top: 1em;
 
     .icon-holder {
       left: calc(50% - 38px);
@@ -178,12 +179,6 @@ a,
         width: 70px;
       }
     }
-  }
-}
-@media (max-width: $dp-hides-width) {
-  .icon-container {
-    position: absolute;
-    top: 1em;
   }
 }
 

@@ -151,3 +151,47 @@
     }
   }
 }
+
+@include keyframes(ilt_rotate) {
+  0%   { top: 0% }
+
+  14.66%  { top: 0% }
+  // 16.66%  { top: 0% }
+  18.66%  { top: 25% }
+
+  48%  { top: 25% }
+  // 50%  { top: 20% }
+  52%  { top: 50% }
+
+  81.33%  { top: 50% }
+  // 83.33%  { top: 40% }
+  85.33%  { top: 75% }
+
+  100% { top: 75% }
+
+  // --------
+  // 16.66% ± 2
+  // --------
+  // 33.33% x 2
+  // --------
+  // 16.66%
+  // --------
+}
+
+// @include keyframes(ilt_color_change) {
+//   0%   { background: $palette-1; }
+
+//   10%  { background: $palette-1; }
+//   15%  { background: $palette-2; }
+
+//   35%  { background: $palette-2; }
+//   40%  { background: $palette-3; }
+
+//   60%  { background: $palette-3; }
+//   65%  { background: $palette-4; }
+
+//   85%  { background: $palette-4; }
+//   90%  { background: $palette-5; }
+
+//   100% { background: $palette-5; }
+// }

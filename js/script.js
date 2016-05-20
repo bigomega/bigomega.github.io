@@ -11,10 +11,15 @@ function navigate(page, cb) {
   if (['home', 'about', 'work', 'connect'].indexOf(page) < 0) {
     return
   }
-
+  // misc
+  $(window).off('scroll.about')
+  if (page === 'home') {
+    set_desc()
+  } else if (page === 'about') {
+    cb = function() { setAboutScroll() && typeof(cb) === 'function' && cb() }
+  }
   // animate dp
   $('.icon-container').attr('class', 'icon-container '+page)
-
   // animate page
   var len = $('.page').length
   $('.page').fadeOut(250, function(){
@@ -24,16 +29,9 @@ function navigate(page, cb) {
       typeof(cb) === 'function' && cb()
     }
   })
-
   // Change header
   $('.header .link').removeClass('active')
   $('.header .link[data-nav='+page+']').addClass('active')
-
-  // change description
-  if (page === 'home') {
-    set_desc()
-  }
-
   window.location.hash = page
 }
 
@@ -115,6 +113,32 @@ $('.me-love .sub-navigation .nav-item:not(.disabled)').click(function() {
     scrollTop: $('#' + $(this).attr('data-subnav')).offset().top,
   }, 750)
 })
+
+function setAboutScroll() {
+  var page = 'about'
+  var submenu_offsets = {
+    explore: $('#explore').height() + $('#explore').offset().top,
+    express: $('#express').height() + $('#express').offset().top,
+    solve: $('#solve').height() + $('#solve').offset().top,
+    play: $('#play').height() + $('#play').offset().top
+  }
+
+  $(window).on('scroll.about', function(e) {
+    if (e.currentTarget.scrollY + 280 < submenu_offsets.explore) {
+      page !== 'about' && $('.icon-container').attr('class', 'icon-container about')
+      page = 'about'
+    } else if (e.currentTarget.scrollY + 280 < submenu_offsets.express) {
+      page !== 'express' && $('.icon-container').attr('class', 'icon-container express')
+      page = 'express'
+    } else if (e.currentTarget.scrollY + 280 < submenu_offsets.solve) {
+      page !== 'solve' && $('.icon-container').attr('class', 'icon-container solve')
+      page = 'solve'
+    } else if (e.currentTarget.scrollY + 280 < submenu_offsets.play) {
+      page !== 'play' && $('.icon-container').attr('class', 'icon-container play')
+      page = 'play'
+    }
+  })
+}
 
 /* ----- WORK ----- */
 /* ----- CONNECT ----- */
