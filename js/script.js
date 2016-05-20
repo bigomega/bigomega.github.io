@@ -1,10 +1,12 @@
 /* ----- FUNCTIONS ----- */
-function setHeight() {
+function onResize() {
   $('.first-section').css({ height: $(window).height() })
+
   if ($(window).width() > 720) {
     $('.me-love').css({ height: $(window).height() })
   } else {
     $('.me-love').css({ height: '' })
+    startYYanimation()
   }
 }
 function navigate(page, cb) {
@@ -37,8 +39,8 @@ function navigate(page, cb) {
 
 /* ----- COMMON ----- */
 
-setHeight()
-$(window).on('resize', setHeight)
+onResize()
+$(window).on('resize', onResize)
 
 var hash = window.location.hash.substr(1)
 if (['about', 'work', 'connect'].indexOf(hash) > -1) {
@@ -114,24 +116,45 @@ $('.me-love .sub-navigation .nav-item:not(.disabled)').click(function() {
   }, 750)
 })
 
+var animation_flag = false
+function startYYanimation() {
+  if(animation_flag) {
+    return
+  }
+  function animate() {
+    $('.yin-yang').addClass('split')
+    setTimeout(function() { $('.yin-yang').removeClass('split') }, 2000)
+  }
+  setTimeout(function(){
+    animate()
+    window.setInterval(animate, 5000)
+  }, 2000)
+  animation_flag = true
+}
+
 function setAboutScroll() {
   var page = 'about'
   var submenu_offsets = {
     explore: $('#explore').height() + $('#explore').offset().top,
     express: $('#express').height() + $('#express').offset().top,
     solve: $('#solve').height() + $('#solve').offset().top,
+    solve_header: $('.dd-header').offset().top,
     play: $('#play').height() + $('#play').offset().top
   }
-
   $(window).on('scroll.about', function(e) {
+console.log($('.icon-holder').position().top)
     if (e.currentTarget.scrollY + 280 < submenu_offsets.explore) {
       page !== 'about' && $('.icon-container').attr('class', 'icon-container about')
       page = 'about'
     } else if (e.currentTarget.scrollY + 280 < submenu_offsets.express) {
       page !== 'express' && $('.icon-container').attr('class', 'icon-container express')
       page = 'express'
+    } else if (e.currentTarget.scrollY + $('.icon-holder').position().top + 110 < submenu_offsets.solve_header) {
+      page !== 'none' && $('.icon-container').attr('class', 'icon-container none')
+      page = 'none'
     } else if (e.currentTarget.scrollY + 280 < submenu_offsets.solve) {
       page !== 'solve' && $('.icon-container').attr('class', 'icon-container solve')
+      page !== 'solve' && $('#solve .dd-header').addClass('animate') && startYYanimation()
       page = 'solve'
     } else if (e.currentTarget.scrollY + 280 < submenu_offsets.play) {
       page !== 'play' && $('.icon-container').attr('class', 'icon-container play')

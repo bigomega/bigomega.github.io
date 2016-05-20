@@ -6,7 +6,7 @@
   border: 10px solid #444;
   left: -3px;
   top: -3px;
-  @include animation(explore_zoom 8s ease-in-out infinite);
+  @include animation(explore_zoom 8s -2s ease-in-out infinite);
 
 
   &:before {
@@ -39,7 +39,7 @@
     background: url(/images/profile-128.jpg);
     background-size: 100%;
     background-position: 50%;
-    @include animation(explore_zoom_img 8s ease-in-out infinite);
+    @include animation(explore_zoom_img 8s -2s ease-in-out infinite);
   }
 }
 
