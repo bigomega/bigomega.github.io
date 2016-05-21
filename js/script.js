@@ -9,6 +9,7 @@ function onResize() {
     startYYanimation()
   }
 }
+var connect_aniamtion
 function navigate(page, cb) {
   if (['home', 'about', 'work', 'connect'].indexOf(page) < 0) {
     return
@@ -17,6 +18,13 @@ function navigate(page, cb) {
   $(window).off('scroll.about')
   if (page === 'home') {
     set_desc()
+  } else if (page === 'connect') {
+    window.clearInterval(connect_aniamtion)
+    $('.hive').removeClass('loaded-animate first-animate');
+    setTimeout(function(){ $('.hive').addClass('first-animate') }, 10)
+    setTimeout(function(){ $('.hive').addClass('loaded-animate') }, 2500)
+    var animation = function(){ $('.hive').removeClass('first-animate loaded-animate'); setTimeout(function(){ $('.hive').addClass('loaded-animate') }, 10) }
+    connect_aniamtion = window.setInterval(animation, 10000)
   } else if (page === 'about') {
     cb = (function(oldCb) {
       return function() {
@@ -48,9 +56,9 @@ onResize()
 $(window).on('resize', onResize)
 
 
-$(window).on("load", function() {
+// $(window).on("load", function() {
   var hash = window.location.hash.substr(1)
-  $('.icon-container').attr('class', 'icon-container home')
+  // $('.icon-container').attr('class', 'icon-container home')
 
   setTimeout(function(){
     if (['about', 'work', 'connect'].indexOf(hash) > -1) {
@@ -64,7 +72,7 @@ $(window).on("load", function() {
   $('[data-nav]').click(function(event) {
     navigate($(this).attr('data-nav'))
   })
-})
+// })
 
 
 /* ----- HOME ----- */
@@ -180,4 +188,64 @@ function setAboutScroll() {
 
 /* ----- WORK ----- */
 /* ----- CONNECT ----- */
+// render hive
+// 7 lines
+var hex = [
+'3333',
+'32223',
+'321123',
+'3210123'
+]
+hexval = {
+  0: [['profile', '/#" data-nav="home']],
+  1: [
+    ['behance', 'https://www.behance.net/bigOmega'],
+    ['github', 'https://github.com/bigomega/'],
+    ['twitter', 'https://twitter.com/bigomega'],
+    ['medium', 'https://medium.com/@bigomega/'],
+    ['mail', 'mailto:bharathraja@live.com'],
+    ['flickr', 'https://www.flickr.com/photos/bigomega/albums']
+  ],
+  2: [
+    ['deviantart', 'http://bigomega.deviantart.com/'],
+    ['codepen', 'http://codepen.io/bigomega/'],
+    ['stackoverflow', 'http://stackoverflow.com/users/2130750/big%CE%A9mega'],
+    ['steam', 'https://steamcommunity.com/id/bigomega'],
+    ['vine', 'https://vine.co/bigomega'],
+    // ^ OR
+    // ['quora', 'https://www.quora.com/profile/Bharath-Raja']
+    ['facebook', 'https://www.facebook.com/bharathinssn'],
+    ['reddit', 'https://www.reddit.com/user/big_omega/'],
+    ['skype', 'skype:bigOmega3?chat'],
+    ['youtube', 'https://www.youtube.com/c/bigomega'],
+    ['linkedin', 'https://www.linkedin.com/in/bigomega'],
+    ['tumblr', 'http://big0mega.tumblr.com'],
+    ['instagram', 'https://instagram.com/big0mega/']
+  ],
+  count: { 0: 0, 1: 0, 2: 0 },
+}
+$('.hive').html((new Array(8)).join(1).split('').reduce(function(mem, x, ind) {
+  // console.log('-------L', ind, line_count)
+  var line_count = ind < 4 ? ind + 4 : 3 + 7 - ind
+  return mem + '\
+    <div class="line">\
+    ' +
+      (new Array(line_count + 1)).join(1).split('').reduce(function(mem2, y, ind2) {
+        var level = hex[line_count - 4][ind2]
+        var val = hexval[level] ? hexval[level][hexval.count[level]++] : ''
+        // console.log(level)
+        // if (level == 0) {
+        //   return mem2 + '<div class="hex-container level-0" data-nav="home"><img src="/images/profile-128.jpg"/></div>'
+        // }
+        return mem2 + '\
+          <a class="hex-container level-'+ level +' '+ (val ? 'icon ' + val[0] : '') +'" target="_blank" '+(val ? 'href="' + val[1] + '"' : '')+'>\
+            <div class="hex-border"><div class="hex"><span></span></div></div>\
+          </a>\
+        '
+      }, '')
+    + '\
+    </div>\
+  '
+}, ''))
+
 /* ----- END ----- */
