@@ -66,18 +66,21 @@ a,
 .link {
   cursor: pointer;
   color: #333;
+    color: $primary;
   text-decoration: underline;
   // @include transition(0.125s linear all);
 
   &:hover {
     color: $primary;
+    color: darken($primary, 20%);
   }
 
   &.active {
     cursor: text;
     text-decoration: none;
-    text-shadow: 0px 0px 3px #ccc;
+    text-shadow: 0px 0px 3px #333;
     color: $primary;
+    color: #333;
   }
 
   &.disabled {
@@ -99,6 +102,10 @@ a,
   width: 100%;
   background: #fff;
   border-bottom: 1px solid #ccc;
+
+  &.hidden {
+    display: none;
+  }
 
   &.minimized {
     background: rgba(255, 255, 255, 0.7);
@@ -130,6 +137,11 @@ a,
 
     ul {
       padding: 0;
+
+      li.active {
+        position: relative;
+        top: -3px;
+      }
     }
   }
 }
@@ -157,7 +169,7 @@ a,
       overflow: hidden;
       border-radius: 50%;
       border: 3px solid #ccc;
-      @include transition(200ms linear all);
+      @include transition(.5s linear all);
       &:hover {
         border-color: $primary;
         box-shadow: 0px 0px 20px 2px $primary;
@@ -176,19 +188,19 @@ a,
   &.start {
     .icon-holder {
       top: 8em;
-      left: calc(50% - 60px);
+      left: calc(50% - 75px);
 
       .dp-icon {
-        width: 120px;
-        height: 120px;
+        width: 150px;
+        height: 150px;
         border-width: 0;
       }
 
       .dp-extras {
-        width: 150px;
-        height: 150px;
-        left: -15px;
-        top: -15px;
+        width: 170px;
+        height: 170px;
+        left: -10px;
+        top: -10px;
         border-radius: 200px;
         background: #ccc;
         opacity: 1;
@@ -196,9 +208,8 @@ a,
         overflow: hidden;
 
         .div1 {
-          width: 75px;
-          height: 75px;
-          border-radius: 70px 0 0 0px;
+          width: 85px;
+          height: 85px;
           position: absolute;
           left: 0;
           top: 0;
@@ -209,12 +220,12 @@ a,
         }
 
         .div2 {
-          width: 120px;
-          height: 120px;
+          width: 150px;
+          height: 150px;
           border-radius: 200px;
           position: absolute;
-          left: 15px;
-          top: 15px;
+          left: 10px;
+          top: 10px;
           background: #666;
           text-align: center;
           padding-top: 47px;

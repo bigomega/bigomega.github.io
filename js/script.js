@@ -1,6 +1,6 @@
 /* ----- FUNCTIONS ----- */
 function onResize() {
-  $('.first-section').css({ height: $(window).height() })
+  // $('.first-section').css({ height: $(window).height() })
 
   if ($(window).width() > 720) {
     $('.me-love').css({ height: $(window).height() })
@@ -48,18 +48,24 @@ onResize()
 $(window).on('resize', onResize)
 
 
-// $(window).on("load", function() {
+$(window).on("load", function() {
   var hash = window.location.hash.substr(1)
-  if (['about', 'work', 'connect'].indexOf(hash) > -1) {
-    setTimeout(function(){ navigate(hash) }, 500)
-  } else {
-    navigate('home')
-  }
-// })
+  $('.icon-container').attr('class', 'icon-container home')
 
-$('[data-nav]').click(function(event) {
-  navigate($(this).attr('data-nav'))
+  setTimeout(function(){
+    if (['about', 'work', 'connect'].indexOf(hash) > -1) {
+      navigate(hash)
+    } else {
+      navigate('home')
+    }
+  }, 500)
+
+  $('.header').removeClass('hidden')
+  $('[data-nav]').click(function(event) {
+    navigate($(this).attr('data-nav'))
+  })
 })
+
 
 /* ----- HOME ----- */
 

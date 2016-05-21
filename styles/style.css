@@ -14,16 +14,19 @@ a,
 .link {
   cursor: pointer;
   color: #333;
+  color: #8fc045;
   text-decoration: underline; }
   a:hover,
   .link:hover {
-    color: #8fc045; }
+    color: #8fc045;
+    color: #577728; }
   a.active,
   .link.active {
     cursor: text;
     text-decoration: none;
-    text-shadow: 0px 0px 3px #ccc;
-    color: #8fc045; }
+    text-shadow: 0px 0px 3px #333;
+    color: #8fc045;
+    color: #333; }
   a.disabled,
   .link.disabled {
     color: #ccc; }
@@ -40,6 +43,8 @@ a,
   width: 100%;
   background: #fff;
   border-bottom: 1px solid #ccc; }
+  .header.hidden {
+    display: none; }
   .header.minimized {
     background: rgba(255, 255, 255, 0.7); }
     .header.minimized ul {
@@ -64,7 +69,10 @@ a,
     border-bottom: none;
     border-top: 1px solid #aaa; }
     .header ul {
-      padding: 0; } }
+      padding: 0; }
+      .header ul li.active {
+        position: relative;
+        top: -3px; } }
 
 .icon-container {
   position: fixed;
@@ -92,10 +100,10 @@ a,
       overflow: hidden;
       border-radius: 50%;
       border: 3px solid #ccc;
-      -moz-transition: 200ms linear all;
-      -o-transition: 200ms linear all;
-      -webkit-transition: 200ms linear all;
-      transition: 200ms linear all; }
+      -moz-transition: 0.5s linear all;
+      -o-transition: 0.5s linear all;
+      -webkit-transition: 0.5s linear all;
+      transition: 0.5s linear all; }
       .icon-container .icon-holder .dp-icon:hover {
         border-color: #8fc045;
         box-shadow: 0px 0px 20px 2px #8fc045; }
@@ -110,25 +118,24 @@ a,
       transition: all 0.5s linear; }
   .icon-container.start .icon-holder {
     top: 8em;
-    left: calc(50% - 60px); }
+    left: calc(50% - 75px); }
     .icon-container.start .icon-holder .dp-icon {
-      width: 120px;
-      height: 120px;
-      border-width: 0; }
-    .icon-container.start .icon-holder .dp-extras {
       width: 150px;
       height: 150px;
-      left: -15px;
-      top: -15px;
+      border-width: 0; }
+    .icon-container.start .icon-holder .dp-extras {
+      width: 170px;
+      height: 170px;
+      left: -10px;
+      top: -10px;
       border-radius: 200px;
       background: #ccc;
       opacity: 1;
       z-index: -1;
       overflow: hidden; }
       .icon-container.start .icon-holder .dp-extras .div1 {
-        width: 75px;
-        height: 75px;
-        border-radius: 70px 0 0 0px;
+        width: 85px;
+        height: 85px;
         position: absolute;
         left: 0;
         top: 0;
@@ -147,12 +154,12 @@ a,
         -o-animation: loader 1.5s linear infinite;
         animation: loader 1.5s linear infinite; }
       .icon-container.start .icon-holder .dp-extras .div2 {
-        width: 120px;
-        height: 120px;
+        width: 150px;
+        height: 150px;
         border-radius: 200px;
         position: absolute;
-        left: 15px;
-        top: 15px;
+        left: 10px;
+        top: 10px;
         background: #666;
         text-align: center;
         padding-top: 47px;
