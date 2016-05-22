@@ -28,7 +28,7 @@ function navigate(page, cb) {
       window.clearInterval(connect_aniamtion)
       animation()
     }
-    connect_aniamtion = window.setInterval(animation, 10000)
+    connect_aniamtion = window.setInterval(animation, 15000)
   } else if (page === 'about') {
     cb = (function(oldCb) {
       return function() {
@@ -201,7 +201,7 @@ var hex = [
 '3210123'
 ]
 hexval = {
-  0: [['profile', '" data-nav="hope']],
+  0: [['profile', 'data-nav="home']],
   1: [
     ['behance', 'https://www.behance.net/bigOmega'],
     ['github', 'https://github.com/bigomega/'],
@@ -239,7 +239,7 @@ $('.hive').html((new Array(8)).join(1).split('').reduce(function(mem, x, ind) {
         var val = hexval[level] ? hexval[level][hexval.count[level]++] : ''
         // console.log(level)
         return mem2 + '\
-          <a class="hex-container level-'+ level +' '+ (val ? 'icon ' + val[0] : '') +'" '+(level != 0 ? 'target="_blank"' : '')+ ' '+(val ? 'href="' + val[1] + '"' : '')+'>\
+          <a class="hex-container level-'+ level +' '+ (val ? 'icon ' + val[0] : '') +'" target="_blank" '+(val ? (level != 0 ? 'href="' : '') + val[1] + '"' : '')+'>\
             <div class="hex-border"><div class="hex"><span></span></div></div>\
           </a>\
         '
