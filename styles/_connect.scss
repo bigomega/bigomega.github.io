@@ -127,7 +127,7 @@
 
   .level-3 {
     .hex {
-      background: #ccc;
+      background: $grey;
     }
   }
 
@@ -136,16 +136,25 @@
       @include animation(hex_boom 1s 0.5s ease-out, visible 2s .5s ease-in-out);
     }
 
+    .level-1 .hex {
+      @include animation(l1_color 4s 1s ease-out);
+    }
     .level-1 .hex-border {
       @include animation(hex_boom 1.3s 1s ease-out, visible 1.5s 1s ease-in-out);
     }
 
+    .level-2 .hex {
+      @include animation(l2_color 3s 1.5s ease-out);
+    }
     .level-2 .hex-border {
       @include animation(hex_boom 1.6s 1.5s ease-out, visible 1s 1.5s ease-in-out);
     }
 
+    .level-3 .hex {
+      @include animation(l3_color 6.5s .5s ease-out);
+    }
     .level-3 .hex-border {
-      @include animation(hex_boom 0s 2s ease-out, visible 1s 2s ease-in-out);
+      @include animation(hex_boom 0s 1s ease-out, visible 1s 2s ease-in-out);
     }
   }
 
@@ -153,6 +162,7 @@
     .hex-border {
       opacity: 1;
     }
+
     .level-0 .hex-border {
       @include animation(hex_boom 1s 0.5s ease-out);
     }
@@ -209,7 +219,7 @@
   }
 }
 
-
+// http://jsbin.com/qawumefala/
 @include keyframes(hex_boom) {
   0%   { @include transform(scale(1)); top: 0; background-color: inherit; }
   30%  { @include transform(scale(1.2)); top: -20px; background-color: black;}
@@ -222,4 +232,21 @@
   0%   { opacity: 0; }
   20%  { opacity: 1; }
   100% { opacity: 1; }
+}
+
+@include keyframes(l1_color) {
+  0% { background: initial; }
+  50% { background: $palette-1; }
+}
+
+@include keyframes(l2_color) {
+  0% { background: initial; }
+  50% { background: $palette-2; }
+}
+
+@include keyframes(l3_color) {
+  0% { background: trasparent; }
+  1% { background: $grey; }
+  2% { background: #fff; }
+  50% { background: #fff; }
 }

@@ -1899,13 +1899,16 @@ a,
   .hive .hex-container.icon.medium .hex {
     background: #00AB6C; }
   .hive .hex-container.icon.medium span {
-    background-position: -417px 50px; }
+    background-position: -414px -474px;
+    width: 51px; }
+  .hive .hex-container.icon.mail .hex {
+    background: #D0854B; }
   .hive .hex-container.icon.mail span {
-    background-position: -169px -119px; }
+    background-position: -109px -119px; }
   .hive .hex-container.icon.flickr .hex {
     background: #0262DC; }
   .hive .hex-container.icon.flickr span {
-    background-position: -289px 50px; }
+    background-position: -289px -473px; }
   .hive .hex-container.icon.deviantart .hex {
     background: #01D13C; }
   .hive .hex-container.icon.deviantart span {
@@ -1990,21 +1993,36 @@ a,
     -moz-animation: hex_boom 1s 0.5s ease-out, visible 2s 0.5s ease-in-out;
     -o-animation: hex_boom 1s 0.5s ease-out, visible 2s 0.5s ease-in-out;
     animation: hex_boom 1s 0.5s ease-out, visible 2s 0.5s ease-in-out; }
+  .hive.first-animate .level-1 .hex {
+    -webkit-animation: l1_color 4s 1s ease-out;
+    -moz-animation: l1_color 4s 1s ease-out;
+    -o-animation: l1_color 4s 1s ease-out;
+    animation: l1_color 4s 1s ease-out; }
   .hive.first-animate .level-1 .hex-border {
     -webkit-animation: hex_boom 1.3s 1s ease-out, visible 1.5s 1s ease-in-out;
     -moz-animation: hex_boom 1.3s 1s ease-out, visible 1.5s 1s ease-in-out;
     -o-animation: hex_boom 1.3s 1s ease-out, visible 1.5s 1s ease-in-out;
     animation: hex_boom 1.3s 1s ease-out, visible 1.5s 1s ease-in-out; }
+  .hive.first-animate .level-2 .hex {
+    -webkit-animation: l2_color 3s 1.5s ease-out;
+    -moz-animation: l2_color 3s 1.5s ease-out;
+    -o-animation: l2_color 3s 1.5s ease-out;
+    animation: l2_color 3s 1.5s ease-out; }
   .hive.first-animate .level-2 .hex-border {
     -webkit-animation: hex_boom 1.6s 1.5s ease-out, visible 1s 1.5s ease-in-out;
     -moz-animation: hex_boom 1.6s 1.5s ease-out, visible 1s 1.5s ease-in-out;
     -o-animation: hex_boom 1.6s 1.5s ease-out, visible 1s 1.5s ease-in-out;
     animation: hex_boom 1.6s 1.5s ease-out, visible 1s 1.5s ease-in-out; }
+  .hive.first-animate .level-3 .hex {
+    -webkit-animation: l3_color 6.5s 0.5s ease-out;
+    -moz-animation: l3_color 6.5s 0.5s ease-out;
+    -o-animation: l3_color 6.5s 0.5s ease-out;
+    animation: l3_color 6.5s 0.5s ease-out; }
   .hive.first-animate .level-3 .hex-border {
-    -webkit-animation: hex_boom 0s 2s ease-out, visible 1s 2s ease-in-out;
-    -moz-animation: hex_boom 0s 2s ease-out, visible 1s 2s ease-in-out;
-    -o-animation: hex_boom 0s 2s ease-out, visible 1s 2s ease-in-out;
-    animation: hex_boom 0s 2s ease-out, visible 1s 2s ease-in-out; }
+    -webkit-animation: hex_boom 0s 1s ease-out, visible 1s 2s ease-in-out;
+    -moz-animation: hex_boom 0s 1s ease-out, visible 1s 2s ease-in-out;
+    -o-animation: hex_boom 0s 1s ease-out, visible 1s 2s ease-in-out;
+    animation: hex_boom 0s 1s ease-out, visible 1s 2s ease-in-out; }
   .hive.loaded-animate .hex-border {
     opacity: 1; }
   .hive.loaded-animate .level-0 .hex-border {
@@ -2230,3 +2248,91 @@ a,
     opacity: 1; }
   100% {
     opacity: 1; } }
+
+@-webkit-keyframes l1_color {
+  0% {
+    background: initial; }
+  50% {
+    background: #FF78BC; } }
+
+@-moz-keyframes l1_color {
+  0% {
+    background: initial; }
+  50% {
+    background: #FF78BC; } }
+
+@-o-keyframes l1_color {
+  0% {
+    background: initial; }
+  50% {
+    background: #FF78BC; } }
+
+@keyframes l1_color {
+  0% {
+    background: initial; }
+  50% {
+    background: #FF78BC; } }
+
+@-webkit-keyframes l2_color {
+  0% {
+    background: initial; }
+  50% {
+    background: #34D0FF; } }
+
+@-moz-keyframes l2_color {
+  0% {
+    background: initial; }
+  50% {
+    background: #34D0FF; } }
+
+@-o-keyframes l2_color {
+  0% {
+    background: initial; }
+  50% {
+    background: #34D0FF; } }
+
+@keyframes l2_color {
+  0% {
+    background: initial; }
+  50% {
+    background: #34D0FF; } }
+
+@-webkit-keyframes l3_color {
+  0% {
+    background: trasparent; }
+  1% {
+    background: #ccc; }
+  2% {
+    background: #fff; }
+  50% {
+    background: #fff; } }
+
+@-moz-keyframes l3_color {
+  0% {
+    background: trasparent; }
+  1% {
+    background: #ccc; }
+  2% {
+    background: #fff; }
+  50% {
+    background: #fff; } }
+
+@-o-keyframes l3_color {
+  0% {
+    background: trasparent; }
+  1% {
+    background: #ccc; }
+  2% {
+    background: #fff; }
+  50% {
+    background: #fff; } }
+
+@keyframes l3_color {
+  0% {
+    background: trasparent; }
+  1% {
+    background: #ccc; }
+  2% {
+    background: #fff; }
+  50% {
+    background: #fff; } }

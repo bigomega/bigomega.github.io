@@ -113,7 +113,7 @@
         background: url(/images/profile-128.jpg);
         background-size: contain;
         @include transform(rotate(180deg));
-        box-shadow: 0 0 0 3px #ccc;
+        box-shadow: 0 0 0 3px $grey;
       }
 
 

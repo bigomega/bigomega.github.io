@@ -19,11 +19,15 @@ function navigate(page, cb) {
   if (page === 'home') {
     set_desc()
   } else if (page === 'connect') {
-    window.clearInterval(connect_aniamtion)
-    $('.hive').removeClass('loaded-animate first-animate');
-    setTimeout(function(){ $('.hive').addClass('first-animate') }, 10)
-    setTimeout(function(){ $('.hive').addClass('loaded-animate') }, 2500)
     var animation = function(){ $('.hive').removeClass('first-animate loaded-animate'); setTimeout(function(){ $('.hive').addClass('loaded-animate') }, 10) }
+    if (!connect_aniamtion) {
+      $('.hive').removeClass('loaded-animate first-animate');
+      setTimeout(function(){ $('.hive').addClass('first-animate') }, 10)
+      setTimeout(function(){ $('.hive').addClass('loaded-animate') }, 2500)
+    } else {
+      window.clearInterval(connect_aniamtion)
+      animation()
+    }
     connect_aniamtion = window.setInterval(animation, 10000)
   } else if (page === 'about') {
     cb = (function(oldCb) {
@@ -56,7 +60,7 @@ onResize()
 $(window).on('resize', onResize)
 
 
-// $(window).on("load", function() {
+$(window).on("load", function() {
   var hash = window.location.hash.substr(1)
   // $('.icon-container').attr('class', 'icon-container home')
 
@@ -72,7 +76,7 @@ $(window).on('resize', onResize)
   $('[data-nav]').click(function(event) {
     navigate($(this).attr('data-nav'))
   })
-// })
+})
 
 
 /* ----- HOME ----- */
@@ -197,7 +201,7 @@ var hex = [
 '3210123'
 ]
 hexval = {
-  0: [['profile', '/#" data-nav="home']],
+  0: [['profile', '" data-nav="hope']],
   1: [
     ['behance', 'https://www.behance.net/bigOmega'],
     ['github', 'https://github.com/bigomega/'],
@@ -211,7 +215,7 @@ hexval = {
     ['codepen', 'http://codepen.io/bigomega/'],
     ['stackoverflow', 'http://stackoverflow.com/users/2130750/big%CE%A9mega'],
     ['steam', 'https://steamcommunity.com/id/bigomega'],
-    ['vine', 'https://vine.co/bigomega'],
+    ['tumblr', 'http://big0mega.tumblr.com'],
     // ^ OR
     // ['quora', 'https://www.quora.com/profile/Bharath-Raja']
     ['facebook', 'https://www.facebook.com/bharathinssn'],
@@ -219,7 +223,7 @@ hexval = {
     ['skype', 'skype:bigOmega3?chat'],
     ['youtube', 'https://www.youtube.com/c/bigomega'],
     ['linkedin', 'https://www.linkedin.com/in/bigomega'],
-    ['tumblr', 'http://big0mega.tumblr.com'],
+    ['vine', 'https://vine.co/bigomega'],
     ['instagram', 'https://instagram.com/big0mega/']
   ],
   count: { 0: 0, 1: 0, 2: 0 },
@@ -234,11 +238,8 @@ $('.hive').html((new Array(8)).join(1).split('').reduce(function(mem, x, ind) {
         var level = hex[line_count - 4][ind2]
         var val = hexval[level] ? hexval[level][hexval.count[level]++] : ''
         // console.log(level)
-        // if (level == 0) {
-        //   return mem2 + '<div class="hex-container level-0" data-nav="home"><img src="/images/profile-128.jpg"/></div>'
-        // }
         return mem2 + '\
-          <a class="hex-container level-'+ level +' '+ (val ? 'icon ' + val[0] : '') +'" target="_blank" '+(val ? 'href="' + val[1] + '"' : '')+'>\
+          <a class="hex-container level-'+ level +' '+ (val ? 'icon ' + val[0] : '') +'" '+(level != 0 ? 'target="_blank"' : '')+ ' '+(val ? 'href="' + val[1] + '"' : '')+'>\
             <div class="hex-border"><div class="hex"><span></span></div></div>\
           </a>\
         '

@@ -69,12 +69,16 @@
       background: #00AB6C;
     }
     span {
-      background-position: -417px 50px;
+      background-position: -414px -474px;
+      width: 51px;
     }
   }
   &.mail {
+    .hex {
+      background: #D0854B;
+    }
     span {
-      background-position: -169px -119px;
+      background-position: -109px -119px;
     }
   }
   &.flickr {
@@ -82,7 +86,7 @@
       background: #0262DC;
     }
     span {
-      background-position: -289px 50px;
+      background-position: -289px -473px;
     }
   }
   &.deviantart {
