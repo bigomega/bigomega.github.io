@@ -24,7 +24,6 @@ a,
   .link.active {
     cursor: text;
     text-decoration: none;
-    text-shadow: 0px 0px 3px #333;
     color: #8fc045;
     color: #333; }
   a.disabled,
@@ -1802,6 +1801,10 @@ a,
       -ms-transform-origin: center;
       -webkit-transform-origin: center;
       transform-origin: center;
+      -moz-transition: transform 0.25s ease-in;
+      -o-transition: transform 0.25s ease-in;
+      -webkit-transition: transform 0.25s ease-in;
+      transition: transform 0.25s ease-in;
       background: inherit;
       z-index: -1; }
     .hive .hex:before,
@@ -1832,6 +1835,30 @@ a,
       width: 99px;
       height: 58px;
       z-index: -2; }
+  .hive.square .hex:before, .hive.square .hex:after,
+  .hive.square .hex-border:before,
+  .hive.square .hex-border:after {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  .hive.plus .hex:before,
+  .hive.plus .hex-border:before {
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg); }
+  .hive.plus .hex:after,
+  .hive.plus .hex-border:after {
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg); }
+  .hive.plus .hex-container.icon.profile .hex:before, .hive.plus .hex-container.icon.profile .hex:after {
+    background: #D2D956; }
   .hive .hex-container.icon span {
     background: url(/images/social-icons.png);
     width: 50px;
@@ -1946,8 +1973,6 @@ a,
   .hive .hex-container.icon.instagram span {
     background-position: -108px -473px; }
   .hive .level-0 {
-    width: 99px;
-    height: 14px;
     position: relative; }
     .hive .level-0 img {
       width: 99px;
