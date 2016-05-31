@@ -1,6 +1,6 @@
 /* ----- FUNCTIONS ----- */
 function onResize() {
-  $('.first-section').css({ height: $(window).height() })
+  // $('.first-section').css({ height: $(window).height() })
 
   if ($(window).width() > 720) {
     $('.me-love').css({ height: $(window).height() })
@@ -9,6 +9,7 @@ function onResize() {
     startYYanimation()
   }
 }
+var connect_animation
 function navigate(page, cb) {
   if (['home', 'about', 'work', 'connect'].indexOf(page) < 0) {
     return
@@ -17,6 +18,17 @@ function navigate(page, cb) {
   $(window).off('scroll.about')
   if (page === 'home') {
     set_desc()
+  } else if (page === 'connect') {
+    var animation = function(){ $('.hive').removeClass('first-animate loaded-animate'); setTimeout(function(){ $('.hive').addClass('loaded-animate') }, 10) }
+    if (!connect_animation) {
+      $('.hive').removeClass('loaded-animate first-animate');
+      setTimeout(function(){ $('.hive').addClass('first-animate') }, 10)
+      setTimeout(function(){ $('.hive').addClass('loaded loaded-animate') }, 2500)
+    } else {
+      window.clearInterval(connect_animation)
+      animation()
+    }
+    connect_animation = window.setInterval(animation, 15000)
   } else if (page === 'about') {
     cb = (function(oldCb) {
       return function() {
@@ -48,18 +60,24 @@ onResize()
 $(window).on('resize', onResize)
 
 
-// $(window).on("load", function() {
+$(window).on("load", function() {
   var hash = window.location.hash.substr(1)
-  if (['about', 'work', 'connect'].indexOf(hash) > -1) {
-    setTimeout(function(){ navigate(hash) }, 500)
-  } else {
-    navigate('home')
-  }
-// })
+  // $('.icon-container').attr('class', 'icon-container home')
 
-$('[data-nav]').click(function(event) {
-  navigate($(this).attr('data-nav'))
+  setTimeout(function(){
+    if (['about', 'work', 'connect'].indexOf(hash) > -1) {
+      navigate(hash)
+    } else {
+      navigate('home')
+    }
+  }, 500)
+
+  $('.header').removeClass('hidden')
+  $('[data-nav]').click(function(event) {
+    navigate($(this).attr('data-nav'))
+  })
 })
+
 
 /* ----- HOME ----- */
 
@@ -126,9 +144,9 @@ $('.me-love .sub-navigation .nav-item:not(.disabled)').click(function() {
   }, 750)
 })
 
-var animation_flag = false
+var yy_animation_flag = false
 function startYYanimation() {
-  if(animation_flag) {
+  if(yy_animation_flag) {
     return
   }
   function animate() {
@@ -137,9 +155,9 @@ function startYYanimation() {
   }
   setTimeout(function(){
     animate()
-    window.setInterval(animate, 5000)
+    window.setInterval(animate, 15000)
   }, 2000)
-  animation_flag = true
+  yy_animation_flag = true
 }
 
 function setAboutScroll() {
@@ -174,4 +192,61 @@ function setAboutScroll() {
 
 /* ----- WORK ----- */
 /* ----- CONNECT ----- */
+// render hive
+// 7 lines
+var hex = [
+'3333',
+'32223',
+'321123',
+'3210123'
+]
+hexval = {
+  0: [['profile', 'data-nav="home']],
+  1: [
+    ['behance', 'https://www.behance.net/bigOmega'],
+    ['github', 'https://github.com/bigomega/'],
+    ['twitter', 'https://twitter.com/bigomega'],
+    ['medium', 'https://medium.com/@bigomega/'],
+    ['mail', 'mailto:bharathraja@live.com'],
+    ['flickr', 'https://www.flickr.com/photos/bigomega/albums']
+  ],
+  2: [
+    ['deviantart', 'http://bigomega.deviantart.com/'],
+    ['codepen', 'http://codepen.io/bigomega/'],
+    ['stackoverflow', 'http://stackoverflow.com/users/2130750/bigOmega'],
+    ['steam', 'https://steamcommunity.com/id/bigomega'],
+    ['tumblr', 'http://big0mega.tumblr.com'],
+    // ^ OR
+    // ['quora', 'https://www.quora.com/profile/Bharath-Raja']
+    ['facebook', 'https://www.facebook.com/bharathinssn'],
+    ['reddit', 'https://www.reddit.com/user/big_omega/'],
+    ['skype', 'skype:bigOmega3?chat'],
+    ['youtube', 'https://www.youtube.com/c/bigomega'],
+    ['linkedin', 'https://www.linkedin.com/in/bigomega'],
+    ['vine', 'https://vine.co/bigomega'],
+    ['instagram', 'https://instagram.com/big0mega/']
+  ],
+  count: { 0: 0, 1: 0, 2: 0 },
+}
+$('.hive').html((new Array(8)).join(1).split('').reduce(function(mem, x, ind) {
+  // console.log('-------L', ind, line_count)
+  var line_count = ind < 4 ? ind + 4 : 3 + 7 - ind
+  return mem + '\
+    <div class="line">\
+    ' +
+      (new Array(line_count + 1)).join(1).split('').reduce(function(mem2, y, ind2) {
+        var level = hex[line_count - 4][ind2]
+        var val = hexval[level] ? hexval[level][hexval.count[level]++] : ''
+        // console.log(level)
+        return mem2 + '\
+          <a class="hex-container level-'+ level +' '+ (val ? 'icon ' + val[0] : '') +'" target="_blank" '+(val ? (level != 0 ? 'href="' : '') + val[1] + '"' : '')+'>\
+            <div class="hex-border"><div class="hex"><span></span></div></div>\
+          </a>\
+        '
+      }, '')
+    + '\
+    </div>\
+  '
+}, ''))
+
 /* ----- END ----- */

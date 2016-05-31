@@ -84,16 +84,16 @@
       }
 
       .design-header span:before {
-        @include transition(left .2s 8.8s linear, bottom 0.5s 11.5s linear);
+        @include transition(left .2s 18.3s linear, bottom 0.5s 11.5s linear);
         left: -30px;
-        bottom: -10px;
-        @include animation(yy_revolve 2s 9s ease-in-out infinite reverse, yy_top_bot 4s 12s linear infinite alternate);
+        // bottom: -10px;
+        @include animation(yy_revolve 2s 18.5s ease-in-out infinite reverse, yy_top_bot 4s 12s linear infinite alternate);
       }
       .develop-header span:before {
-        @include transition(left .2s 7.8s linear, bottom 0.5s 11.5s linear);
+        @include transition(left .2s 19.3s linear, bottom 0.5s 11.5s linear);
         left: -30px;
-        bottom: -10px;
-        @include animation(yy_revolve 2s 8s ease-in-out infinite, yy_top_bot 4s 12s linear infinite alternate);
+        // bottom: -10px;
+        @include animation(yy_revolve 2s 19.5s ease-in-out infinite, yy_top_bot 4s 12s linear infinite alternate);
       }
     }
 
@@ -113,7 +113,7 @@
         background: url(/images/profile-128.jpg);
         background-size: contain;
         @include transform(rotate(180deg));
-        box-shadow: 0 0 0 3px #ccc;
+        box-shadow: 0 0 0 3px $grey;
       }
 
 
@@ -265,6 +265,6 @@
   100% { left: -30px; z-index: 1; }
 }
 @include keyframes(yy_top_bot) {
-  0% { bottom: -10px; }
-  100% { bottom: 75px; }
+  // 0% { bottom: -10px; }
+  // 100% { bottom: 75px; }
 }

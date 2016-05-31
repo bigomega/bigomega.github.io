@@ -1,6 +1,6 @@
 .first-section {
   position: relative;
-  min-height: 33em;
+  min-height: 35em;
 
    .container {
       height: 100%;
@@ -109,6 +109,10 @@
     border-radius: 100px;
     border-bottom: 3px solid darken($primary, 20%);
     background: $primary;
+    background: none;
+    border-bottom: 2px solid $primary;
+    border-radius: 0;
+
 
     &.animate {
       @include animation(/* ilt_color_change 5s ease-in-out infinite alternate,  */ilt_rotate 5s ease-in-out infinite alternate);
@@ -141,6 +145,10 @@
   .ilt-section {
     font-size: 1.5em;
     margin-top: 1em;
+
+    .ilt {
+      border-width: 1px;
+    }
 
     .ilt-option {
       margin-bottom: 0.3em;

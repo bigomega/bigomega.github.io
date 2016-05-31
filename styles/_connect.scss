@@ -1,0 +1,274 @@
+.icon-container.connect{
+  .icon-holder{
+    top: calc(18em + 160px);
+    opacity: 0;
+    visibility: hidden;
+    @include transition(all 0.5s cubic-bezier(0,.06,.1,1.01), opacity 0.5s .5s linear, visibility .5s 1s linear);
+  }
+}
+.hive {
+  margin-top: 18em;
+  width: 720px;
+  // overflow: hidden;
+  margin-left: calc(50% - 360px);
+
+  > .line {
+    margin-top: -1.5em;
+
+    &:nth-child(1),
+    &:nth-child(7) {
+      padding-left: calc(3.2em * 3);
+    }
+
+    &:nth-child(2),
+    &:nth-child(6) {
+      padding-left: calc(3.2em * 2);
+    }
+
+    &:nth-child(3),
+    &:nth-child(5) {
+      padding-left: calc(3.2em * 1);
+    }
+  }
+
+  .hex-container {
+    display: inline-block;
+    height: 114px;
+
+    &:hover {
+      .hex {
+        background: $palette-2;
+        z-index: 2;
+      }
+      .hex-border {
+        @include transform(scale(1.4));
+        background: $palette-4;
+        z-index: 0;
+      }
+    }
+  }
+
+  .hex,
+  .hex-border {
+    width: 87px;
+    height: 50px;
+    background: $primary;
+    display: inline-block;
+    position: relative;
+    @include transition(all .25s linear);
+
+    &:before ,
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 87px;
+      height: 50px;
+      @include transform-origin(center);
+      background: inherit;
+      z-index: -1;
+    }
+
+    &:before {
+      @include transform(rotate(-60deg));
+    }
+
+    &:after {
+      @include transform(rotate(60deg));
+    }
+  }
+
+  .hex-border {
+    margin-top: 28px;
+    padding: 4px 6px;
+    box-sizing: border-box;
+    background: none;
+    opacity: 0;
+    @include transition(all .125s linear);
+
+    &,
+    &:before ,
+    &:after , {
+      width: 99px;
+      height: 58px;
+      z-index: -2;
+    }
+  }
+
+  @import "hexagon-icons";
+
+
+  .hex-container.icon:hover .hex {
+    // background: $primary;
+  }
+
+  .level-0 {
+    width: 99px;
+    height: 14px;
+    position: relative;
+
+    img {
+      width: 99px;
+      position: absolute;
+      left: 0;
+      margin-top: -60px;
+    }
+
+    &:hover img {
+      width: 120px;
+    }
+  }
+
+  .level-1 {
+    .hex {
+      background: $palette-5;
+    }
+  }
+
+  .level-2 {
+    .hex {
+      background: $palette-1;
+    }
+  }
+
+  .level-3 {
+    .hex {
+      background: $grey;
+    }
+  }
+
+  &.first-animate {
+    .level-0 .hex-border {
+      @include animation(hex_boom_1 1s 0.5s ease-out, visible 2s .5s ease-in-out);
+    }
+
+    .level-1 .hex {
+      @include animation(l1_color 4s 1s ease-out);
+    }
+    .level-1 .hex-border {
+      @include animation(hex_boom_1 1.3s 1s ease-out, visible 1.5s 1s ease-in-out);
+    }
+
+    .level-2 .hex {
+      @include animation(l2_color 3s 1.5s ease-out);
+    }
+    .level-2 .hex-border {
+      @include animation(hex_boom_1 1.6s 1.5s ease-out, visible 1s 1.5s ease-in-out);
+    }
+
+    .level-3 .hex {
+      @include animation(l3_color 4.5s .5s ease-out);
+    }
+    .level-3 .hex-border {
+      @include animation(hex_boom_1 0s 1s ease-out, visible 1s 2s ease-in-out);
+    }
+  }
+
+  &.loaded {
+    .hex-border {
+      opacity: 1;
+    }
+  }
+
+  &.loaded-animate {
+    .level-0 .hex-border {
+      @include animation(hex_boom_centre 1s 0.5s ease-out);
+    }
+
+    .level-1 .hex-border {
+      @include animation(hex_boom 1.3s .65s ease-out);
+    }
+
+    .level-2 .hex-border {
+      @include animation(hex_boom 1.6s .8s ease-out);
+    }
+
+    .level-3 .hex-border {
+      @include animation(hex_boom 2s .95s ease-out);
+    }
+  }
+}
+@media (max-height: 850px) {
+  .hive {
+    margin-top: 7em;
+  }
+  .icon-container.connect .icon-holder{
+    top: calc(7em + 160px);
+  }
+}
+@media (max-width: 850px) {
+  .hive {
+    @include transform(scale(0.7));
+  }
+}
+@media (max-width: 550px) {
+  .hive {
+    margin-top: 2em;
+    width: 520px;
+    margin-left: calc(50% - 260px);
+
+    .level-3 {
+      display: none;
+    }
+
+    &.loaded-animate .level-0 .hex-border,
+    &.loaded-animate .level-1 .hex-border,
+    &.loaded-animate .level-2 .hex-border {
+      @include animation(none);
+    }
+  }
+  .icon-container.connect .icon-holder{
+    top: calc(2em + 160px);
+  }
+}
+@media (max-width: $dp-hides-width) {
+  .icon-container.connect .icon-holder{
+    margin-left: -3px;
+  }
+}
+
+// http://jsbin.com/qawumefala/
+@include keyframes(hex_boom) {
+  0%   { @include transform(scale(1)); background-color: inherit; }
+  30%  { @include transform(scale(1.2)); background-color: black;}
+  60%  { @include transform(scale(1)); background-color: inherit; }
+  100% { @include transform(scale(1)); background-color: inherit;}
+}
+@include keyframes(hex_boom_centre) {
+  0%   { @include transform(scale(1)); background-color: $primary; }
+  30%  { @include transform(scale(1.2)); background-color: black;}
+  60%  { @include transform(scale(1)); background-color: black; }
+  100% { @include transform(scale(1)); background-color: $primary;}
+}
+
+@include keyframes(hex_boom_1) {
+  0%   { @include transform(scale(1)); background-color: none; }
+  30%  { @include transform(scale(1.4)); }
+  60%  { @include transform(scale(1)); }
+  // 90%  { top: -10px; }
+  100% { @include transform(scale(1)); }
+}
+
+@include keyframes(visible) {
+  0%   { opacity: 0; }
+  20%  { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+@include keyframes(l1_color) {
+  0% { background: white; }
+  30% { background: $palette-1; }
+}
+
+@include keyframes(l2_color) {
+  0% { background: white; }
+  30% { background: $palette-2; }
+}
+
+@include keyframes(l3_color) {
+  0% { background: trasparent; }
+  1% { background: $grey; }
+  2% { background: #fff; }
+  50% { background: #fff; }
+}
