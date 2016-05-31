@@ -194,7 +194,7 @@ function setAboutScroll() {
 /* ----- CONNECT ----- */
 // render hive
 // 7 lines
-var hex = [
+var hex_arrangement = [
 '3333',
 '32223',
 '321123',
@@ -218,7 +218,7 @@ hexval = {
     ['tumblr', 'http://big0mega.tumblr.com'],
     // ^ OR
     // ['quora', 'https://www.quora.com/profile/Bharath-Raja']
-    ['facebook', 'https://www.facebook.com/bharathinssn'],
+    ['facebook', 'https://www.facebook.com/big0mega'],
     ['reddit', 'https://www.reddit.com/user/big_omega/'],
     ['skype', 'skype:bigOmega3?chat'],
     ['youtube', 'https://www.youtube.com/c/bigomega'],
@@ -235,7 +235,7 @@ $('.hive').html((new Array(8)).join(1).split('').reduce(function(mem, x, ind) {
     <div class="line">\
     ' +
       (new Array(line_count + 1)).join(1).split('').reduce(function(mem2, y, ind2) {
-        var level = hex[line_count - 4][ind2]
+        var level = hex_arrangement[line_count - 4][ind2]
         var val = hexval[level] ? hexval[level][hexval.count[level]++] : ''
         // console.log(level)
         return mem2 + '\
