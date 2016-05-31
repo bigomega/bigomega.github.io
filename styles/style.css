@@ -1464,27 +1464,25 @@ a,
       -webkit-transition: opacity 0.2s 2.8s linear;
       transition: opacity 0.2s 2.8s linear; }
     #solve .dd-header.animate .design-header span:before {
-      -moz-transition: left 0.2s 8.8s linear, bottom 0.5s 11.5s linear;
-      -o-transition: left 0.2s 8.8s linear, bottom 0.5s 11.5s linear;
-      -webkit-transition: left 0.2s 8.8s linear, bottom 0.5s 11.5s linear;
-      transition: left 0.2s 8.8s linear, bottom 0.5s 11.5s linear;
+      -moz-transition: left 0.2s 18.3s linear, bottom 0.5s 11.5s linear;
+      -o-transition: left 0.2s 18.3s linear, bottom 0.5s 11.5s linear;
+      -webkit-transition: left 0.2s 18.3s linear, bottom 0.5s 11.5s linear;
+      transition: left 0.2s 18.3s linear, bottom 0.5s 11.5s linear;
       left: -30px;
-      bottom: -10px;
-      -webkit-animation: yy_revolve 2s 9s ease-in-out infinite reverse, yy_top_bot 4s 12s linear infinite alternate;
-      -moz-animation: yy_revolve 2s 9s ease-in-out infinite reverse, yy_top_bot 4s 12s linear infinite alternate;
-      -o-animation: yy_revolve 2s 9s ease-in-out infinite reverse, yy_top_bot 4s 12s linear infinite alternate;
-      animation: yy_revolve 2s 9s ease-in-out infinite reverse, yy_top_bot 4s 12s linear infinite alternate; }
+      -webkit-animation: yy_revolve 2s 18.5s ease-in-out infinite reverse, yy_top_bot 4s 12s linear infinite alternate;
+      -moz-animation: yy_revolve 2s 18.5s ease-in-out infinite reverse, yy_top_bot 4s 12s linear infinite alternate;
+      -o-animation: yy_revolve 2s 18.5s ease-in-out infinite reverse, yy_top_bot 4s 12s linear infinite alternate;
+      animation: yy_revolve 2s 18.5s ease-in-out infinite reverse, yy_top_bot 4s 12s linear infinite alternate; }
     #solve .dd-header.animate .develop-header span:before {
-      -moz-transition: left 0.2s 7.8s linear, bottom 0.5s 11.5s linear;
-      -o-transition: left 0.2s 7.8s linear, bottom 0.5s 11.5s linear;
-      -webkit-transition: left 0.2s 7.8s linear, bottom 0.5s 11.5s linear;
-      transition: left 0.2s 7.8s linear, bottom 0.5s 11.5s linear;
+      -moz-transition: left 0.2s 19.3s linear, bottom 0.5s 11.5s linear;
+      -o-transition: left 0.2s 19.3s linear, bottom 0.5s 11.5s linear;
+      -webkit-transition: left 0.2s 19.3s linear, bottom 0.5s 11.5s linear;
+      transition: left 0.2s 19.3s linear, bottom 0.5s 11.5s linear;
       left: -30px;
-      bottom: -10px;
-      -webkit-animation: yy_revolve 2s 8s ease-in-out infinite, yy_top_bot 4s 12s linear infinite alternate;
-      -moz-animation: yy_revolve 2s 8s ease-in-out infinite, yy_top_bot 4s 12s linear infinite alternate;
-      -o-animation: yy_revolve 2s 8s ease-in-out infinite, yy_top_bot 4s 12s linear infinite alternate;
-      animation: yy_revolve 2s 8s ease-in-out infinite, yy_top_bot 4s 12s linear infinite alternate; }
+      -webkit-animation: yy_revolve 2s 19.5s ease-in-out infinite, yy_top_bot 4s 12s linear infinite alternate;
+      -moz-animation: yy_revolve 2s 19.5s ease-in-out infinite, yy_top_bot 4s 12s linear infinite alternate;
+      -o-animation: yy_revolve 2s 19.5s ease-in-out infinite, yy_top_bot 4s 12s linear infinite alternate;
+      animation: yy_revolve 2s 19.5s ease-in-out infinite, yy_top_bot 4s 12s linear infinite alternate; }
   #solve .dd-header .yin-yang {
     width: 90px;
     height: 90px;
@@ -1728,31 +1726,7 @@ a,
     left: -30px;
     z-index: 1; } }
 
-@-webkit-keyframes yy_top_bot {
-  0% {
-    bottom: -10px; }
-  100% {
-    bottom: 75px; } }
-
-@-moz-keyframes yy_top_bot {
-  0% {
-    bottom: -10px; }
-  100% {
-    bottom: 75px; } }
-
-@-o-keyframes yy_top_bot {
-  0% {
-    bottom: -10px; }
-  100% {
-    bottom: 75px; } }
-
-@keyframes yy_top_bot {
-  0% {
-    bottom: -10px; }
-  100% {
-    bottom: 75px; } }
-
-#play {
+@-webkit-keyframes yy_top_bot {}@-moz-keyframes yy_top_bot {}@-o-keyframes yy_top_bot {}@keyframes yy_top_bot {}#play {
   min-height: 60em; }
   #play .float-img-holder {
     box-sizing: border-box; }
@@ -2014,22 +1988,22 @@ a,
     -o-animation: hex_boom_1 1.6s 1.5s ease-out, visible 1s 1.5s ease-in-out;
     animation: hex_boom_1 1.6s 1.5s ease-out, visible 1s 1.5s ease-in-out; }
   .hive.first-animate .level-3 .hex {
-    -webkit-animation: l3_color 3.5s 0.5s ease-out;
-    -moz-animation: l3_color 3.5s 0.5s ease-out;
-    -o-animation: l3_color 3.5s 0.5s ease-out;
-    animation: l3_color 3.5s 0.5s ease-out; }
+    -webkit-animation: l3_color 4.5s 0.5s ease-out;
+    -moz-animation: l3_color 4.5s 0.5s ease-out;
+    -o-animation: l3_color 4.5s 0.5s ease-out;
+    animation: l3_color 4.5s 0.5s ease-out; }
   .hive.first-animate .level-3 .hex-border {
     -webkit-animation: hex_boom_1 0s 1s ease-out, visible 1s 2s ease-in-out;
     -moz-animation: hex_boom_1 0s 1s ease-out, visible 1s 2s ease-in-out;
     -o-animation: hex_boom_1 0s 1s ease-out, visible 1s 2s ease-in-out;
     animation: hex_boom_1 0s 1s ease-out, visible 1s 2s ease-in-out; }
-  .hive.loaded-animate .hex-border {
+  .hive.loaded .hex-border {
     opacity: 1; }
   .hive.loaded-animate .level-0 .hex-border {
-    -webkit-animation: hex_boom 1s 0.5s ease-out;
-    -moz-animation: hex_boom 1s 0.5s ease-out;
-    -o-animation: hex_boom 1s 0.5s ease-out;
-    animation: hex_boom 1s 0.5s ease-out; }
+    -webkit-animation: hex_boom_centre 1s 0.5s ease-out;
+    -moz-animation: hex_boom_centre 1s 0.5s ease-out;
+    -o-animation: hex_boom_centre 1s 0.5s ease-out;
+    animation: hex_boom_centre 1s 0.5s ease-out; }
   .hive.loaded-animate .level-1 .hex-border {
     -webkit-animation: hex_boom 1.3s 0.65s ease-out;
     -moz-animation: hex_boom 1.3s 0.65s ease-out;
@@ -2201,6 +2175,126 @@ a,
     transform: scale(1);
     background-color: inherit; } }
 
+@-webkit-keyframes hex_boom_centre {
+  0% {
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    background-color: #8fc045; }
+  30% {
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    background-color: black; }
+  60% {
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    background-color: black; }
+  100% {
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    background-color: #8fc045; } }
+
+@-moz-keyframes hex_boom_centre {
+  0% {
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    background-color: #8fc045; }
+  30% {
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    background-color: black; }
+  60% {
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    background-color: black; }
+  100% {
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    background-color: #8fc045; } }
+
+@-o-keyframes hex_boom_centre {
+  0% {
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    background-color: #8fc045; }
+  30% {
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    background-color: black; }
+  60% {
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    background-color: black; }
+  100% {
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    background-color: #8fc045; } }
+
+@keyframes hex_boom_centre {
+  0% {
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    background-color: #8fc045; }
+  30% {
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    background-color: black; }
+  60% {
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    background-color: black; }
+  100% {
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    background-color: #8fc045; } }
+
 @-webkit-keyframes hex_boom_1 {
   0% {
     -moz-transform: scale(1);
@@ -2210,11 +2304,11 @@ a,
     transform: scale(1);
     background-color: none; }
   30% {
-    -moz-transform: scale(1.3);
-    -o-transform: scale(1.3);
-    -ms-transform: scale(1.3);
-    -webkit-transform: scale(1.3);
-    transform: scale(1.3); }
+    -moz-transform: scale(1.4);
+    -o-transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    -webkit-transform: scale(1.4);
+    transform: scale(1.4); }
   60% {
     -moz-transform: scale(1);
     -o-transform: scale(1);
@@ -2237,11 +2331,11 @@ a,
     transform: scale(1);
     background-color: none; }
   30% {
-    -moz-transform: scale(1.3);
-    -o-transform: scale(1.3);
-    -ms-transform: scale(1.3);
-    -webkit-transform: scale(1.3);
-    transform: scale(1.3); }
+    -moz-transform: scale(1.4);
+    -o-transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    -webkit-transform: scale(1.4);
+    transform: scale(1.4); }
   60% {
     -moz-transform: scale(1);
     -o-transform: scale(1);
@@ -2264,11 +2358,11 @@ a,
     transform: scale(1);
     background-color: none; }
   30% {
-    -moz-transform: scale(1.3);
-    -o-transform: scale(1.3);
-    -ms-transform: scale(1.3);
-    -webkit-transform: scale(1.3);
-    transform: scale(1.3); }
+    -moz-transform: scale(1.4);
+    -o-transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    -webkit-transform: scale(1.4);
+    transform: scale(1.4); }
   60% {
     -moz-transform: scale(1);
     -o-transform: scale(1);
@@ -2291,11 +2385,11 @@ a,
     transform: scale(1);
     background-color: none; }
   30% {
-    -moz-transform: scale(1.3);
-    -o-transform: scale(1.3);
-    -ms-transform: scale(1.3);
-    -webkit-transform: scale(1.3);
-    transform: scale(1.3); }
+    -moz-transform: scale(1.4);
+    -o-transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    -webkit-transform: scale(1.4);
+    transform: scale(1.4); }
   60% {
     -moz-transform: scale(1);
     -o-transform: scale(1);

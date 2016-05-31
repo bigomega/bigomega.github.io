@@ -9,7 +9,7 @@ function onResize() {
     startYYanimation()
   }
 }
-var connect_aniamtion
+var connect_animation
 function navigate(page, cb) {
   if (['home', 'about', 'work', 'connect'].indexOf(page) < 0) {
     return
@@ -20,15 +20,15 @@ function navigate(page, cb) {
     set_desc()
   } else if (page === 'connect') {
     var animation = function(){ $('.hive').removeClass('first-animate loaded-animate'); setTimeout(function(){ $('.hive').addClass('loaded-animate') }, 10) }
-    if (!connect_aniamtion) {
+    if (!connect_animation) {
       $('.hive').removeClass('loaded-animate first-animate');
       setTimeout(function(){ $('.hive').addClass('first-animate') }, 10)
-      setTimeout(function(){ $('.hive').addClass('loaded-animate') }, 2500)
+      setTimeout(function(){ $('.hive').addClass('loaded loaded-animate') }, 2500)
     } else {
-      window.clearInterval(connect_aniamtion)
+      window.clearInterval(connect_animation)
       animation()
     }
-    connect_aniamtion = window.setInterval(animation, 15000)
+    connect_animation = window.setInterval(animation, 15000)
   } else if (page === 'about') {
     cb = (function(oldCb) {
       return function() {
@@ -144,9 +144,9 @@ $('.me-love .sub-navigation .nav-item:not(.disabled)').click(function() {
   }, 750)
 })
 
-var animation_flag = false
+var yy_animation_flag = false
 function startYYanimation() {
-  if(animation_flag) {
+  if(yy_animation_flag) {
     return
   }
   function animate() {
@@ -155,9 +155,9 @@ function startYYanimation() {
   }
   setTimeout(function(){
     animate()
-    window.setInterval(animate, 5000)
+    window.setInterval(animate, 15000)
   }, 2000)
-  animation_flag = true
+  yy_animation_flag = true
 }
 
 function setAboutScroll() {
@@ -213,7 +213,7 @@ hexval = {
   2: [
     ['deviantart', 'http://bigomega.deviantart.com/'],
     ['codepen', 'http://codepen.io/bigomega/'],
-    ['stackoverflow', 'http://stackoverflow.com/users/2130750/big%CE%A9mega'],
+    ['stackoverflow', 'http://stackoverflow.com/users/2130750/bigOmega'],
     ['steam', 'https://steamcommunity.com/id/bigomega'],
     ['tumblr', 'http://big0mega.tumblr.com'],
     // ^ OR
