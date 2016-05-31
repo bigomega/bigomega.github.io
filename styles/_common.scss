@@ -160,7 +160,7 @@ a,
     top: 0;
     left: calc(50% - 48px);
     opacity: 1;
-    @include transition(0.5s ease-out all);
+    @include transition(0.5s ease-out all, visibility 0s linear);
 
     .dp-icon {
       display: inline-block;

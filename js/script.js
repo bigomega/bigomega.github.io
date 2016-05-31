@@ -29,6 +29,13 @@ function navigate(page, cb) {
       animation()
     }
     connect_animation = window.setInterval(animation, 15000)
+  } else if (page === 'work') {
+    cb = (function(oldCb) {
+      return function() {
+        $('.work-img-container').removeClass('animate'); setTimeout(function(){ $('.work-img-container').addClass('animate') }, 10)
+        typeof(oldCb) === 'function' && oldCb()
+      }
+    })(cb)
   } else if (page === 'about') {
     cb = (function(oldCb) {
       return function() {
@@ -44,7 +51,7 @@ function navigate(page, cb) {
   $('.page').fadeOut(250, function(){
     if(--len === 0) {
       $('body').scrollTop(0)
-      $('#' + page).fadeIn(250)
+      $('#' + page).fadeIn(500)
       typeof(cb) === 'function' && cb()
     }
   })

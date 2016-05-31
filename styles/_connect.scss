@@ -1,11 +1,13 @@
 .icon-container.connect{
+  z-index: -2;
+  @include transition(z-index 0s 0.5s linear);
+
   .icon-holder{
-    top: calc(18em + 160px);
-    opacity: 0;
-    visibility: hidden;
-    @include transition(all 0.5s cubic-bezier(0,.06,.1,1.01), opacity 0.5s .5s linear, visibility .5s 1s linear);
+    top: 28em;
+    @include transition(all 0.5s cubic-bezier(0,.06,.1,1.01), visibility 0s linear);
   }
 }
+
 .hive {
   margin-top: 18em;
   width: 720px;
@@ -229,11 +231,23 @@
   }
 }
 @media (max-width: 850px) {
+  .icon-container.connect{
+    .icon-holder{
+      top: 33.5em;
+      @include transform(scale(.8));
+    }
+  }
   .hive {
     @include transform(scale(0.7));
   }
 }
 @media (max-width: 550px) {
+  .icon-container.connect{
+    .icon-holder{
+      top: 12em;
+      @include transform(scale(.8));
+    }
+  }
   .hive {
     margin-top: 2em;
     width: 520px;
