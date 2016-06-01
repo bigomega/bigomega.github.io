@@ -1,7 +1,7 @@
 .icon-container.work{
   .icon-holder{
     left: calc(50% - 325px);
-    top: 1em;
+    top: 2.5em;
     opacity: 0;
     visibility: hidden;
     .dp-icon {
@@ -15,7 +15,7 @@
 @media (max-width: $dp-hides-width) {
   .icon-container.work{
     .icon-holder{
-      top: .2em;
+      top: 4em;
       left: calc(50% - 165px);
       .dp-icon {
         width: 330px;
@@ -26,7 +26,7 @@
 }
 
 #work {
-  margin-top: 8em;
+  margin-top: 6em;
 }
 .work-img-container {
   position: relative;
@@ -43,7 +43,7 @@
     overflow: hidden;
     // display: flex;
     // flex-flow: row wrap;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.85);
     font-size: 1.3em;
 
     .hat-1, .hat-2, .hat-3,
@@ -145,13 +145,13 @@
     .sp-3 {
       top: 48%;
       font-size: 1.2em;
-      color: rgba(255, 255, 255, 0.7);
+      // color: rgba(255, 255, 255, 0.7);
     }
     .sp-4 {
       top: 70%;
     }
     .sp-5 {
-      top: 85%;
+      top: 83%;
     }
   }
 
@@ -159,6 +159,8 @@
     .split {
       opacity: 1;
       height: 20%;
+    }
+    .sp-1 {
       @include transition(all 0.3s linear);
     }
     .sp-2 {
@@ -179,8 +181,10 @@
     width: 100%;
   }
 }
+
+
 .work-rest {
-  display: none;
+  opacity: 0;
 
   .work-img-title {
     text-align: center;
@@ -196,8 +200,15 @@
     width: 160px;
     padding: 10px;
     margin: auto;
+    margin-top: 3em;
     border-radius: 3px;
     border: 1px solid $primary;
+  }
+}
+#work.show-rest {
+  .work-rest {
+    opacity: 1;
+    @include transition(all .5s linear);
   }
 }
 
@@ -211,7 +222,20 @@
       .work-split {
         font-size: 1em;
 
-        .split:nth-child(3) {
+        .hat-2 {
+          border-bottom-width: 79px;
+          border-left-width: 18px;
+          border-right-width: 16px;
+
+          &:before {
+            bottom: -100px;
+            left: -18px;
+            width: calc(100% + 34px);
+            height: 40px;
+          }
+        }
+
+        .sp-3 {
           font-size: 1em;
         }
       }

@@ -41,7 +41,7 @@ function navigate(page, cb) {
     cb = (function(oldCb) {
       return function() {
         $('.work-img-container').removeClass('animate'); setTimeout(function(){ $('.work-img-container').addClass('animate') }, 700)
-        $('.work-rest').hide(); setTimeout(function(){ $('.work-rest').fadeIn(500) }, 2500)
+        $('#work').removeClass('show-rest'); setTimeout(function(){ $('#work').addClass('show-rest') }, 2500)
         typeof(oldCb) === 'function' && oldCb()
       }
     })(cb)
@@ -199,6 +199,7 @@ function setAboutScroll() {
 }
 
 /* ----- WORK ----- */
+var a = 1
 /* ----- CONNECT ----- */
 // render hive
 // 7 lines
@@ -208,7 +209,7 @@ var hex_arrangement = [
 '321123',
 '3210123'
 ]
-hexval = {
+var hexval = {
   0: [['profile', 'data-nav="home']],
   1: [
     ['behance', 'https://www.behance.net/bigOmega'],

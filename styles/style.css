@@ -1743,7 +1743,7 @@ a,
 
 .icon-container.work .icon-holder {
   left: calc(50% - 325px);
-  top: 1em;
+  top: 2.5em;
   opacity: 0;
   visibility: hidden;
   -moz-transition: all 0.5s linear, opacity 0.3s 0.5s linear, visibility 0s 0.8s linear;
@@ -1760,14 +1760,14 @@ a,
 
 @media (max-width: 720px) {
   .icon-container.work .icon-holder {
-    top: .2em;
+    top: 4em;
     left: calc(50% - 165px); }
     .icon-container.work .icon-holder .dp-icon {
       width: 330px;
       height: 330px; } }
 
 #work {
-  margin-top: 8em; }
+  margin-top: 6em; }
 
 .work-img-container {
   position: relative;
@@ -1781,7 +1781,7 @@ a,
     z-index: -1;
     box-sizing: border-box;
     overflow: hidden;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.85);
     font-size: 1.3em; }
     .work-img-container .work-split .hat-1 {
       position: absolute;
@@ -1870,15 +1870,15 @@ a,
       top: 26%; }
     .work-img-container .work-split .sp-3 {
       top: 48%;
-      font-size: 1.2em;
-      color: rgba(255, 255, 255, 0.7); }
+      font-size: 1.2em; }
     .work-img-container .work-split .sp-4 {
       top: 70%; }
     .work-img-container .work-split .sp-5 {
-      top: 85%; }
+      top: 83%; }
   .work-img-container.animate .split {
     opacity: 1;
-    height: 20%;
+    height: 20%; }
+  .work-img-container.animate .sp-1 {
     -moz-transition: all 0.3s linear;
     -o-transition: all 0.3s linear;
     -webkit-transition: all 0.3s linear;
@@ -1907,7 +1907,7 @@ a,
     width: 100%; }
 
 .work-rest {
-  display: none; }
+  opacity: 0; }
   .work-rest .work-img-title {
     text-align: center;
     color: #ccc; }
@@ -1920,8 +1920,16 @@ a,
     width: 160px;
     padding: 10px;
     margin: auto;
+    margin-top: 3em;
     border-radius: 3px;
     border: 1px solid #8fc045; }
+
+#work.show-rest .work-rest {
+  opacity: 1;
+  -moz-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear; }
 
 @media (max-width: 720px) {
   #work {
@@ -1930,7 +1938,16 @@ a,
       width: 300px; }
       #work .work-img-container .work-split {
         font-size: 1em; }
-        #work .work-img-container .work-split .split:nth-child(3) {
+        #work .work-img-container .work-split .hat-2 {
+          border-bottom-width: 79px;
+          border-left-width: 18px;
+          border-right-width: 16px; }
+          #work .work-img-container .work-split .hat-2:before {
+            bottom: -100px;
+            left: -18px;
+            width: calc(100% + 34px);
+            height: 40px; }
+        #work .work-img-container .work-split .sp-3 {
           font-size: 1em; } }
 
 .icon-container.connect {
