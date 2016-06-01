@@ -71,6 +71,24 @@ function navigate(page, cb) {
   // window.location.hash = page
 }
 
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
 /* ----- COMMON ----- */
 
 onResize()
@@ -237,6 +255,20 @@ var skills = [
   , ['Soccer', 35]
   , ['Dota2', 95]
 ]
+shuffle(skills)
+skills.forEach(function(sk){
+  $('.skills-list').append('\
+    <div class="skill"><span style="width:'+ sk[1] +'%;"></span>'+ sk[0] +'</div>\
+  ')
+})
+$('.work-dig-deeper').click(function(){
+  $('#work').toggleClass('showing-skills')
+  if ($('#work').hasClass('showing-skills')) {
+    $(this).text('Hide all skills')
+  } else {
+    $(this).text('See all skills')
+  }
+})
 
 // Tags: js - css - hack - art - design - visualization - bash - ui
 var gibberish_list = [
