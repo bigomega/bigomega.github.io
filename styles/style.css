@@ -1816,10 +1816,10 @@ a,
       border-bottom: 138px solid #666;
       border-left: 31px solid transparent;
       border-right: 28px solid transparent;
-      -moz-transition: all 0.3s 2.4s linear;
-      -o-transition: all 0.3s 2.4s linear;
-      -webkit-transition: all 0.3s 2.4s linear;
-      transition: all 0.3s 2.4s linear; }
+      -moz-transition: all 0.3s 2.3s linear;
+      -o-transition: all 0.3s 2.3s linear;
+      -webkit-transition: all 0.3s 2.3s linear;
+      transition: all 0.3s 2.3s linear; }
       .work-img-container .work-split .hat-2:before {
         content: '';
         position: absolute;
@@ -1830,10 +1830,10 @@ a,
         /* @include transform(rotate(1deg)); */
         height: 128px;
         border-radius: 50%;
-        -moz-transition: all 0.3s 2.4s linear;
-        -o-transition: all 0.3s 2.4s linear;
-        -webkit-transition: all 0.3s 2.4s linear;
-        transition: all 0.3s 2.4s linear; }
+        -moz-transition: all 0.3s 2.3s linear;
+        -o-transition: all 0.3s 2.3s linear;
+        -webkit-transition: all 0.3s 2.3s linear;
+        transition: all 0.3s 2.3s linear; }
     .work-img-container .work-split .hat-3 {
       position: absolute;
       top: 22.6%;
@@ -1848,10 +1848,10 @@ a,
       border-radius: 50%;
       background: #333;
       z-index: 3;
-      -moz-transition: all 0.3s 2.8s linear;
-      -o-transition: all 0.3s 2.8s linear;
-      -webkit-transition: all 0.3s 2.8s linear;
-      transition: all 0.3s 2.8s linear; }
+      -moz-transition: all 0.3s 2.55s linear;
+      -o-transition: all 0.3s 2.55s linear;
+      -webkit-transition: all 0.3s 2.55s linear;
+      transition: all 0.3s 2.55s linear; }
     .work-img-container .work-split .face-2 {
       position: absolute;
       top: 67%;
@@ -1860,10 +1860,10 @@ a,
       z-index: 1;
       background: #E4A270;
       /* background: #E09F6E; */
-      -moz-transition: all 0.3s 3.2s linear;
-      -o-transition: all 0.3s 3.2s linear;
-      -webkit-transition: all 0.3s 3.2s linear;
-      transition: all 0.3s 3.2s linear; }
+      -moz-transition: all 0.3s 3.5s linear;
+      -o-transition: all 0.3s 3.5s linear;
+      -webkit-transition: all 0.3s 3.5s linear;
+      transition: all 0.3s 3.5s linear; }
     .work-img-container .work-split .face-1 {
       position: absolute;
       top: 41%;

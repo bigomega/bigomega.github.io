@@ -82,7 +82,7 @@ $text-wait: 3.5s;
       border-bottom: 138px solid #666;
       border-left: 31px solid transparent;
       border-right: 28px solid transparent;
-      @include transition(all .3s $drop-start + .4s linear);
+      @include transition(all .3s $drop-start + .3s linear);
 
       &:before {
         content: '';
@@ -94,7 +94,7 @@ $text-wait: 3.5s;
         /* @include transform(rotate(1deg)); */
         height: 128px;
         border-radius: 50%;
-        @include transition(all .3s $drop-start + .4s linear);
+        @include transition(all .3s $drop-start + .3s linear);
       }
     }
 
@@ -108,7 +108,7 @@ $text-wait: 3.5s;
       border-radius: 50%;
       background: #333;
       z-index: 3;
-      @include transition(all .3s $drop-start + .8s linear);
+      @include transition(all .3s $drop-start + .55s linear);
     }
 
     .face-2 {
@@ -119,7 +119,7 @@ $text-wait: 3.5s;
       z-index: 1;
       background: #E4A270;
       /* background: #E09F6E; */
-      @include transition(all .3s $drop-start + 1.2s linear);
+      @include transition(all .3s $drop-start + 1.5s linear);
     }
 
     .face-1 {
