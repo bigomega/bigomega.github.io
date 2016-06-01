@@ -40,8 +40,8 @@ function navigate(page, cb) {
   } else if (page === 'work') {
     cb = (function(oldCb) {
       return function() {
-        $('.work-img-container').removeClass('animate'); setTimeout(function(){ $('.work-img-container').addClass('animate') }, 700)
-        $('#work').removeClass('show-rest'); setTimeout(function(){ $('#work').addClass('show-rest') }, 2500)
+        $('.work-img-container').removeClass('animate'); setTimeout(function(){ $('.work-img-container').addClass('animate') }, 10)
+        $('#work').removeClass('show-rest'); setTimeout(function(){ $('#work').addClass('show-rest') }, 3500)
         typeof(oldCb) === 'function' && oldCb()
       }
     })(cb)
@@ -199,7 +199,70 @@ function setAboutScroll() {
 }
 
 /* ----- WORK ----- */
-var a = 1
+var skills = [
+    ['Art', 40]
+  , ['Illustration', 55]
+  , ['3D modeling', 15]
+  , ['Sculpting', 30]
+
+  , ['UX design', 70]
+  , ['Graphic design', 35]
+  , ['Web design', 80]
+
+  , ['HTML/CSS', 95]
+  , ['Sass/Less', 70]
+
+  , ['Javascript ecosystem', 100]
+  , ['ReactJS', 75]
+  , ['App development', 90]
+
+  , ['Node.js', 80]
+  , ['Python', 35]
+  , ['Php', 30]
+  , ['Ruby on Rails', 25]
+
+  , ['BrainFuck', 60]
+  , ['Hacking', 90]
+  , ['Shell', 60]
+  , ['Git', 90]
+
+  , ['Dancing', 70]
+  , ['Singing', 5]
+  , ['Guitar', 20]
+  , ['Trekking', 75]
+  , ['Biking', 65]
+  , ['Photography', 20]
+  , ['Blogging', 45]
+  , ['Rambling', 100]
+  , ['Soccer', 35]
+  , ['Dota2', 95]
+]
+
+// Tags: js - css - hack - art - design - visualization - bash - ui
+var gibberish_list = [
+  { title: 'BrainFuck Compiling Visualization', url: 'http://bigomega.github.io/brainfuck-visualizer/', tags: ['js', 'ui', 'visualization'], date: 'Nov 2012' },
+  { title: 'Conway’s Game-of-Life in js', url: 'http://blog.bharathraja.in/post/22316608463/conways-game-of-life-in-js', date: 'May 2012', tags: ['js', 'ui', 'visualization'] },
+  { title: 'CaaS - Charting As A Service', url: 'http://bharathraja.in/caas/', date: 'May 2014', tags: ['js', 'ui'] },
+  { title: 'Jigsaw Puzzle game - Facebook', url: 'http://bharathraja.in/facebook-image-jigsaw/', date: 'Oct 2012', tags: ['js', 'ui'] },
+
+  { title: 'Voicemash - Voice dubbing for famous videos', url: 'https://github.com/bigomega/voicemash', date: 'May 2015', tags: ['ui'] },
+  { title: 'Less css - Command line helper', url: 'https://github.com/bigomega/lesscss-cmd-helper', date: 'Mar 2013', tags: ['bash', 'hack'] },
+  { title: 'CommandLine url shortener - goo.gl', url: 'http://blog.bharathraja.in/post/32492820406/googl', tags: ['hack', 'bash'], date: 'Sep 2012' },
+  { title: 'jQuery helper for sahi - testing automation', url: 'http://blog.bharathraja.in/post/138615700562/jquery-helper-for-sahi-testing-automation', date: 'Dec 2014', tags: [] },
+  { title: 'Simple load testing script in bash', url: 'https://medium.com/@bigomega/simple-load-testing-script-in-bash-a8c5a4968dc7', date: 'Mar 2016', tags: ['bash'] },
+  { title: 'Information extraction from audio', url: 'https://medium.com/@bigomega/big%CF%89mega-information-extraction-from-audio-noob-level-9e6df4e98b54#.tsiku4ufh', date: 'May 2016', tags: ['hack'] },
+  { title: 'Tracking the Dota 2 International prize pool', url: 'https://medium.com/@bigomega/track-the-dota-2-international-prize-pool-102635901df#.r985pck2i', date: 'May 2016', tags: ['hack', 'visualization'] },
+
+  { title: 'Windranger - Dota 2 - ipad art', url: 'http://bigomega.deviantart.com/art/Windranger-Dota-2-521934478', date: 'Mar 2015', tags: ['art'] },
+  { title: 'Ubuntu logo - 3d art', url: 'http://bigomega.deviantart.com/art/Ubuntu-Logo-503582682', date: 'Apr 2019', tags: ['art'] },
+  { title: 'Vector Illustration - Abishek', url: 'https://www.behance.net/gallery/21931539/My-Dear-Abishek', date: 'Dec 2014', tags: ['art'] },
+  { title: '#TheCupcakeSwage logo design', url: 'https://www.behance.net/gallery/37828833/TheCupcakeSwag-Logo-design', date: 'Dec 2015', tags: ['art', 'design', 'ui'] },
+
+  { title: 'Spotless cleaning service - website design', url: 'https://www.behance.net/gallery/30710447/Spotless-cleaning-service-bootstrap', date: 'Oct 2015', tags: ['design', 'ui'] },
+
+  { title: 'Batman logo - css', url: 'http://bharathraja.in/css-batman-75-logo/', date: 'Nov 2014', tags: ['css', 'ui'] },
+  { title: 'Guy Fawkes mask in CSS', url: 'https://medium.com/@bigomega/drawing-guy-fawkes-mask-in-css-ecace7d58b88#.u7lxtn194', date: 'Dec 2014', tags: ['css', 'ui'] },
+]
 /* ----- CONNECT ----- */
 // render hive
 // 7 lines

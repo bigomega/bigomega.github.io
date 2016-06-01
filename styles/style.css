@@ -1850,6 +1850,14 @@ a,
       z-index: 1;
       background: #E4A270;
       /* background: #E09F6E; */ }
+    .work-img-container .work-split .extra-bar {
+      width: 100%;
+      height: 10%;
+      background: #8fc045;
+      z-index: 7;
+      position: absolute;
+      top: -10%;
+      opacity: 0.75; }
     .work-img-container .work-split .split {
       width: 100%;
       height: 10%;
@@ -1875,34 +1883,39 @@ a,
       top: 70%; }
     .work-img-container .work-split .sp-5 {
       top: 83%; }
+  .work-img-container.animate .extra-bar {
+    -webkit-animation: scan_img 1s 0.7s linear;
+    -moz-animation: scan_img 1s 0.7s linear;
+    -o-animation: scan_img 1s 0.7s linear;
+    animation: scan_img 1s 0.7s linear; }
   .work-img-container.animate .split {
     opacity: 1;
     height: 20%; }
   .work-img-container.animate .sp-1 {
-    -moz-transition: all 0.3s linear;
-    -o-transition: all 0.3s linear;
-    -webkit-transition: all 0.3s linear;
-    transition: all 0.3s linear; }
+    -moz-transition: all 0.3s 1.5s linear;
+    -o-transition: all 0.3s 1.5s linear;
+    -webkit-transition: all 0.3s 1.5s linear;
+    transition: all 0.3s 1.5s linear; }
   .work-img-container.animate .sp-2 {
-    -moz-transition: all 0.3s 0.4s linear;
-    -o-transition: all 0.3s 0.4s linear;
-    -webkit-transition: all 0.3s 0.4s linear;
-    transition: all 0.3s 0.4s linear; }
+    -moz-transition: all 0.3s 1.9s linear;
+    -o-transition: all 0.3s 1.9s linear;
+    -webkit-transition: all 0.3s 1.9s linear;
+    transition: all 0.3s 1.9s linear; }
   .work-img-container.animate .sp-3 {
-    -moz-transition: all 0.3s 0.8s linear;
-    -o-transition: all 0.3s 0.8s linear;
-    -webkit-transition: all 0.3s 0.8s linear;
-    transition: all 0.3s 0.8s linear; }
+    -moz-transition: all 0.3s 2.3s linear;
+    -o-transition: all 0.3s 2.3s linear;
+    -webkit-transition: all 0.3s 2.3s linear;
+    transition: all 0.3s 2.3s linear; }
   .work-img-container.animate .sp-4 {
-    -moz-transition: all 0.3s 1.2s linear;
-    -o-transition: all 0.3s 1.2s linear;
-    -webkit-transition: all 0.3s 1.2s linear;
-    transition: all 0.3s 1.2s linear; }
+    -moz-transition: all 0.3s 2.7s linear;
+    -o-transition: all 0.3s 2.7s linear;
+    -webkit-transition: all 0.3s 2.7s linear;
+    transition: all 0.3s 2.7s linear; }
   .work-img-container.animate .sp-5 {
-    -moz-transition: all 0.3s 1.6s linear;
-    -o-transition: all 0.3s 1.6s linear;
-    -webkit-transition: all 0.3s 1.6s linear;
-    transition: all 0.3s 1.6s linear; }
+    -moz-transition: all 0.3s 3.1s linear;
+    -o-transition: all 0.3s 3.1s linear;
+    -webkit-transition: all 0.3s 3.1s linear;
+    transition: all 0.3s 3.1s linear; }
   .work-img-container .work-dp-img {
     width: 100%; }
 
@@ -1949,6 +1962,38 @@ a,
             height: 40px; }
         #work .work-img-container .work-split .sp-3 {
           font-size: 1em; } }
+
+@-webkit-keyframes scan_img {
+  0% {
+    top: -10%; }
+  50% {
+    top: 100%; }
+  100% {
+    top: -10%; } }
+
+@-moz-keyframes scan_img {
+  0% {
+    top: -10%; }
+  50% {
+    top: 100%; }
+  100% {
+    top: -10%; } }
+
+@-o-keyframes scan_img {
+  0% {
+    top: -10%; }
+  50% {
+    top: 100%; }
+  100% {
+    top: -10%; } }
+
+@keyframes scan_img {
+  0% {
+    top: -10%; }
+  50% {
+    top: 100%; }
+  100% {
+    top: -10%; } }
 
 .icon-container.connect {
   z-index: -2;

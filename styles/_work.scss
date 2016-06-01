@@ -121,6 +121,16 @@
       /* background: #E09F6E; */
     }
 
+    .extra-bar {
+      width: 100%;
+      height: 10%;
+      background: $primary;
+      z-index: 7;
+      position: absolute;
+      top: -10%;
+      opacity: 0.75;
+    }
+
     .split {
       width: 100%;
       height: 10%;
@@ -156,24 +166,27 @@
   }
 
   &.animate {
+    .extra-bar {
+      @include animation(scan_img 1s .7s linear);
+    }
     .split {
       opacity: 1;
       height: 20%;
     }
     .sp-1 {
-      @include transition(all 0.3s linear);
+      @include transition(all 0.3s 1.5s linear);
     }
     .sp-2 {
-      @include transition(all .3s .4s linear);
+      @include transition(all .3s 1.9s linear);
     }
     .sp-3 {
-      @include transition(all .3s .8s linear);
+      @include transition(all .3s 2.3s linear);
     }
     .sp-4 {
-      @include transition(all .3s 1.2s linear);
+      @include transition(all .3s 2.7s linear);
     }
     .sp-5 {
-      @include transition(all .3s 1.6s linear);
+      @include transition(all .3s 3.1s linear);
     }
   }
 
@@ -241,4 +254,10 @@
       }
     }
   }
+}
+
+@include keyframes(scan_img) {
+  0% { top: -10%; }
+  50% { top: 100%; }
+  100% { top: -10%; }
 }
