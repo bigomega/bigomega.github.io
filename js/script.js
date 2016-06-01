@@ -33,6 +33,7 @@ function navigate(page, cb) {
     cb = (function(oldCb) {
       return function() {
         $('.work-img-container').removeClass('animate'); setTimeout(function(){ $('.work-img-container').addClass('animate') }, 10)
+        $('.work-rest').hide(); setTimeout(function(){ $('.work-rest').fadeIn(500) }, 1300)
         typeof(oldCb) === 'function' && oldCb()
       }
     })(cb)
