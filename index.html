@@ -11,19 +11,19 @@
   <body>
     <div class="header hidden">
       <div class="container">
-        <ul>
-          <li class="link active" data-nav="home">home</li>
-          <li class="link" data-nav="about">about</li>
-          <li class="link" data-nav="work">work</li>
+        <ul class="top-nav">
+          <li><a href="/#home" data-id="home">home</a></li>
+          <li><a href="/#about" data-id="about">about</a></li>
+          <li><a href="/#work" data-id="work">work</a></li>
           <li><a href="https://medium.com/@bigomega/" target="_blank">blog</a></li>
-          <li class="link" data-nav="connect">connect</li>
+          <li><a href="/#connect" data-id="connect">connect</a></li>
         </ul>
       </div>
     </div>
     <div class="icon-container start">
       <div class="container">
         <div class="icon-holder link" data-nav="home">
-          <img src="/images/profile-small.jpg" alt="profile image" class="dp-icon">
+          <img src="/images/profile.jpg" alt="profile image" class="dp-icon">
           <div class="dp-extras">
             <div class="div1"></div>
             <div class="div2"></div>
@@ -39,22 +39,23 @@
           <div class="center-text">
             <h1>Bharath Raja</h1>
             <h3 id="desc">I think you have Javascript disabled :( <br/>too bad, I had cool animations!!! <br/>and a kickass description</h3>
-            <h3>I go by <a href="https://medium.com/@bigomega/i-go-by-bigomega-92bc3d0a0bd4" target="_blank">bigOmega</a></h3>
+            <!-- <h3>I go by <a href="https://medium.com/@bigomega/i-go-by-bigomega-92bc3d0a0bd4" target="_blank">bigOmega</a></h3> -->
+            <h3>I go by <a href="/#connect">bigOmega</a></h3>
           </div>
           <div class="social">
             <a class="img twitter" href="https://twitter.com/bigOmega" target="_blank"></a>
             <a class="img email" href="mailto:bharathraja@live.com"></a>
             <a class="img skype" href="skype:bigOmega3?chat"></a>
             <a class="img linkedin" href="https://linkedin.com/in/bigomega" target="_blank"></a>
-            <div class="more link" data-nav="connect">more…</div>
+            <a class="more" href="/#connect">more…</a>
           </div>
           <div class="ilt-section">
             <div class="ilt">I <img src="/images/heart.png" alt="love"> to</div>
             <div class="ilt-holder">
-              <div class="ilt-option">explore</div>
-              <div class="ilt-option">express</div>
-              <div class="ilt-option">solve</div>
-              <div class="ilt-option">play</div>
+              <div class="ilt-option" data-nav="about">explore</div>
+              <div class="ilt-option" data-nav="about">express</div>
+              <div class="ilt-option" data-nav="about">solve</div>
+              <div class="ilt-option" data-nav="about">play</div>
             </div>
           </div>
         </div>
@@ -172,6 +173,7 @@
       <img src="/images/paint-brush.png" />
       <img src="/images/social-less.jpg" />
       <img src="/images/social-icons.png" />
+      <img src="/images/profile.jpg" />
       <img src="/images/profile-128.jpg" />
       <img src="/images/profile-small.jpg" />
       <img src="/images/profile-128-60deg.jpg" />

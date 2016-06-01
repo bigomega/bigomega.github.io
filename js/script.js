@@ -9,6 +9,14 @@ function onResize() {
     startYYanimation()
   }
 }
+function navigateToHash() {
+  var hash = window.location.hash.substr(1)
+  if (['about', 'work', 'connect'].indexOf(hash) > -1) {
+    navigate(hash)
+  } else {
+    navigate('home')
+  }
+}
 var connect_animation
 function navigate(page, cb) {
   if (['home', 'about', 'work', 'connect'].indexOf(page) < 0) {
@@ -57,9 +65,10 @@ function navigate(page, cb) {
     }
   })
   // Change header
-  $('.header .link').removeClass('active')
-  $('.header .link[data-nav='+page+']').addClass('active')
-  window.location.hash = page
+  $('.header .top-nav a').removeClass('active')
+  $('.header .top-nav a[data-id='+page+']').addClass('active')
+  $('.header').removeClass('hidden')
+  // window.location.hash = page
 }
 
 /* ----- COMMON ----- */
@@ -67,22 +76,13 @@ function navigate(page, cb) {
 onResize()
 $(window).on('resize', onResize)
 
-
+window.onhashchange = navigateToHash
 $(window).on("load", function() {
-  var hash = window.location.hash.substr(1)
   // $('.icon-container').attr('class', 'icon-container home')
-
-  setTimeout(function(){
-    if (['about', 'work', 'connect'].indexOf(hash) > -1) {
-      navigate(hash)
-    } else {
-      navigate('home')
-    }
-  }, 500)
-
-  $('.header').removeClass('hidden')
+  setTimeout(navigateToHash, 500)
   $('[data-nav]').click(function(event) {
-    navigate($(this).attr('data-nav'))
+    window.location.hash = $(this).attr('data-nav')
+    event.preventDefault()
   })
 })
 
