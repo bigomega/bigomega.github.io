@@ -1,7 +1,7 @@
 .icon-container.work{
   .icon-holder{
     left: calc(50% - 325px);
-    top: 2.5em;
+    top: 4.3em;
     opacity: 0;
     visibility: hidden;
     .dp-icon {
@@ -15,7 +15,7 @@
 @media (max-width: $dp-hides-width) {
   .icon-container.work{
     .icon-holder{
-      top: 4em;
+      top: 5.5em;
       left: calc(50% - 165px);
       .dp-icon {
         width: 330px;
@@ -26,6 +26,7 @@
 }
 
 $drop-start: 2s;
+$text-wait: 3.5s;
 
 #work {
   margin-top: 6em;
@@ -64,7 +65,7 @@ $drop-start: 2s;
       width: 80%;
       height: 40%;
       border-radius: 50%;
-      background: #999;
+      background: #333;
       z-index: 5;
       @include transition(all 0.3s $drop-start linear);
     }
@@ -110,28 +111,29 @@ $drop-start: 2s;
       @include transition(all .3s $drop-start + .8s linear);
     }
 
+    .face-2 {
+      position: absolute;
+      top: 67%;
+      width: 80%;
+      height: 35%;
+      z-index: 1;
+      background: #E4A270;
+      /* background: #E09F6E; */
+      @include transition(all .3s $drop-start + 1.2s linear);
+    }
+
     .face-1 {
       position: absolute;
-      top: 45%;
-      left: 26.5%;
-      width: 50%;
+      top: 41%;
+      left: 24.5%;
+      width: 55%;
       height: 43%;
       border-radius: 50%;
       background: #B57A4E;
       z-index: 2;
+      opacity: 1;
       /* background: #B36A34; */
-      @include transition(all .3s $drop-start + 1.2s linear);
-    }
-
-    .face-2 {
-      position: absolute;
-      top: 75%;
-      width: 80%;
-      height: 30%;
-      z-index: 1;
-      background: #E4A270;
-      /* background: #E09F6E; */
-      @include transition(all .3s $drop-start + 1.6s linear);
+      @include transition(opacity .7s $drop-start + $text-wait + 1.2s linear/* , height .3s $drop-start + $text-wait  linear */);
     }
 
     .extra-bar {
@@ -169,10 +171,10 @@ $drop-start: 2s;
       // color: rgba(255, 255, 255, 0.7);
     }
     .sp-4 {
-      top: 70%;
+      top: 67.5%;
     }
     .sp-5 {
-      top: 83%;
+      top: 81%;
     }
   }
 
@@ -192,20 +194,24 @@ $drop-start: 2s;
     }
 
     .sp-1 {
-      @include transition(all 0.3s $drop-start linear);
+      @include transition(all 0.3s $drop-start + $text-wait linear);
     }
     .sp-2 {
-      @include transition(all .3s $drop-start + .4s linear);
+      @include transition(all .3s $drop-start + $text-wait + .4s linear);
     }
     .sp-3 {
-      @include transition(all .3s $drop-start + .8s linear);
+      @include transition(all .3s $drop-start + $text-wait + .8s linear);
     }
     .sp-4 {
-      @include transition(all .3s $drop-start + 1.2s linear);
+      @include transition(all .3s $drop-start + $text-wait + 1.2s linear);
     }
     .sp-5 {
-      @include transition(all .3s $drop-start + 1.6s linear);
+      @include transition(all .3s $drop-start + $text-wait + 1.6s linear);
     }
+  }
+
+  &.animation-done .extra-bar {
+    @include animation(none);
   }
 
   .work-dp-img {
@@ -257,6 +263,9 @@ $drop-start: 2s;
       bottom: 0;
       height: 0;
     }
+  }
+  .face-1 {
+    opacity: 0;
   }
 }
 
@@ -318,14 +327,14 @@ $drop-start: 2s;
 
       span {
         background: $primary;
-        height: 0px;
+        height: 5px;
         width: 0px;
-        padding: 5px 0 0 0px;
-        @include transition(all .5s linear);
+        @include transition(width .7s .7s linear);
         display: block;
         position: absolute;
         left: 0px;
         bottom: 0px;
+        border-radius: 10px;
       }
     }
   }
@@ -339,6 +348,10 @@ $drop-start: 2s;
     }
   }
 }
+#work:not(.showing-skills) .all-skills-container .skills-list .skill span {
+  width: 0 !important;
+  @include transition(none);
+}
 #work.showing-skills {
   .all-skills-container {
     background: rgba(255,255,255,0.65);
@@ -347,7 +360,25 @@ $drop-start: 2s;
     margin-top: 3em;
   }
   .work-img-container {
-    @include filter(blur(30px) grayscale(30%));
+    @include filter(blur(10px) grayscale(30%));
+
+    .work-split {
+      color: transparent;
+      @include transition(all .3s linear);
+
+      .hat-2 {
+        border-bottom-color: #333;
+        @include transition(all .5s linear);
+        &:before {
+          background: #333;
+          @include transition(all .5s linear);
+        }
+      }
+      .face-1 {
+        opacity: 0;
+        @include transition(all .5s linear);
+      }
+    }
   }
 }
 @media (max-width: $dp-hides-width) {

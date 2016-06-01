@@ -18,6 +18,7 @@ function navigateToHash() {
   }
 }
 var connect_animation
+var work_animation
 function navigate(page, cb) {
   if (['home', 'about', 'work', 'connect'].indexOf(page) < 0) {
     return
@@ -38,13 +39,18 @@ function navigate(page, cb) {
     }
     connect_animation = window.setInterval(animation, 15000)
   } else if (page === 'work') {
-    cb = (function(oldCb) {
-      return function() {
-        $('.work-img-container').removeClass('animate'); setTimeout(function(){ $('.work-img-container').addClass('animate') }, 10)
-        $('#work').removeClass('show-rest'); setTimeout(function(){ $('#work').addClass('show-rest') }, 4000)
-        typeof(oldCb) === 'function' && oldCb()
-      }
-    })(cb)
+    if (!work_animation) {
+      work_animation = true
+      cb = (function(oldCb) {
+        return function() {
+          $('.work-img-container').removeClass('animate'); setTimeout(function(){ $('.work-img-container').addClass('animate') }, 10)
+          $('#work').removeClass('show-rest'); setTimeout(function(){ $('#work').addClass('show-rest'); $('.work-img-container').addClass('animation-done'); }, 4000)
+          typeof(oldCb) === 'function' && oldCb()
+        }
+      })(cb)
+    } else {
+      $('#work').removeClass('show-rest'); setTimeout(function(){ $('#work').addClass('show-rest') }, 1000)
+    }
   } else if (page === 'about') {
     cb = (function(oldCb) {
       return function() {
@@ -255,7 +261,6 @@ var skills = [
   , ['Soccer', 35]
   , ['Dota2', 95]
 ]
-shuffle(skills)
 skills.forEach(function(sk){
   $('.skills-list').append('\
     <div class="skill"><span style="width:'+ sk[1] +'%;"></span>'+ sk[0] +'</div>\
@@ -267,6 +272,13 @@ $('.work-dig-deeper').click(function(){
     $(this).text('Hide all skills')
   } else {
     $(this).text('See all skills')
+    shuffle(skills)
+    $('.skills-list').html('')
+    skills.forEach(function(sk){
+      $('.skills-list').append('\
+        <div class="skill"><span style="width:'+ sk[1] +'%;"></span>'+ sk[0] +'</div>\
+      ')
+    })
   }
 })
 
