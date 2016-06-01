@@ -70,28 +70,28 @@ $drop-start: 2s;
     .hat-2 {
       position: absolute;
       top: 14%;
-      left: 20.8%;
-      width: 49.8%;
+      left: 21.6%;
+      width: 50%;
       height: 0;
       @include transform(rotate(3deg));
       background: transparent;
       z-index: 4;
-      border-bottom: 158px solid #666;
-      border-left: 36px solid transparent;
-      border-right: 32px solid transparent;
+      border-bottom: 138px solid #666;
+      border-left: 31px solid transparent;
+      border-right: 28px solid transparent;
       @include transition(all .3s $drop-start + .4s linear);
 
       &:before {
         content: '';
         position: absolute;
-        bottom: -198px;
-        left: -36px;
+        bottom: -201px;
+        left: -31px;
         background: #666;
-        width: calc(100% + 68px);
+        width: calc(100% + 59px);
         /* @include transform(rotate(1deg)); */
-        height: 78px;
+        height: 128px;
         border-radius: 50%;
-      @include transition(all .3s $drop-start + .4s linear);
+        @include transition(all .3s $drop-start + .4s linear);
       }
     }
 
@@ -174,23 +174,6 @@ $drop-start: 2s;
     }
   }
 
-  &:not(.animate) {
-    .hat-1, .hat-2, .hat-3,
-    .face-1, .face-2 {
-      height: 0;
-      transition: none;
-    }
-
-    .hat-2 {
-      border-bottom-width: 0;
-      &:before {
-        transition: none;
-        bottom: 0;
-        height: 0;
-      }
-    }
-  }
-
   &.animate {
     .work-split {
       background: #fff;
@@ -261,30 +244,48 @@ $drop-start: 2s;
 @media (max-width: $dp-hides-width) {
   #work {
     margin-top: 2em;
+  }
+  .work-img-container {
+    width: 300px;
 
-    .work-img-container {
-      width: 300px;
+    .work-split {
+      font-size: 1em;
+      color: rgba(255, 255, 255, 0.5);
 
-      .work-split {
-        font-size: 1em;
+      .hat-2 {
+        border-bottom-width: 69px;
+        border-left-width: 15px;
+        border-right-width: 16px;
+        left: 21.7%;
 
-        .hat-2 {
-          border-bottom-width: 79px;
-          border-left-width: 18px;
-          border-right-width: 16px;
-
-          &:before {
-            bottom: -100px;
-            left: -18px;
-            width: calc(100% + 34px);
-            height: 40px;
-          }
-        }
-
-        .sp-3 {
-          font-size: 1em;
+        &:before {
+          bottom: -101px;
+          left: -15px;
+          width: calc(100% + 31px);
+          height: 64px;
         }
       }
+
+      .sp-3 {
+        font-size: 1em;
+      }
+    }
+  }
+}
+
+.work-img-container:not(.animate) {
+  .hat-1, .hat-2, .hat-3,
+  .face-1, .face-2 {
+    height: 0;
+    transition: none;
+  }
+
+  .hat-2 {
+    border-bottom-width: 0;
+    &:before {
+      transition: none;
+      bottom: 0;
+      height: 0;
     }
   }
 }
