@@ -36,7 +36,7 @@
   .work-split {
     width: 100%;
     height: calc(100% - 4px);
-    background: $grey;
+    background: #fff;
     position: absolute;
     z-index: -1;
     box-sizing: border-box;
@@ -45,6 +45,8 @@
     // flex-flow: row wrap;
     color: rgba(255, 255, 255, 0.85);
     font-size: 1.3em;
+    font-weight: 600;
+    text-transform: uppercase;
 
     .hat-1, .hat-2, .hat-3,
     .face-1, .face-2 {
@@ -59,6 +61,7 @@
       border-radius: 50%;
       background: #999;
       z-index: 5;
+      @include transition(all 0.3s 1.5s linear);
     }
 
     .hat-2 {
@@ -73,6 +76,7 @@
       border-bottom: 158px solid #666;
       border-left: 36px solid transparent;
       border-right: 32px solid transparent;
+      @include transition(all .3s 1.9s linear);
 
       &:before {
         content: '';
@@ -84,6 +88,7 @@
         /* @include transform(rotate(1deg)); */
         height: 78px;
         border-radius: 50%;
+      @include transition(all .3s 1.9s linear);
       }
     }
 
@@ -97,6 +102,7 @@
       border-radius: 50%;
       background: #333;
       z-index: 3;
+      @include transition(all .3s 2.3s linear);
     }
 
     .face-1 {
@@ -109,6 +115,7 @@
       background: #B57A4E;
       z-index: 2;
       /* background: #B36A34; */
+      @include transition(all .3s 2.7s linear);
     }
 
     .face-2 {
@@ -119,15 +126,16 @@
       z-index: 1;
       background: #E4A270;
       /* background: #E09F6E; */
+      @include transition(all .3s 3.1s linear);
     }
 
     .extra-bar {
       width: 100%;
-      height: 10%;
+      height: 20%;
       background: $primary;
       z-index: 7;
       position: absolute;
-      top: -10%;
+      top: -20%;
       opacity: 0.75;
     }
 
@@ -138,11 +146,9 @@
       align-items: center;
       justify-content: center;
       overflow: hidden;
-      text-transform: uppercase;
       z-index: 6;
       background: transparent;
       position: absolute;
-      font-weight: 600;
       opacity: 0;
     }
     .sp-1 {
@@ -165,10 +171,28 @@
     }
   }
 
+  &:not(.animate) {
+    .hat-1, .hat-2, .hat-3,
+    .face-1, .face-2 {
+      height: 0;
+      transition: none;
+    }
+
+    .hat-2 {
+      border-bottom-width: 0;
+      &:before {
+        transition: none;
+        bottom: 0;
+        height: 0;
+      }
+    }
+  }
+
   &.animate {
     .extra-bar {
-      @include animation(scan_img 1s .7s linear);
+      @include animation(scan_img 1s .5s linear);
     }
+
     .split {
       opacity: 1;
       height: 20%;
@@ -257,7 +281,7 @@
 }
 
 @include keyframes(scan_img) {
-  0% { top: -10%; }
+  0% { top: -20%; }
   50% { top: 100%; }
-  100% { top: -10%; }
+  100% { top: -20%; }
 }
