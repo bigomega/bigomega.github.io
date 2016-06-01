@@ -41,7 +41,7 @@ function navigate(page, cb) {
     cb = (function(oldCb) {
       return function() {
         $('.work-img-container').removeClass('animate'); setTimeout(function(){ $('.work-img-container').addClass('animate') }, 10)
-        $('#work').removeClass('show-rest'); setTimeout(function(){ $('#work').addClass('show-rest') }, 3500)
+        $('#work').removeClass('show-rest'); setTimeout(function(){ $('#work').addClass('show-rest') }, 4000)
         typeof(oldCb) === 'function' && oldCb()
       }
     })(cb)

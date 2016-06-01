@@ -1776,7 +1776,7 @@ a,
   .work-img-container .work-split {
     width: 100%;
     height: calc(100% - 4px);
-    background: #fff;
+    background: #ccc;
     position: absolute;
     z-index: -1;
     box-sizing: border-box;
@@ -1794,10 +1794,10 @@ a,
       border-radius: 50%;
       background: #999;
       z-index: 5;
-      -moz-transition: all 0.3s 1.5s linear;
-      -o-transition: all 0.3s 1.5s linear;
-      -webkit-transition: all 0.3s 1.5s linear;
-      transition: all 0.3s 1.5s linear; }
+      -moz-transition: all 0.3s 2s linear;
+      -o-transition: all 0.3s 2s linear;
+      -webkit-transition: all 0.3s 2s linear;
+      transition: all 0.3s 2s linear; }
     .work-img-container .work-split .hat-2 {
       position: absolute;
       top: 14%;
@@ -1814,10 +1814,10 @@ a,
       border-bottom: 158px solid #666;
       border-left: 36px solid transparent;
       border-right: 32px solid transparent;
-      -moz-transition: all 0.3s 1.9s linear;
-      -o-transition: all 0.3s 1.9s linear;
-      -webkit-transition: all 0.3s 1.9s linear;
-      transition: all 0.3s 1.9s linear; }
+      -moz-transition: all 0.3s 2.4s linear;
+      -o-transition: all 0.3s 2.4s linear;
+      -webkit-transition: all 0.3s 2.4s linear;
+      transition: all 0.3s 2.4s linear; }
       .work-img-container .work-split .hat-2:before {
         content: '';
         position: absolute;
@@ -1828,10 +1828,10 @@ a,
         /* @include transform(rotate(1deg)); */
         height: 78px;
         border-radius: 50%;
-        -moz-transition: all 0.3s 1.9s linear;
-        -o-transition: all 0.3s 1.9s linear;
-        -webkit-transition: all 0.3s 1.9s linear;
-        transition: all 0.3s 1.9s linear; }
+        -moz-transition: all 0.3s 2.4s linear;
+        -o-transition: all 0.3s 2.4s linear;
+        -webkit-transition: all 0.3s 2.4s linear;
+        transition: all 0.3s 2.4s linear; }
     .work-img-container .work-split .hat-3 {
       position: absolute;
       top: 22.6%;
@@ -1846,10 +1846,10 @@ a,
       border-radius: 50%;
       background: #333;
       z-index: 3;
-      -moz-transition: all 0.3s 2.3s linear;
-      -o-transition: all 0.3s 2.3s linear;
-      -webkit-transition: all 0.3s 2.3s linear;
-      transition: all 0.3s 2.3s linear; }
+      -moz-transition: all 0.3s 2.8s linear;
+      -o-transition: all 0.3s 2.8s linear;
+      -webkit-transition: all 0.3s 2.8s linear;
+      transition: all 0.3s 2.8s linear; }
     .work-img-container .work-split .face-1 {
       position: absolute;
       top: 45%;
@@ -1860,10 +1860,10 @@ a,
       background: #B57A4E;
       z-index: 2;
       /* background: #B36A34; */
-      -moz-transition: all 0.3s 2.7s linear;
-      -o-transition: all 0.3s 2.7s linear;
-      -webkit-transition: all 0.3s 2.7s linear;
-      transition: all 0.3s 2.7s linear; }
+      -moz-transition: all 0.3s 3.2s linear;
+      -o-transition: all 0.3s 3.2s linear;
+      -webkit-transition: all 0.3s 3.2s linear;
+      transition: all 0.3s 3.2s linear; }
     .work-img-container .work-split .face-2 {
       position: absolute;
       top: 75%;
@@ -1872,10 +1872,10 @@ a,
       z-index: 1;
       background: #E4A270;
       /* background: #E09F6E; */
-      -moz-transition: all 0.3s 3.1s linear;
-      -o-transition: all 0.3s 3.1s linear;
-      -webkit-transition: all 0.3s 3.1s linear;
-      transition: all 0.3s 3.1s linear; }
+      -moz-transition: all 0.3s 3.6s linear;
+      -o-transition: all 0.3s 3.6s linear;
+      -webkit-transition: all 0.3s 3.6s linear;
+      transition: all 0.3s 3.6s linear; }
     .work-img-container .work-split .extra-bar {
       width: 100%;
       height: 20%;
@@ -1917,39 +1917,45 @@ a,
       transition: none;
       bottom: 0;
       height: 0; }
+  .work-img-container.animate .work-split {
+    background: #fff;
+    -moz-transition: all 0.4s 1.6s linear;
+    -o-transition: all 0.4s 1.6s linear;
+    -webkit-transition: all 0.4s 1.6s linear;
+    transition: all 0.4s 1.6s linear; }
   .work-img-container.animate .extra-bar {
-    -webkit-animation: scan_img 1s 0.5s linear;
-    -moz-animation: scan_img 1s 0.5s linear;
-    -o-animation: scan_img 1s 0.5s linear;
-    animation: scan_img 1s 0.5s linear; }
+    -webkit-animation: scan_img 1s 0.7s linear;
+    -moz-animation: scan_img 1s 0.7s linear;
+    -o-animation: scan_img 1s 0.7s linear;
+    animation: scan_img 1s 0.7s linear; }
   .work-img-container.animate .split {
     opacity: 1;
     height: 20%; }
   .work-img-container.animate .sp-1 {
-    -moz-transition: all 0.3s 1.5s linear;
-    -o-transition: all 0.3s 1.5s linear;
-    -webkit-transition: all 0.3s 1.5s linear;
-    transition: all 0.3s 1.5s linear; }
+    -moz-transition: all 0.3s 2s linear;
+    -o-transition: all 0.3s 2s linear;
+    -webkit-transition: all 0.3s 2s linear;
+    transition: all 0.3s 2s linear; }
   .work-img-container.animate .sp-2 {
-    -moz-transition: all 0.3s 1.9s linear;
-    -o-transition: all 0.3s 1.9s linear;
-    -webkit-transition: all 0.3s 1.9s linear;
-    transition: all 0.3s 1.9s linear; }
+    -moz-transition: all 0.3s 2.4s linear;
+    -o-transition: all 0.3s 2.4s linear;
+    -webkit-transition: all 0.3s 2.4s linear;
+    transition: all 0.3s 2.4s linear; }
   .work-img-container.animate .sp-3 {
-    -moz-transition: all 0.3s 2.3s linear;
-    -o-transition: all 0.3s 2.3s linear;
-    -webkit-transition: all 0.3s 2.3s linear;
-    transition: all 0.3s 2.3s linear; }
+    -moz-transition: all 0.3s 2.8s linear;
+    -o-transition: all 0.3s 2.8s linear;
+    -webkit-transition: all 0.3s 2.8s linear;
+    transition: all 0.3s 2.8s linear; }
   .work-img-container.animate .sp-4 {
-    -moz-transition: all 0.3s 2.7s linear;
-    -o-transition: all 0.3s 2.7s linear;
-    -webkit-transition: all 0.3s 2.7s linear;
-    transition: all 0.3s 2.7s linear; }
+    -moz-transition: all 0.3s 3.2s linear;
+    -o-transition: all 0.3s 3.2s linear;
+    -webkit-transition: all 0.3s 3.2s linear;
+    transition: all 0.3s 3.2s linear; }
   .work-img-container.animate .sp-5 {
-    -moz-transition: all 0.3s 3.1s linear;
-    -o-transition: all 0.3s 3.1s linear;
-    -webkit-transition: all 0.3s 3.1s linear;
-    transition: all 0.3s 3.1s linear; }
+    -moz-transition: all 0.3s 3.6s linear;
+    -o-transition: all 0.3s 3.6s linear;
+    -webkit-transition: all 0.3s 3.6s linear;
+    transition: all 0.3s 3.6s linear; }
   .work-img-container .work-dp-img {
     width: 100%; }
 
