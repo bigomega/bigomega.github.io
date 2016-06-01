@@ -1781,38 +1781,128 @@ a,
     z-index: -1;
     box-sizing: border-box;
     overflow: hidden;
-    display: flex;
-    flex-flow: row wrap;
-    color: #fff;
+    color: rgba(255, 255, 255, 0.5);
     font-size: 1.3em; }
+    .work-img-container .work-split .hat-1 {
+      position: absolute;
+      top: -16%;
+      left: 16%;
+      width: 80%;
+      height: 40%;
+      border-radius: 50%;
+      background: #999;
+      z-index: 5; }
+    .work-img-container .work-split .hat-2 {
+      position: absolute;
+      top: 14%;
+      left: 20.8%;
+      width: 49.8%;
+      height: 0;
+      -moz-transform: rotate(3deg);
+      -o-transform: rotate(3deg);
+      -ms-transform: rotate(3deg);
+      -webkit-transform: rotate(3deg);
+      transform: rotate(3deg);
+      background: transparent;
+      z-index: 4;
+      border-bottom: 158px solid #666;
+      border-left: 36px solid transparent;
+      border-right: 32px solid transparent; }
+      .work-img-container .work-split .hat-2:before {
+        content: '';
+        position: absolute;
+        bottom: -198px;
+        left: -36px;
+        background: #666;
+        width: calc(100% + 68px);
+        /* @include transform(rotate(1deg)); */
+        height: 78px;
+        border-radius: 50%; }
+    .work-img-container .work-split .hat-3 {
+      position: absolute;
+      top: 22.6%;
+      left: 7%;
+      width: 90%;
+      height: 50%;
+      -moz-transform: rotate(3deg);
+      -o-transform: rotate(3deg);
+      -ms-transform: rotate(3deg);
+      -webkit-transform: rotate(3deg);
+      transform: rotate(3deg);
+      border-radius: 50%;
+      background: #333;
+      z-index: 3; }
+    .work-img-container .work-split .face-1 {
+      position: absolute;
+      top: 45%;
+      left: 26.5%;
+      width: 50%;
+      height: 43%;
+      border-radius: 50%;
+      background: #B57A4E;
+      z-index: 2;
+      /* background: #B36A34; */ }
+    .work-img-container .work-split .face-2 {
+      position: absolute;
+      top: 75%;
+      width: 80%;
+      height: 30%;
+      z-index: 1;
+      background: #E4A270;
+      /* background: #E09F6E; */ }
     .work-img-container .work-split .split {
       width: 100%;
-      height: 0%;
+      height: 10%;
       display: flex;
       align-items: center;
       justify-content: center;
       overflow: hidden;
-      text-transform: uppercase; }
-    .work-img-container .work-split .split:nth-child(1) {
-      background: #FDF957;
-      background: #FD5F57; }
-    .work-img-container .work-split .split:nth-child(2) {
-      background: #BA88FB; }
-    .work-img-container .work-split .split:nth-child(3) {
-      background: #2764A2;
-      font-size: 1.3em; }
-    .work-img-container .work-split .split:nth-child(4) {
-      background: #15BFA0; }
-    .work-img-container .work-split .split:nth-child(5) {
-      background: #D1D656;
-      background: #8fc045;
-      background: #B4BB0B; }
+      text-transform: uppercase;
+      z-index: 6;
+      background: transparent;
+      position: absolute;
+      font-weight: 600;
+      opacity: 0; }
+    .work-img-container .work-split .sp-1 {
+      top: 3%;
+      left: 2%; }
+    .work-img-container .work-split .sp-2 {
+      top: 26%; }
+    .work-img-container .work-split .sp-3 {
+      top: 48%;
+      font-size: 1.2em;
+      color: rgba(255, 255, 255, 0.7); }
+    .work-img-container .work-split .sp-4 {
+      top: 70%; }
+    .work-img-container .work-split .sp-5 {
+      top: 85%; }
   .work-img-container.animate .split {
+    opacity: 1;
     height: 20%;
-    -moz-transition: all 0.3s 0.7s linear;
-    -o-transition: all 0.3s 0.7s linear;
-    -webkit-transition: all 0.3s 0.7s linear;
-    transition: all 0.3s 0.7s linear; }
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear; }
+  .work-img-container.animate .sp-2 {
+    -moz-transition: all 0.3s 0.4s linear;
+    -o-transition: all 0.3s 0.4s linear;
+    -webkit-transition: all 0.3s 0.4s linear;
+    transition: all 0.3s 0.4s linear; }
+  .work-img-container.animate .sp-3 {
+    -moz-transition: all 0.3s 0.8s linear;
+    -o-transition: all 0.3s 0.8s linear;
+    -webkit-transition: all 0.3s 0.8s linear;
+    transition: all 0.3s 0.8s linear; }
+  .work-img-container.animate .sp-4 {
+    -moz-transition: all 0.3s 1.2s linear;
+    -o-transition: all 0.3s 1.2s linear;
+    -webkit-transition: all 0.3s 1.2s linear;
+    transition: all 0.3s 1.2s linear; }
+  .work-img-container.animate .sp-5 {
+    -moz-transition: all 0.3s 1.6s linear;
+    -o-transition: all 0.3s 1.6s linear;
+    -webkit-transition: all 0.3s 1.6s linear;
+    transition: all 0.3s 1.6s linear; }
   .work-img-container .work-dp-img {
     width: 100%; }
 
