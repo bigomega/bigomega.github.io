@@ -25,8 +25,8 @@
   }
 }
 
-$drop-start: 2s;
-$text-wait: 3s;
+$drop-start: 1.6s;
+$text-wait: 2.5s;
 
 #work {
   margin-top: 6em;
@@ -40,7 +40,7 @@ $text-wait: 3s;
 
   .work-split {
     width: 100%;
-    height: calc(100% - 4px);
+    height: 100%;
     background: $grey;
     position: absolute;
     z-index: -1;
@@ -124,16 +124,16 @@ $text-wait: 3s;
 
     .face-1 {
       position: absolute;
-      top: 41%;
-      left: 24.5%;
-      width: 55%;
+      top: 39%;
+      left: 20.5%;
+      width: 65%;
       height: 43%;
       border-radius: 50%;
       background: #B57A4E;
       z-index: 2;
       opacity: 1;
       /* background: #B36A34; */
-      @include transition(opacity .7s $drop-start + $text-wait + 1.2s linear/* , height .3s $drop-start + $text-wait  linear */);
+      @include transition(opacity .5s $drop-start + 2s linear/* , height .3s $drop-start + $text-wait  linear */);
     }
 
     .extra-bar {
@@ -171,21 +171,21 @@ $text-wait: 3s;
       // color: rgba(255, 255, 255, 0.7);
     }
     .sp-4 {
-      top: 67.5%;
+      top: 66.5%;
     }
     .sp-5 {
-      top: 81%;
+      top: 80%;
     }
   }
 
   &.animate {
     .work-split {
       background: #fff;
-      @include transition(all 0.4s 1.6s linear);
+      @include transition(all 0.4s 1.3s linear);
     }
 
     .extra-bar {
-      @include animation(scan_img 1s .7s linear);
+      @include animation(scan_img .7s .7s linear);
     }
 
     .split {
@@ -216,6 +216,7 @@ $text-wait: 3s;
 
   .work-dp-img {
     width: 100%;
+    vertical-align: bottom;
   }
 }
 @media (max-width: $dp-hides-width) {
@@ -419,7 +420,7 @@ $text-wait: 3s;
 }
 
 .gibberish-container {
-  margin: 14em 0 10em;
+  margin: 10em 0 10em;
   text-align: center;
 
   .gibberish-list {

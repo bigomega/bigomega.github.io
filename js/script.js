@@ -191,7 +191,7 @@ var skills = [
 
   , ['Node.js', 80]
   , ['Python', 35]
-  , ['Php', 30]
+  , ['PHP', 30]
   , ['Ruby on Rails', 25]
 
   , ['BrainFuck', 60]

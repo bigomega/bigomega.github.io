@@ -13,56 +13,72 @@
 
 .icon-container.about {
   position: absolute;
-}
 
-.icon-container.about .icon-holder .dp-extras {
-  width: 90px;
-  height: 90px;
-  opacity: 1;
-  left: 3px;
-  top: 3px;
-  border-radius: 100px;
-  @include animation(dp_art 12s -2s linear infinite);
+  .icon-holder {
+    left: calc(50% - 68px);
+    @include animation(all .3s linear);
 
-  .div1 {
-    width: 70px;
-    height: 98px;
-    background: url(/images/paint-brush.png);
-    background-size: contain;
-    position: absolute;
-    left: 100px;
-    top: -10px;
-    @include animation(paint_brush 3s -0.6s linear infinite alternate);
+    .dp-icon {
+      width: 130px;
+      height: 130px;
+      @include animation(all .3s linear);
+    }
+
+    .dp-extras {
+      // width: 90px;
+      // height: 90px;
+      opacity: 1;
+      border: 3px solid #ccc;
+      border-radius: 0;
+      @include animation(dp_art 15s -1.5s linear infinite);
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      &:before {
+        content: '';
+        width: 70px;
+        height: 98px;
+        background: url(/images/paint-brush.png);
+        background-size: contain;
+        position: absolute;
+        left: 100px;
+        top: -10px;
+        @include animation(paint_brush 3s -.2s linear infinite alternate);
+      }
+    }
   }
 }
 
 @include keyframes(dp_art) {
-  0% { background: url(/images/profile-128.jpg); background-size: contain; }
+  0% { background-image: url(/images/profile-128.jpg); }
 
-  23% { background: url(/images/profile-128.jpg); background-size: contain; }
-  27% { background: url(/images/dp-hand-drawn-128.jpg); background-size: contain; }
+  18% { background-image: url(/images/profile-128.jpg); }
+  22% { background-image: url(/images/dp-hand-drawn-128.jpg); }
 
-  48% { background: url(/images/dp-hand-drawn-128.jpg); background-size: contain; }
-  52% { background: url(/images/dp-art-128.jpg); background-size: contain; }
+  38% { background-image: url(/images/dp-hand-drawn-128.jpg); }
+  42% { background-image: url(/images/dp-cool-128.jpg); }
 
-  73% { background: url(/images/dp-art-128.jpg); background-size: contain; }
-  77% { background: url(/images/dp-pixel-128.jpg); background-size: contain; }
+  58% { background-image: url(/images/dp-cool-128.jpg); }
+  62% { background-image: url(/images/dp-art-128.jpg); }
 
-  98% { background: url(/images/dp-pixel-128.jpg); background-size: contain; }
-  100% { background: url(/images/profile-128.jpg); background-size: contain; }
+  78% { background-image: url(/images/dp-art-128.jpg); }
+  82% { background-image: url(/images/dp-pixel-128.jpg); }
+
+  98% { background-image: url(/images/dp-pixel-128.jpg); }
+  100% { background-image: url(/images/profile-128.jpg); }
 }
 @include keyframes(paint_brush) {
-  0% { left: 100px; top: -10px; }
+  0% { left: 120px; top: 20px; }
 
-  38% { left: 100px; top: -10px; }
+  38% { left: 120px; top: 20px; }
   // 46% { left: 60px; top: -70px; }
 
-  46% { left: 40px; top: -60px; }
-  50% { left: 60px; top: -50px; }
-  54% { left: 40px; top: -40px; }
+  46% { left: 60px; top: -50px; }
+  50% { left: 80px; top: -30px; }
+  54% { left: 60px; top: -10px; }
 
   // 54% { left: 60px; top: -30px; }
-  62% { left: 100px; top: -10px; }
+  62% { left: 120px; top: 20px; }
 
-  100% { left: 100px; top: -10px; }
+  100% { left: 120px; top: 20px; }
 }

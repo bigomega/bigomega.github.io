@@ -109,6 +109,7 @@ a,
 
     .dp-icon {
       display: inline-block;
+      vertical-align: bottom;
       width: 90px;
       height: 90px;
       overflow: hidden;
@@ -123,10 +124,14 @@ a,
 
     .dp-extras {
       position: absolute;
+      width: calc(100% - 6px);
+      height: calc(100% - 6px);
+      // border-radius: 50%;
       top: 0;
       left: 0;
       opacity: 0;
       @include transition(all 0.5s linear);
+
     }
   }
 
@@ -152,7 +157,8 @@ a,
         z-index: -1;
         overflow: hidden;
 
-        .div1 {
+        &:before {
+          content: '';
           width: 85px;
           height: 85px;
           position: absolute;
@@ -164,7 +170,8 @@ a,
           @include animation(loader 1.5s linear infinite);
         }
 
-        .div2 {
+        &:after {
+          content: 'Loading...';
           width: 150px;
           height: 150px;
           border-radius: 200px;
@@ -173,14 +180,10 @@ a,
           top: 10px;
           background: #666;
           text-align: center;
-          padding-top: 47px;
+          padding-top: 63px;
           box-sizing: border-box;
           font-size: 1.3em;
           color: #8FC045;
-
-          &:before {
-            content: 'Loading...'
-          }
         }
       }
     }
