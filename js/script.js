@@ -3,9 +3,9 @@ function onResize() {
   // $('.first-section').css({ height: $(window).height() })
 
   if ($(window).width() > 720) {
-    $('.me-love').css({ height: $(window).height() })
+    // $('.me-love').css({ height: $(window).height() })
   } else {
-    $('.me-love').css({ height: '' })
+    // $('.me-love').css({ height: '' })
     startYYanimation()
   }
 }
@@ -52,12 +52,7 @@ function navigate(page, cb) {
       $('#work').removeClass('show-rest'); setTimeout(function(){ $('#work').addClass('show-rest') }, 1000)
     }
   } else if (page === 'about') {
-    cb = (function(oldCb) {
-      return function() {
-        setAboutScroll()
-        typeof(oldCb) === 'function' && oldCb()
-      }
-    })(cb)
+    //
   }
   // animate dp
   $('.icon-container').attr('class', 'icon-container '+page)
@@ -150,7 +145,7 @@ $('.ilt-option')
     var submenu = $(this).html()
     navigate('about', function() {
       $('body').animate({
-        scrollTop: $('#' + submenu).offset().top,
+        scrollTop: $('.' + submenu).offset().top,
       }, 750)
     })
     event.preventDefault()
@@ -159,22 +154,6 @@ $('.ilt-option')
 /* ----- ABOUT ----- */
 
 // Render "about" subnavigation
-$('.me-love .sub-navigation').each(function() {
-  var selected = $(this).parent().parent().attr('id')
-  var subnav_list = ['explore', 'express', 'solve', 'play']
-  var index = subnav_list.indexOf(selected)
-  $(this).html('\
-    <span class="nav-item link subnav '+(index < 1 ? 'disabled' : '')+'" data-subnav="'+subnav_list[index - 1]+'">▲</span>\
-    <span class="nav-item link active" data-subnav="'+selected+'">'+selected+'</span>\
-    <span class="nav-item link subnav '+(index >= subnav_list.length - 1 ? 'disabled' : '')+'" data-subnav="'+subnav_list[index + 1]+'">▼</span>\
-  ')
-})
-
-$('.me-love .sub-navigation .nav-item:not(.disabled)').click(function() {
-  $('body').animate({
-    scrollTop: $('#' + $(this).attr('data-subnav')).offset().top,
-  }, 750)
-})
 
 var yy_animation_flag = false
 function startYYanimation() {
@@ -190,36 +169,6 @@ function startYYanimation() {
     window.setInterval(animate, 15000)
   }, 2000)
   yy_animation_flag = true
-}
-
-function setAboutScroll() {
-  var page = 'about'
-  var submenu_offsets = {
-    explore: $('#explore').height() + $('#explore').offset().top,
-    express: $('#express').height() + $('#express').offset().top,
-    solve: $('#solve').height() + $('#solve').offset().top,
-    solve_header: $('.dd-header').offset().top,
-    play: $('#play').height() + $('#play').offset().top
-  }
-  $(window).on('scroll.about', function(e) {
-    if (e.currentTarget.scrollY + 280 < submenu_offsets.explore) {
-      page !== 'about' && $('.icon-container').attr('class', 'icon-container about')
-      page = 'about'
-    } else if (e.currentTarget.scrollY + 280 < submenu_offsets.express) {
-      page !== 'express' && $('.icon-container').attr('class', 'icon-container express')
-      page = 'express'
-    } else if (e.currentTarget.scrollY + $('.icon-holder').position().top + 110 < submenu_offsets.solve_header) {
-      page !== 'none' && $('.icon-container').attr('class', 'icon-container none')
-      page = 'none'
-    } else if (e.currentTarget.scrollY + 280 < submenu_offsets.solve) {
-      page !== 'solve' && $('.icon-container').attr('class', 'icon-container solve')
-      page !== 'solve' && $('#solve .dd-header').addClass('animate') && startYYanimation()
-      page = 'solve'
-    } else if (e.currentTarget.scrollY + 280 < submenu_offsets.play) {
-      page !== 'play' && $('.icon-container').attr('class', 'icon-container play')
-      page = 'play'
-    }
-  })
 }
 
 /* ----- WORK ----- */

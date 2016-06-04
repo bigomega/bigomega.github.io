@@ -1,5 +1,68 @@
+/*
 @import "about/common";
 @import "about/explore";
 @import "about/express";
 @import "about/solve";
 @import "about/play";
+*/
+@import "about/solve";
+
+#about {
+  margin-top: 15em;
+}
+
+.icon-container.about {
+  position: absolute;
+}
+
+.icon-container.about .icon-holder .dp-extras {
+  width: 90px;
+  height: 90px;
+  opacity: 1;
+  left: 3px;
+  top: 3px;
+  border-radius: 100px;
+  @include animation(dp_art 12s -2s linear infinite);
+
+  .div1 {
+    width: 70px;
+    height: 98px;
+    background: url(/images/paint-brush.png);
+    background-size: contain;
+    position: absolute;
+    left: 100px;
+    top: -10px;
+    @include animation(paint_brush 3s -0.6s linear infinite alternate);
+  }
+}
+
+@include keyframes(dp_art) {
+  0% { background: url(/images/profile-128.jpg); background-size: contain; }
+
+  23% { background: url(/images/profile-128.jpg); background-size: contain; }
+  27% { background: url(/images/dp-hand-drawn-128.jpg); background-size: contain; }
+
+  48% { background: url(/images/dp-hand-drawn-128.jpg); background-size: contain; }
+  52% { background: url(/images/dp-art-128.jpg); background-size: contain; }
+
+  73% { background: url(/images/dp-art-128.jpg); background-size: contain; }
+  77% { background: url(/images/dp-pixel-128.jpg); background-size: contain; }
+
+  98% { background: url(/images/dp-pixel-128.jpg); background-size: contain; }
+  100% { background: url(/images/profile-128.jpg); background-size: contain; }
+}
+@include keyframes(paint_brush) {
+  0% { left: 100px; top: -10px; }
+
+  38% { left: 100px; top: -10px; }
+  // 46% { left: 60px; top: -70px; }
+
+  46% { left: 40px; top: -60px; }
+  50% { left: 60px; top: -50px; }
+  54% { left: 40px; top: -40px; }
+
+  // 54% { left: 60px; top: -30px; }
+  62% { left: 100px; top: -10px; }
+
+  100% { left: 100px; top: -10px; }
+}
