@@ -37,7 +37,7 @@
     display: inline-block;
     height: 114px;
 
-    &:hover {
+    &:not(.level-3):hover {
       .hex {
         background: $palette-blue;
         z-index: 2;

@@ -336,9 +336,9 @@ $('.hive').html((new Array(8)).join(1).split('').reduce(function(mem, x, ind) {
         var val = hexval[level] ? hexval[level][hexval.count[level]++] : ''
         // console.log(level)
         return mem2 + '\
-          <a class="hex-container level-'+ level +' '+ (val ? 'icon ' + val[0] : '') +'" target="_blank" '+(val ? (level != 0 ? 'href="' : '') + val[1] + '"' : '')+'>\
+          <'+(val ? 'a' : 'div')+' class="hex-container level-'+ level +' '+ (val ? 'icon ' + val[0] : '') +'" target="_blank" '+(val ? (level != 0 ? 'href="' : '') + val[1] + '"' : '')+'>\
             <div class="hex-border"><div class="hex"><span></span></div></div>\
-          </a>\
+          </'+(val ? 'a' : 'div')+'>\
         '
       }, '')
     + '\
