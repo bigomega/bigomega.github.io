@@ -430,7 +430,7 @@ $text-wait: 2.5s;
 }
 
 .gibberish-container {
-  margin: 10em 0 5em;
+  margin: 10em 0 3em;
   text-align: center;
 
   .gibberish-list {
@@ -469,6 +469,14 @@ $text-wait: 2.5s;
 @media (max-width: $dp-hides-width) {
   .gibberish-container {
     margin-top: 8em;
+  }
+}
+
+@media (max-width: $dp-hides-width) {
+  #work {
+    .bigomega-block {
+      margin-bottom: 5em;
+    }
   }
 }
 

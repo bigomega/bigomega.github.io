@@ -157,8 +157,8 @@
     }
   }
   .text-container-holder {
-    width: 75%;
-    margin-left: 25%;
+    width: 73%;
+    margin-left: 27%;
     height: calc(100% - 12em);
     margin-top: 4em;
     /* position: absolute; */
@@ -238,7 +238,7 @@
 }
 
 .play {
-  padding-bottom: 10em;
+  // padding-bottom: 10em;
   background: $palette-blue;
   // background: $palette-violet;
 
@@ -253,6 +253,14 @@
 
     img {
       height: 100%;
+    }
+  }
+}
+
+@media (max-width: $dp-hides-width) {
+  #solve {
+    .bigomega-block {
+      margin-bottom: 5em;
     }
   }
 }
