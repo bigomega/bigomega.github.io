@@ -233,8 +233,8 @@
 @media (max-width: 850px) {
   .icon-container.connect{
     .icon-holder{
-      top: 33.5em;
-      @include transform(scale(.8));
+      // top: 33.5em;
+      @include transform(scale(.65));
     }
   }
   .hive {
@@ -245,7 +245,7 @@
   .icon-container.connect{
     .icon-holder{
       top: 12em;
-      @include transform(scale(.8));
+      @include transform(scale(.7));
     }
   }
   .hive {

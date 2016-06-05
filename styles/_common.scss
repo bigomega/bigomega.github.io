@@ -126,12 +126,11 @@ a,
       position: absolute;
       width: calc(100% - 6px);
       height: calc(100% - 6px);
-      // border-radius: 50%;
+      border-radius: 50%;
       top: 0;
       left: 0;
       opacity: 0;
-      @include transition(all 0.5s linear);
-
+      @include transition(border-radius 0.5s linear);
     }
   }
 

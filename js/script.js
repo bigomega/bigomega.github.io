@@ -6,7 +6,7 @@ function onResize() {
     // $('.me-love').css({ height: $(window).height() })
   } else {
     // $('.me-love').css({ height: '' })
-    startYYanimation()
+    // startYYanimation()
   }
 }
 function navigateToHash() {
@@ -19,6 +19,8 @@ function navigateToHash() {
 }
 var connect_animation
 var work_animation
+var yy_animation_flag
+
 function navigate(page, cb) {
   if (['home', 'about', 'work', 'connect'].indexOf(page) < 0) {
     return
@@ -52,7 +54,17 @@ function navigate(page, cb) {
       $('#work').removeClass('show-rest'); setTimeout(function(){ $('#work').addClass('show-rest') }, 1000)
     }
   } else if (page === 'about') {
-    //
+    if(!yy_animation_flag) {
+      function animate() {
+        $('.yin-yang').addClass('split')
+        setTimeout(function() { $('.yin-yang').removeClass('split') }, 2000)
+      }
+      setTimeout(function(){
+        animate()
+        window.setInterval(animate, 10000)
+      }, 4000)
+      yy_animation_flag = true
+    }
   }
   // animate dp
   $('.icon-container').attr('class', 'icon-container '+page)
