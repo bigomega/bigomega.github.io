@@ -20,6 +20,8 @@
       @include animation(dp_art 15s -1.5s linear infinite);
       background-size: contain;
       background-repeat: no-repeat;
+      border-radius: 0;
+      border-color: #fff;
 
       &:before {
         content: '';

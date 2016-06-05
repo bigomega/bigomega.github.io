@@ -248,7 +248,12 @@ a,
   position: relative;
   min-height: 35em; }
   .first-section .container {
-    height: 100%; }
+    height: 100%;
+    font-size: 1.2em; }
+
+@media (max-width: 720px) {
+  .first-section .container {
+    font-size: 1em; } }
 
 .center-text {
   text-align: center;
@@ -306,7 +311,7 @@ a,
       background-position: 26px 24px; }
 
 .ilt-section {
-  font-size: 2em;
+  font-size: 1.2em;
   position: relative;
   width: 8em;
   margin: 4em auto 0; }
@@ -318,7 +323,6 @@ a,
     padding: 5px 10px;
     box-sizing: border-box;
     border-radius: 100px;
-    border-bottom: 3px solid #577728;
     background: #8fc045;
     background: none;
     border-bottom: 2px solid #8fc045;
@@ -329,10 +333,11 @@ a,
       -o-animation: ilt_rotate 5s ease-in-out infinite alternate;
       animation: ilt_rotate 5s ease-in-out infinite alternate; }
     .ilt-section .ilt img {
-      width: 0.9em;
+      width: 1.3em;
+      vertical-align: middle;
       margin: 0 0.2em; }
   .ilt-section .ilt-holder {
-    margin-left: 3.8em; }
+    margin-left: 4.2em; }
   .ilt-section .ilt-option {
     cursor: pointer;
     padding-top: 5px;
@@ -342,9 +347,8 @@ a,
       margin-bottom: 0;
       padding-bottom: 1em; }
 
-@media (max-width: 720px), (max-height: 950px) {
+@media (max-width: 720px), (max-height: 800px) {
   .ilt-section {
-    font-size: 1.5em;
     margin-top: 1em; }
     .ilt-section .ilt {
       border-width: 1px; }
@@ -448,7 +452,9 @@ a,
       -o-animation: dp_art 15s -1.5s linear infinite;
       animation: dp_art 15s -1.5s linear infinite;
       background-size: contain;
-      background-repeat: no-repeat; }
+      background-repeat: no-repeat;
+      border-radius: 0;
+      border-color: #fff; }
       .icon-container.about .icon-holder .dp-extras:before {
         content: '';
         width: 70px;
@@ -1493,11 +1499,11 @@ a,
   margin-top: 0.5em; }
 
 #work.showing-skills .work-img-container {
-  -webkit-filter: blur(5px) grayscale(30%);
-  -moz-filter: blur(5px) grayscale(30%);
-  -ms-filter: blur(5px) grayscale(30%);
-  -o-filter: blur(5px) grayscale(30%);
-  filter: blur(5px) grayscale(30%); }
+  -webkit-filter: blur(20px) grayscale(30%);
+  -moz-filter: blur(20px) grayscale(30%);
+  -ms-filter: blur(20px) grayscale(30%);
+  -o-filter: blur(20px) grayscale(30%);
+  filter: blur(20px) grayscale(30%); }
   #work.showing-skills .work-img-container .work-split {
     color: transparent;
     -moz-transition: all 0.3s linear;

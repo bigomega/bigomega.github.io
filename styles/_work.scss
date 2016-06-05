@@ -375,7 +375,7 @@ $text-wait: 2.5s;
     margin-top: 0.5em;
   }
   .work-img-container {
-    @include filter(blur(5px) grayscale(30%));
+    @include filter(blur(20px) grayscale(30%));
 
     .work-split {
       color: transparent;

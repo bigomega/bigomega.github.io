@@ -157,7 +157,7 @@ $('.ilt-option')
     var submenu = $(this).html()
     navigate('about', function() {
       $('body').animate({
-        scrollTop: $('.' + submenu).offset().top,
+        scrollTop: $('.' + submenu).offset().top - 50,
       }, 750)
     })
     event.preventDefault()
