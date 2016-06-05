@@ -12,19 +12,21 @@
     }
 
     .dp-extras {
-      // width: 90px;
-      // height: 90px;
+      width: calc(100% - 6px);
+      height: calc(100% - 6px);
       opacity: 1;
       border: 3px solid $grey;
       // border-radius: 0;
-      @include animation(dp_art 15s -1.5s linear infinite);
+      background-image: url(/images/profile-128.jpg);
       background-size: contain;
       background-repeat: no-repeat;
       border-radius: 0;
       border-color: #fff;
+      @include transition(border-radius .3s .5s linear);
+      @include animation(dp_art 15s -1s linear infinite);
 
       &:before {
-        content: '';
+        // content: '';
         width: 70px;
         height: 98px;
         background: url(/images/paint-brush.png);
@@ -32,7 +34,7 @@
         position: absolute;
         left: 100px;
         top: -10px;
-        @include animation(paint_brush 3s -.2s linear infinite alternate);
+        @include animation(paint_brush 3s .3s linear infinite alternate);
       }
     }
   }

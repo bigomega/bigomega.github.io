@@ -109,12 +109,11 @@ a,
         box-shadow: 0px 0px 20px 2px #8fc045; }
     .icon-container .icon-holder .dp-extras {
       position: absolute;
-      width: calc(100% - 6px);
-      height: calc(100% - 6px);
       border-radius: 50%;
-      top: 0;
-      left: 0;
+      top: 0px;
+      left: 0px;
       opacity: 0;
+      background: transparent;
       -moz-transition: border-radius 0.5s linear;
       -o-transition: border-radius 0.5s linear;
       -webkit-transition: border-radius 0.5s linear;
@@ -445,18 +444,24 @@ a,
       -o-animation: all 0.3s linear;
       animation: all 0.3s linear; }
     .icon-container.about .icon-holder .dp-extras {
+      width: calc(100% - 6px);
+      height: calc(100% - 6px);
       opacity: 1;
       border: 3px solid #ccc;
-      -webkit-animation: dp_art 15s -1.5s linear infinite;
-      -moz-animation: dp_art 15s -1.5s linear infinite;
-      -o-animation: dp_art 15s -1.5s linear infinite;
-      animation: dp_art 15s -1.5s linear infinite;
+      background-image: url(/images/profile-128.jpg);
       background-size: contain;
       background-repeat: no-repeat;
       border-radius: 0;
-      border-color: #fff; }
+      border-color: #fff;
+      -moz-transition: border-radius 0.3s 0.5s linear;
+      -o-transition: border-radius 0.3s 0.5s linear;
+      -webkit-transition: border-radius 0.3s 0.5s linear;
+      transition: border-radius 0.3s 0.5s linear;
+      -webkit-animation: dp_art 15s -1s linear infinite;
+      -moz-animation: dp_art 15s -1s linear infinite;
+      -o-animation: dp_art 15s -1s linear infinite;
+      animation: dp_art 15s -1s linear infinite; }
       .icon-container.about .icon-holder .dp-extras:before {
-        content: '';
         width: 70px;
         height: 98px;
         background: url(/images/paint-brush.png);
@@ -464,10 +469,10 @@ a,
         position: absolute;
         left: 100px;
         top: -10px;
-        -webkit-animation: paint_brush 3s -0.2s linear infinite alternate;
-        -moz-animation: paint_brush 3s -0.2s linear infinite alternate;
-        -o-animation: paint_brush 3s -0.2s linear infinite alternate;
-        animation: paint_brush 3s -0.2s linear infinite alternate; }
+        -webkit-animation: paint_brush 3s 0.3s linear infinite alternate;
+        -moz-animation: paint_brush 3s 0.3s linear infinite alternate;
+        -o-animation: paint_brush 3s 0.3s linear infinite alternate;
+        animation: paint_brush 3s 0.3s linear infinite alternate; }
 
 #about {
   padding-top: 16em; }
@@ -1646,10 +1651,10 @@ a,
   .hive .hex-container {
     display: inline-block;
     height: 114px; }
-    .hive .hex-container:hover .hex {
+    .hive .hex-container:not(.level-3):hover .hex {
       background: #34D0FF;
       z-index: 2; }
-    .hive .hex-container:hover .hex-border {
+    .hive .hex-container:not(.level-3):hover .hex-border {
       -moz-transform: scale(1.4);
       -o-transform: scale(1.4);
       -ms-transform: scale(1.4);
