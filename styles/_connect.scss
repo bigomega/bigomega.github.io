@@ -39,12 +39,12 @@
 
     &:hover {
       .hex {
-        background: $palette-2;
+        background: $palette-blue;
         z-index: 2;
       }
       .hex-border {
         @include transform(scale(1.4));
-        background: $palette-4;
+        background: $palette-yellow;
         z-index: 0;
       }
     }
@@ -155,13 +155,13 @@
 
   .level-1 {
     .hex {
-      background: $palette-5;
+      background: $palette-violet;
     }
   }
 
   .level-2 {
     .hex {
-      background: $palette-1;
+      background: $palette-pink;
     }
   }
 
@@ -303,12 +303,12 @@
 
 @include keyframes(l1_color) {
   0% { background: white; }
-  30% { background: $palette-1; }
+  30% { background: $palette-pink; }
 }
 
 @include keyframes(l2_color) {
   0% { background: white; }
-  30% { background: $palette-2; }
+  30% { background: $palette-blue; }
 }
 
 @include keyframes(l3_color) {

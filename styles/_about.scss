@@ -37,18 +37,20 @@
 }
 
 #about {
-  padding-top: 9em;
+  padding-top: 16em;
 }
 .me-love {
+  padding: 2em 1em 2em;
+
   .title {
     // font-family: cursive, sans-serif;
     text-align: center;
-    margin-top: 4em;
   }
 
   .text-container {
-    padding: 0 20px;
+    padding: 20px;
     line-height: 1.5em;
+    background: rgba(#fff, 0.8);
 
     span {
       font-weight: 600;
@@ -59,21 +61,27 @@
 }
 @media (max-width: $dp-hides-width) {
   #about {
-    padding-top: 7em;
+    padding-top: 10.5em;
   }
   .me-love {
-    .title {
-      margin-top: 2em;
-    }
+    padding: 0.1em 0 2em;
   }
 }
 
 .explore {
+  background: $primary;
+  padding-top: 0.5em;
+
+  .title {
+    margin-bottom: 1em;
+  }
+
   .images {
-    margin: 20px 10px;
+    padding: 20px 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    background: rgba(#fff, 0.8);
 
 
     a {
@@ -105,14 +113,14 @@
     }
   }
 }
-@media (max-width: 1040px) {
+@media (max-width: 1080px) {
   .explore .images a {
     width: 100px;
   }
 }
 @media (max-width: $dp-hides-width) {
   .explore .images {
-    margin: 20px 15px;
+    padding: 20px 15px;
 
     a {
       margin: 5px;
@@ -126,6 +134,8 @@
 }
 
 .express {
+  background: $palette-yellow;
+
   .float-img-holder {
     width: 25%;
     height: calc(100% - 12em);
@@ -149,10 +159,9 @@
     align-items: center;
     /* padding: 0 3em; */
     box-sizing: border-box;
-    margin-bottom: 4em;
+    margin-bottom: 6em;
 
     .text-container {
-      background: rgba(255, 255, 255, 0.8);
       padding: 1.3em;
       // border: 1px solid $grey;
       border-radius: 3px;
@@ -160,7 +169,7 @@
     }
   }
 }
-@media (max-width: 830px) {
+@media (max-width: 1150px) {
   .express {
     .float-img-holder {
       display: flex;
@@ -186,11 +195,15 @@
       margin-top: 0;
       width: 100%;
       margin-left: 0;
+      margin-bottom: 0;
     }
   }
 }
 
 .solve {
+  padding-left: 0px;
+  padding-right: 0px;
+
   @import "solve_animation";
 
   .text-container.first {
@@ -217,7 +230,9 @@
 }
 
 .play {
-  margin-bottom: 10em;
+  padding-bottom: 10em;
+  background: $palette-blue;
+  // background: $palette-violet;
 
   .title {
     margin-bottom: 0;
