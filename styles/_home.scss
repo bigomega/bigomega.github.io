@@ -1,11 +1,15 @@
 .first-section {
   position: relative;
-  min-height: 35em;
+  min-height: 37em;
 
    .container {
       height: 100%;
       font-size: 1.2em;
    }
+
+  .bigomega-block {
+    margin: -15px auto -1.5em;
+  }
 }
 @media (max-width: $dp-hides-width) {
   .first-section {
@@ -14,6 +18,10 @@
      .container {
         font-size: 1em;
      }
+
+    .bigomega-block {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -97,7 +105,11 @@
     }
   }
 }
-
+@media (max-width: $dp-hides-width) {
+  .social {
+    margin-top: -0.5em;
+  }
+}
 .ilt-section {
   font-size: 1.2em;
   position: relative;
@@ -147,7 +159,7 @@
     }
   }
 }
-@media (max-width: $dp-hides-width), (max-height: 800px) {
+@media (max-width: $dp-hides-width), (max-height: 850px) {
   .ilt-section {
     // font-size: 1.5em;
     margin-top: 1em;

@@ -205,6 +205,53 @@ a,
   }
 }
 
+.bigomega-block {
+  width: 150px;
+  height: 90px;
+  margin: 2em auto;
+  padding: 15px 0 0 15px;
+  /* border: 1px solid #ccc; */
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.75);
+
+  .line {
+    display: flex;
+    margin-top: -15px;
+
+    &:nth-child(odd) {
+      padding-left: 10px;
+    }
+
+    .point {
+      display: inline-block;
+      width: 0px;
+      height: 0px;
+      border: 10px solid;
+      border-top-width: 15px;
+      border-bottom-width: 15px;
+      border-color: transparent;
+      border-left-color: transparent;
+      border-right-color: transparent;
+      // border-top-color: rgba(255, 0, 0, 0.62);
+      // border-bottom-color: rgba(0, 0, 255, 0.65);
+
+      &.point-b {
+        border-bottom-color: black;
+        @include animation(bigomega_color_b 3s linear infinite alternate);
+      }
+      &.point-t {
+        border-top-color: black;
+        @include animation(bigomega_color_t 3s linear infinite alternate);
+      }
+      &.point-tb {
+        border-bottom-color: black;
+        border-top-color: black;
+        @include animation(bigomega_color_b 3s linear infinite alternate, bigomega_color_t 3s linear infinite alternate);
+      }
+    }
+  }
+}
+
 .page {
   display: none;
 }
@@ -216,4 +263,13 @@ a,
 @include keyframes(loader) {
   from { @include transform(rotate(0deg)); }
   to { @include transform(rotate(360deg)); }
+}
+
+@include keyframes(bigomega_color_b) {
+  from { border-bottom-color: black; }
+  to { border-bottom-color: $primary; }
+}
+@include keyframes(bigomega_color_t) {
+  to { border-top-color: $primary; }
+  from { border-top-color: black; }
 }
