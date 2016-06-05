@@ -105,11 +105,12 @@
     }
   }
 }
-@media (max-width: $dp-hides-width) {
+@media (max-width: $dp-hides-width), (max-height: 850px) {
   .social {
     margin-top: -0.5em;
   }
 }
+
 .ilt-section {
   font-size: 1.2em;
   position: relative;

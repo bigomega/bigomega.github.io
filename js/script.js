@@ -136,7 +136,7 @@ $(window).on("load", function() {
     '
   }, ''))
 
-  $('.point-t, .point-b, point-tb').each(function(index) {
+  $('.point-t, .point-b').each(function(index) {
     var delay = Math.random() * 2 * Math.random() < 0.5 ? -1 : 1
     var duration = Math.random() < 0.5 ? Math.random() * 3 : 3
     duration = duration > 1 ? duration : 1
@@ -352,7 +352,7 @@ var hexval = {
     // ^ OR
     // ['quora', 'https://www.quora.com/profile/Bharath-Raja']
     ['facebook', 'https://www.facebook.com/big0mega'],
-    ['reddit', 'https://www.reddit.com/user/big_omega/'],
+    ['reddit', 'https://www.reddit.com/user/big0mega/'],
     ['skype', 'skype:bigOmega3?chat'],
     ['youtube', 'https://www.youtube.com/c/bigomega'],
     ['linkedin', 'https://www.linkedin.com/in/bigomega'],

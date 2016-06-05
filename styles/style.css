@@ -404,7 +404,7 @@ a,
     .social .linkedin:hover {
       background-position: 26px 24px; }
 
-@media (max-width: 720px) {
+@media (max-width: 720px), (max-height: 850px) {
   .social {
     margin-top: -0.5em; } }
 
@@ -1662,7 +1662,7 @@ a,
     margin: 0 0.4em 0.4em; } }
 
 .gibberish-container {
-  margin: 10em 0 10em;
+  margin: 10em 0 5em;
   text-align: center; }
   .gibberish-container .gibberish-list {
     text-align: left;
