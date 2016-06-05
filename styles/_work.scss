@@ -210,8 +210,18 @@ $text-wait: 2.5s;
     }
   }
 
-  &.animation-done .extra-bar {
-    @include animation(none);
+  &.animation-done{
+    .extra-bar {
+      @include animation(none);
+    }
+
+    .sp-1, .sp-2, .sp-3, .sp-4, .sp-5,
+    .hat-2, .hat-2:before {
+      @include transition(all .3s 0s linear);
+    }
+    .face-1 {
+      @include transition(all .3s 1s linear);
+    }
   }
 
   .work-dp-img {
@@ -365,7 +375,7 @@ $text-wait: 2.5s;
     margin-top: 0.5em;
   }
   .work-img-container {
-    @include filter(blur(10px) grayscale(30%));
+    @include filter(blur(5px) grayscale(30%));
 
     .work-split {
       color: transparent;

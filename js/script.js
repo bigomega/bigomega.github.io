@@ -260,7 +260,7 @@ var gibberish_list = [
   , { title: 'Tracking the Dota 2 International prize pool', url: 'https://medium.com/@bigomega/track-the-dota-2-international-prize-pool-102635901df#.r985pck2i', date: 'May 2016', tags: ['hack', 'visualization'] }
 
   , { title: 'Windranger - Dota 2 - ipad art', url: 'http://bigomega.deviantart.com/art/Windranger-Dota-2-521934478', date: 'Mar 2015', tags: ['art'] }
-  , { title: 'Ubuntu logo - 3d art', url: 'http://bigomega.deviantart.com/art/Ubuntu-Logo-503582682', date: 'Apr 2019', tags: ['art'] }
+  , { title: 'Ubuntu logo - 3d art', url: 'http://bigomega.deviantart.com/art/Ubuntu-Logo-503582682', date: 'Apr 2009', tags: ['art'] }
   , { title: 'Vector Illustration - Abishek', url: 'https://www.behance.net/gallery/21931539/My-Dear-Abishek', date: 'Dec 2014', tags: ['art'] }
   , { title: '#TheCupcakeSwage logo design', url: 'https://www.behance.net/gallery/37828833/TheCupcakeSwag-Logo-design', date: 'Dec 2015', tags: ['art', 'design', 'ui'] }
 
@@ -271,7 +271,9 @@ var gibberish_list = [
 
   // , { title: 'Batman bust clay model - sculpture', url: 'https://medium.com/@bigomega/drawing-guy-fawkes-mask-in-css-ecace7d58b88#.u7lxtn194', date: 'May 2015', tags: ['art'] }
 ]
-shuffle(gibberish_list)
+gibberish_list.sort(function(a, b) {
+  return new Date(a.date) < new Date(b.date) ? 1 : -1
+})
 gibberish_list.forEach(function(task){
   $('.gibberish-list').append('\
     <div class="task">\

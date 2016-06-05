@@ -1,4 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,600);
+/* background: #34D0FF; */
+/* background: #BF78FF; */
 ::-moz-selection {
   background: #bdda91; }
 
@@ -467,7 +469,6 @@ a,
   padding-top: 9em; }
 
 .me-love .title {
-  font-family: cursive, sans-serif;
   text-align: center;
   margin-top: 4em; }
 
@@ -1337,6 +1338,17 @@ a,
     -moz-animation: none;
     -o-animation: none;
     animation: none; }
+  .work-img-container.animation-done .sp-1, .work-img-container.animation-done .sp-2, .work-img-container.animation-done .sp-3, .work-img-container.animation-done .sp-4, .work-img-container.animation-done .sp-5,
+  .work-img-container.animation-done .hat-2, .work-img-container.animation-done .hat-2:before {
+    -moz-transition: all 0.3s 0s linear;
+    -o-transition: all 0.3s 0s linear;
+    -webkit-transition: all 0.3s 0s linear;
+    transition: all 0.3s 0s linear; }
+  .work-img-container.animation-done .face-1 {
+    -moz-transition: all 0.3s 1s linear;
+    -o-transition: all 0.3s 1s linear;
+    -webkit-transition: all 0.3s 1s linear;
+    transition: all 0.3s 1s linear; }
   .work-img-container .work-dp-img {
     width: 100%;
     vertical-align: bottom; }
@@ -1474,11 +1486,11 @@ a,
   margin-top: 0.5em; }
 
 #work.showing-skills .work-img-container {
-  -webkit-filter: blur(10px) grayscale(30%);
-  -moz-filter: blur(10px) grayscale(30%);
-  -ms-filter: blur(10px) grayscale(30%);
-  -o-filter: blur(10px) grayscale(30%);
-  filter: blur(10px) grayscale(30%); }
+  -webkit-filter: blur(5px) grayscale(30%);
+  -moz-filter: blur(5px) grayscale(30%);
+  -ms-filter: blur(5px) grayscale(30%);
+  -o-filter: blur(5px) grayscale(30%);
+  filter: blur(5px) grayscale(30%); }
   #work.showing-skills .work-img-container .work-split {
     color: transparent;
     -moz-transition: all 0.3s linear;
