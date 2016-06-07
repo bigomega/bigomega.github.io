@@ -74,7 +74,7 @@ a,
         top: -3px; } }
 
 .icon-container {
-  position: fixed;
+  position: absolute;
   top: 6em;
   left: 0;
   width: 100%;
@@ -334,6 +334,14 @@ a,
   from {
     border-top-color: black; } }
 
+@media (max-height: 850px) {
+  .icon-container.home {
+    top: 5em; } }
+
+@media (max-width: 720px) {
+  .icon-container.home {
+    top: 1em; } }
+
 #desc span {
   font-weight: 600; }
 
@@ -345,6 +353,10 @@ a,
     font-size: 1.2em; }
   .first-section .bigomega-block {
     margin: -15px auto -1.5em; }
+
+@media (max-height: 850px) {
+  .first-section .container {
+    font-size: 1em; } }
 
 @media (max-width: 720px) {
   .first-section .container {
@@ -358,6 +370,10 @@ a,
   padding-top: 192px; }
   .center-text h3 {
     font-weight: 400; }
+
+@media (max-height: 850px) {
+  .center-text {
+    padding-top: 10em; } }
 
 @media (max-width: 720px) {
   .center-text {
@@ -412,7 +428,7 @@ a,
     margin-top: -0.5em; } }
 
 .ilt-section {
-  font-size: 1.2em;
+  font-size: 1.4em;
   position: relative;
   width: 8.4em;
   margin: 4em auto 0; }
@@ -448,7 +464,11 @@ a,
       margin-bottom: 0;
       padding-bottom: 1em; }
 
-@media (max-width: 720px), (max-height: 850px) {
+@media (max-height: 750px) {
+  .ilt-section {
+    margin-top: 1em; } }
+
+@media (max-width: 720px), (max-height: 670px) {
   .ilt-section {
     margin-top: 1em; }
     .ilt-section .ilt {
