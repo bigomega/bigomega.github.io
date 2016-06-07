@@ -315,7 +315,7 @@ gibberish_list.sort(function(a, b) {
 gibberish_list.forEach(function(task){
   $('.gibberish-list').append('\
     <div class="task">\
-      <a href="'+ task.url +'">'+ task.title +'</a>\
+      <a target="_blank" href="'+ task.url +'">'+ task.title +'</a>\
       <br/>\
       <span class="date">'+ task.date +'</span>\
       '+ task.tags.map(function(tag){
