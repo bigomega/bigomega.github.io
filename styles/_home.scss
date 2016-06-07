@@ -9,6 +9,13 @@
   }
 }
 
+@media (max-width: $dp-hides-width) and (max-height: 600px) {
+  .icon-container.home {
+    transform: scale(0.8);
+    top: 0.7em;
+  }
+}
+
 #desc span {
   font-weight: 600;
 }
@@ -68,6 +75,11 @@
     h3 {
       margin-top: -0.5em;
     }
+  }
+}
+@media (max-width: $dp-hides-width) and (max-height: 600px) {
+  .center-text {
+    padding-top: 3.5em;
   }
 }
 
@@ -194,7 +206,7 @@
 }
 @media (max-width: $dp-hides-width), (max-height: 670px) {
   .ilt-section {
-    // font-size: 1.5em;
+    font-size: 1.2em;
     margin-top: 1em;
 
     .ilt {
