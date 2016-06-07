@@ -808,16 +808,6 @@ a,
         -o-transition: opacity 0.2s 2.8s linear;
         -webkit-transition: opacity 0.2s 2.8s linear;
         transition: opacity 0.2s 2.8s linear; }
-      .solve .dd-header.animate .design-header span:before {
-        -webkit-animation: yy_revolve 2s 36s ease-in-out infinite reverse, yy_top_bot 4s 12s linear infinite alternate;
-        -moz-animation: yy_revolve 2s 36s ease-in-out infinite reverse, yy_top_bot 4s 12s linear infinite alternate;
-        -o-animation: yy_revolve 2s 36s ease-in-out infinite reverse, yy_top_bot 4s 12s linear infinite alternate;
-        animation: yy_revolve 2s 36s ease-in-out infinite reverse, yy_top_bot 4s 12s linear infinite alternate; }
-      .solve .dd-header.animate .develop-header span:before {
-        -webkit-animation: yy_revolve 2s 35s ease-in-out infinite, yy_top_bot 4s 12s linear infinite alternate;
-        -moz-animation: yy_revolve 2s 35s ease-in-out infinite, yy_top_bot 4s 12s linear infinite alternate;
-        -o-animation: yy_revolve 2s 35s ease-in-out infinite, yy_top_bot 4s 12s linear infinite alternate;
-        animation: yy_revolve 2s 35s ease-in-out infinite, yy_top_bot 4s 12s linear infinite alternate; }
     .solve .dd-header .yin-yang {
       width: 90px;
       height: 90px;

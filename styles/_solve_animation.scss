@@ -98,13 +98,13 @@
       // @include transition(left .2s 18.3s linear, bottom 0.5s 11.5s linear);
       // left: -30px;
       // bottom: -10px;
-      @include animation(yy_revolve 2s 5s + (10s * 3) + 1s ease-in-out infinite reverse, yy_top_bot 4s 12s linear infinite alternate);
+      // @include animation(yy_revolve 2s 5s + (10s * 3) + 1s ease-in-out infinite reverse, yy_top_bot 4s 12s linear infinite alternate);
     }
     .develop-header span:before {
       // @include transition(left .2s 19.3s linear, bottom 0.5s 11.5s linear);
       // left: -30px;
       // bottom: -10px;
-      @include animation(yy_revolve 2s 5s + (10s * 3) ease-in-out infinite, yy_top_bot 4s 12s linear infinite alternate);
+      // @include animation(yy_revolve 2s 5s + (10s * 3) ease-in-out infinite, yy_top_bot 4s 12s linear infinite alternate);
     }
   }
 
