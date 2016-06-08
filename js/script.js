@@ -296,7 +296,8 @@ var gibberish_list = [
   , { title: 'Simple load testing script in bash', url: 'https://medium.com/@bigomega/simple-load-testing-script-in-bash-a8c5a4968dc7', date: 'Mar 2016', tags: ['bash'] }
   , { title: 'Information extraction from audio', url: 'https://medium.com/@bigomega/big%CF%89mega-information-extraction-from-audio-noob-level-9e6df4e98b54#.tsiku4ufh', date: 'May 2016', tags: ['hack'] }
   , { title: 'Tracking the Dota 2 International prize pool', url: 'https://medium.com/@bigomega/track-the-dota-2-international-prize-pool-102635901df#.r985pck2i', date: 'May 2016', tags: ['hack', 'visualization'] }
-
+  
+  , { title: 'Batman bust - clay model', url: 'https://medium.com/@bigomega/sculpture-from-a-first-timer-ae966088bcd8', date: 'May 2015', tags: ['art'] }
   , { title: 'Windranger - Dota 2 - ipad art', url: 'http://bigomega.deviantart.com/art/Windranger-Dota-2-521934478', date: 'Mar 2015', tags: ['art'] }
   , { title: 'Ubuntu logo - 3d art', url: 'http://bigomega.deviantart.com/art/Ubuntu-Logo-503582682', date: 'Apr 2009', tags: ['art'] }
   , { title: 'Vector Illustration - Abishek', url: 'https://www.behance.net/gallery/21931539/My-Dear-Abishek', date: 'Dec 2014', tags: ['art'] }
