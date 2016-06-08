@@ -1,10 +1,17 @@
 ::-moz-selection { background: lighten($primary, 20%)}
 ::selection { background: lighten($primary, 20%); }
 
+$open-sans : 'Open Sans', helvetica, sans-serif;
+$raleway: 'Raleway', 'Open Sans', helvetica, sans-serif;
+
 body {
   margin: 0;
-  font-family: 'Raleway', helvetica, sans-serif;
+  font-family: $open-sans;
   background: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $raleway;
 }
 
 a,

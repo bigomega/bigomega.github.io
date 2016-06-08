@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,600);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway);
 ::-moz-selection {
   background: #bdda91; }
 
@@ -7,8 +7,11 @@
 
 body {
   margin: 0;
-  font-family: 'Raleway', helvetica, sans-serif;
+  font-family: "Open Sans", helvetica, sans-serif;
   background: #fff; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", "Open Sans", helvetica, sans-serif; }
 
 a,
 .link {
@@ -351,6 +354,7 @@ a,
   font-weight: 600; }
 
 .first-section {
+  font-family: "Raleway", "Open Sans", helvetica, sans-serif;
   position: relative;
   min-height: 37em; }
   .first-section .container {
@@ -618,8 +622,7 @@ a,
     line-height: 1.5em;
     background: rgba(255, 255, 255, 0.8); }
     .me-love .text-container span {
-      font-weight: 600;
-      font-size: 1.2em; }
+      font-weight: 600; }
 
 @media (max-width: 720px) {
   #about {
@@ -729,6 +732,7 @@ a,
   padding-left: 0px;
   padding-right: 0px; }
   .solve .dd-header {
+    font-family: "Raleway", "Open Sans", helvetica, sans-serif;
     height: 90px;
     padding: 2em 0;
     display: flex;
