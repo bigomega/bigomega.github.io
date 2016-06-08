@@ -1,0 +1,209 @@
+.hex-container.icon {
+  span {
+    background: url(/images/social-icons.png);
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin-left: 19px;
+  }
+
+  &.profile {
+    span {
+      display: none;
+    }
+    .hex {
+      background: url(/images/profile-128.jpg);
+      background-size: cover;
+      background-position: 50%;
+
+      &:after {
+        background: url(/images/profile-128-min-60deg.jpg);
+        background-position: 50%;
+        background-size: 137%;
+      }
+      &:before {
+        background: url(/images/profile-128-60deg.jpg);
+        background-position: 50%;
+        background-size: 137%;
+      }
+    }
+    .hex-border {
+      background: $primary;
+    }
+
+    &:hover{
+      .hex-border {
+        background: $primary;
+      }
+    }
+  }
+
+  &.behance {
+    .hex {
+      background: #1769FF;
+    }
+    span {
+      background-position: -110px -178px;
+    }
+  }
+  &.github {
+    .hex {
+      background: #333;
+    }
+    span {
+      background-position: -109px -240px;
+    }
+  }
+  &.twitter {
+    .hex {
+      background: #5EA9DD;
+    }
+    span {
+      background-position: -40px 2px;
+      margin-left: 15px;
+      margin-top: 2px;
+    }
+  }
+  &.medium {
+    .hex {
+      background: #00AB6C;
+    }
+    span {
+      background-position: -414px -474px;
+      width: 51px;
+    }
+  }
+  &.mail {
+    .hex {
+      background: #9800E6;
+    }
+    span {
+      background-position: -109px -119px;
+    }
+  }
+  &.flickr {
+    .hex {
+      background: #FF1983;
+      background: #0262DC;
+    }
+    span {
+      background-position: -289px -473px;
+      background-position: -355px -175px;
+    }
+  }
+  &.deviantart {
+    .hex {
+      background: #01D13C;
+    }
+    span {
+    background-position: -170px -303px;
+    }
+  }
+  &.codepen {
+    .hex {
+      background: #333;
+    }
+    span {
+      background-position: -170px -238px;
+    }
+  }
+  &.stackoverflow {
+    .hex {
+      background: #FFA500;
+    }
+    span {
+      background-position: -56px -234px;
+      height: 55px;
+      margin-top: -4px;
+    }
+  }
+  &.steam {
+    .hex {
+      background: #231F20;
+    }
+    span {
+      background-position: 0px -473px;
+      margin-left: 22px;
+    }
+  }
+  &.vine {
+    .hex {
+      background: #00B386;
+    }
+    span {
+      background-position: -50px -471px;
+    }
+  }
+  &.quora {
+    .hex {
+      background: #C41A00;
+    }
+    span {
+      background-position: 0px -236px;
+    }
+  }
+  &.facebook {
+    .hex {
+      background: #3765A3;
+    }
+    span {
+      background-position: 0px 0px;
+      margin-left: 32px;
+      margin-top: 3px;
+    }
+  }
+  &.reddit {
+    .hex {
+      background: #88BFE6;
+    }
+    span {
+      background-position: -473px -239px;
+      margin-left: 18px;
+      width: 55px;
+    }
+  }
+  &.skype {
+    .hex {
+      background: #00AAF1;
+    }
+    span {
+      background-position: 0px -114px;
+    }
+  }
+  &.youtube {
+    .hex {
+      background: #cd201f;
+    }
+    span {
+      background-position: 0px -51px;
+      margin-left: 20px;
+      margin-top: -2px;
+      height: 55px;
+    }
+  }
+  &.linkedin {
+    .hex {
+      background: #0274B3;
+    }
+    span {
+      background-position: -342px 0px;
+    }
+  }
+  &.tumblr {
+    .hex {
+      background: #36465D;
+    }
+    span {
+      background-position: -354px -52px;
+    }
+  }
+  &.instagram {
+    .hex {
+      background: #D83573;
+    }
+    span {
+      background-position: -108px -473px;
+    }
+  }
+}
+
