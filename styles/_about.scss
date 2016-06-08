@@ -73,7 +73,7 @@
 }
 
 .explore {
-  background: $primary;
+  // background: $primary;
   padding-top: 0.5em;
 
   .title {
@@ -239,8 +239,9 @@
 
 .play {
   // padding-bottom: 10em;
-  background: $palette-blue;
+  // background: $palette-blue;
   // background: $palette-violet;
+  background: $primary;
 
   .title {
     margin-bottom: 0;
@@ -250,6 +251,7 @@
     height: 30px;
     text-align: center;
     margin-bottom: 2em;
+    margin-top: 0.5em;
 
     img {
       height: 100%;

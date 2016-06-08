@@ -48,12 +48,14 @@ a,
 }
 
 .header {
+  font-family: $raleway;
   position: fixed;
   top: 0;
   z-index: 10;
   width: 100%;
   background: #fff;
   border-bottom: 1px solid $grey;
+  text-transform: capitalize;
 
   &.hidden {
     display: none;

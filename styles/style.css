@@ -39,12 +39,14 @@ a,
   margin: 0 auto; }
 
 .header {
+  font-family: "Raleway", "Open Sans", helvetica, sans-serif;
   position: fixed;
   top: 0;
   z-index: 10;
   width: 100%;
   background: #fff;
-  border-bottom: 1px solid #ccc; }
+  border-bottom: 1px solid #ccc;
+  text-transform: capitalize; }
   .header.hidden {
     display: none; }
   .header.minimized {
@@ -635,7 +637,6 @@ a,
     padding: 0.1em 0 2em; } }
 
 .explore {
-  background: #8fc045;
   padding-top: 0.5em; }
   .explore .title {
     margin-bottom: 1em; }
@@ -1076,13 +1077,14 @@ a,
     width: 100%; } }
 
 .play {
-  background: #34D0FF; }
+  background: #8fc045; }
   .play .title {
     margin-bottom: 0; }
   .play .images {
     height: 30px;
     text-align: center;
-    margin-bottom: 2em; }
+    margin-bottom: 2em;
+    margin-top: 0.5em; }
     .play .images img {
       height: 100%; }
 
