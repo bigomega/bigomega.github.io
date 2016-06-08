@@ -63,6 +63,10 @@ a,
     transition: 0.35s ease-out all; }
   .header li {
     list-style: none; }
+  .header a {
+    text-decoration: none; }
+    .header a.active {
+      border-bottom: 2px solid; }
 
 @media (max-width: 720px) {
   .header {
@@ -1318,7 +1322,6 @@ a,
     overflow: hidden;
     color: rgba(255, 255, 255, 0.85);
     font-size: 1.3em;
-    font-weight: 600;
     text-transform: uppercase; }
     .work-img-container .work-split .hat-1 {
       position: absolute;
@@ -1509,7 +1512,7 @@ a,
     width: 300px; }
     .work-img-container .work-split {
       font-size: 1em;
-      color: rgba(255, 255, 255, 0.5); }
+      color: rgba(255, 255, 255, 0.65); }
       .work-img-container .work-split .hat-2 {
         border-bottom-width: 69px;
         border-left-width: 15px;

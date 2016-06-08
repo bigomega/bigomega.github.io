@@ -79,6 +79,14 @@ a,
   li {
     list-style: none;
   }
+
+  a {
+    text-decoration: none;
+
+    &.active {
+      border-bottom: 2px solid;
+    }
+  }
 }
 @media (max-width: $dp-hides-width) {
   .header {
