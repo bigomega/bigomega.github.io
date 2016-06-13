@@ -1636,8 +1636,11 @@ a,
 #work.showing-skills .all-skills-container {
   background: rgba(255, 255, 255, 0.65); }
 
-#work.showing-skills .work-dig-deeper {
-  margin-top: 0.5em; }
+#work.showing-skills .work-dig-deeper.show {
+  margin-top: -3.5em; }
+
+#work.showing-skills .work-dig-deeper.hide {
+  margin-top: 2.5em; }
 
 #work.showing-skills .work-img-container {
   -webkit-filter: blur(20px) grayscale(30%);
