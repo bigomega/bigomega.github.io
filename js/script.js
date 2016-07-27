@@ -338,7 +338,7 @@ var hexval = {
     ['github', 'https://github.com/bigomega/'],
     ['twitter', 'https://twitter.com/bigomega'],
     ['medium', 'https://medium.com/@bigomega/'],
-    ['mail', 'mailto:bharathraja@live.com'],
+    ['mail', 'mailto:bharathraja04@gmail.com'],
     ['flickr', 'https://www.flickr.com/photos/bigomega/albums']
   ],
   2: [
