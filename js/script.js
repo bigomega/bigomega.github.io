@@ -266,7 +266,7 @@ skills.forEach(function(sk){
     <div class="skill"><span style="width:'+ sk[1] +'%;"></span>'+ sk[0] +'</div>\
   ')
 })
-$('.work-dig-deeper').click(function(){
+$('.skill-toggle').click(function(){
   $('#work').toggleClass('showing-skills')
   if (!$('#work').hasClass('showing-skills')) {
     shuffle(skills)
@@ -326,10 +326,10 @@ gibberish_list.forEach(function(task){
 // render hive
 // 7 lines
 var hex_arrangement = [
-'3333',
-'32223',
-'321123',
-'3210123'
+  '3333',
+  '32223',
+  '321123',
+  '3210123'
 ]
 var hexval = {
   0: [['profile', 'data-nav="home']],

@@ -305,21 +305,28 @@ $text-wait: 2.3s;
   @include transition(all .5s linear);
 
   .work-dig-deeper {
-    text-align: center;
-    display: block;
-    background: #fff;
-    display: block;
-    /* color: #fff; */
-    width: 160px;
-    padding: 10px;
     margin: 3em auto 2em;
     margin-top: 42em;
-    border-radius: 3px;
-    border: 1px solid $primary;
+    text-align: center;
+    width: 400px;
     @include transition(all .5s cubic-bezier(0.18, 0.89, 0.32, 1.28));
 
-    &:hover {
-      background: lighten($primary, 10%);
+    .button {
+      text-align: center;
+      display: inline-block;
+      background: #fff;
+      width: 160px;
+      padding: 10px;
+      border-radius: 3px;
+      border: 1px solid $primary;
+
+      &:hover {
+        background: lighten($primary, 10%);
+      }
+    }
+
+    a.button {
+      margin-left: 20px;
     }
   }
 
