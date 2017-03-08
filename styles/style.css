@@ -1963,6 +1963,10 @@ a,
   .hive .hex-container.icon.steam span {
     background-position: 0px -473px;
     margin-left: 22px; }
+  .hive .hex-container.icon.imgur .hex {
+    background: #000; }
+  .hive .hex-container.icon.imgur span {
+    background-position: -527px -472px; }
   .hive .hex-container.icon.vine .hex {
     background: #00B386; }
   .hive .hex-container.icon.vine span {

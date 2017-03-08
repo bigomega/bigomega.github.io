@@ -354,7 +354,7 @@ var hexval = {
     ['skype', 'skype:bigOmega3?chat'],
     ['youtube', 'https://www.youtube.com/c/bigomega'],
     ['linkedin', 'https://www.linkedin.com/in/bigomega'],
-    ['vine', 'https://vine.co/bigomega'],
+    ['imgur', 'http://big0mega.imgur.com/'],
     ['instagram', 'https://instagram.com/big0mega/']
   ],
   count: { 0: 0, 1: 0, 2: 0 },

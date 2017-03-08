@@ -126,6 +126,14 @@
       margin-left: 22px;
     }
   }
+  &.imgur {
+    .hex {
+      background: #000;
+    }
+    span {
+      background-position: -527px -472px;
+    }
+  }
   &.vine {
     .hex {
       background: #00B386;
