@@ -126,12 +126,20 @@
       margin-left: 22px;
     }
   }
+  &.soundcloud {
+    .hex {
+      background: #ff6a22;
+    }
+    span {
+      background-position: -530px -472px;
+    }
+  }
   &.imgur {
     .hex {
       background: #000;
     }
     span {
-      background-position: -527px -472px;
+      background-position: 2px -533px;
     }
   }
   &.vine {

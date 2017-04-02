@@ -336,9 +336,9 @@ var hexval = {
   1: [
     ['behance', 'https://www.behance.net/bigOmega'],
     ['github', 'https://github.com/bigomega/'],
-    ['twitter', 'https://twitter.com/bigomega'],
-    ['medium', 'https://medium.com/@bigomega/'],
     ['mail', 'mailto:bharathraja04@gmail.com'],
+    ['medium', 'https://medium.com/@bigomega/'],
+    ['twitter', 'https://twitter.com/bigomega'],
     ['flickr', 'https://www.flickr.com/photos/bigomega/albums']
   ],
   2: [
@@ -347,15 +347,15 @@ var hexval = {
     ['stackoverflow', 'http://stackoverflow.com/users/2130750/bigOmega'],
     ['steam', 'https://steamcommunity.com/id/bigomega'],
     ['tumblr', 'http://big0mega.tumblr.com'],
-    // ^ OR
-    // ['quora', 'https://www.quora.com/profile/Bharath-Raja']
-    ['facebook', 'https://www.facebook.com/big0mega'],
+    ['linkedin', 'https://www.linkedin.com/in/bigomega'],
     ['reddit', 'https://www.reddit.com/user/big0mega/'],
     ['skype', 'skype:bigOmega3?chat'],
+    ['soundcloud', 'https://soundcloud.com/big0mega/'],
+    ['facebook', 'https://www.facebook.com/big0mega'],
+    ['instagram', 'https://instagram.com/big0mega/'],
     ['youtube', 'https://www.youtube.com/c/bigomega'],
-    ['linkedin', 'https://www.linkedin.com/in/bigomega'],
-    ['imgur', 'http://big0mega.imgur.com/'],
-    ['instagram', 'https://instagram.com/big0mega/']
+    // ['imgur', 'http://big0mega.imgur.com/'],
+    // ['quora', 'https://www.quora.com/profile/Bharath-Raja'],
   ],
   count: { 0: 0, 1: 0, 2: 0 },
 }
