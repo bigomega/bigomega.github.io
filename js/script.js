@@ -156,25 +156,10 @@ $(window).on("load", function() {
 
 /* ----- HOME ----- */
 
-function set_desc() {
-  var desc = [
-    // 'I\’m a designer who loves to code.'
-    // ,
-    'Geek. Gamer. Rookie artist. Weird thinker and a bathroom singer.'
-    ,
-    'I\'m a passionate Designer with craze towards Art and impulse towards Programming.'
-  ]
-  var selected = desc[Math.floor(Math.random() * desc.length)]
-  $('#desc').html(selected + '<br/>An erratic perfectionist.')
-}
-
 // Initiate ILT animation
 setTimeout(function() {
   $('.ilt').addClass('animate')
 }, 4000)
-
-// Randomize description
-set_desc()
 
 $('.ilt-holder')
   .mouseover(function() {
