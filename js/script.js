@@ -28,7 +28,7 @@ function navigate(page, cb) {
   // misc
   $(window).off('scroll.about')
   if (page === 'home') {
-    set_desc()
+    //
   } else if (page === 'connect') {
     var animation = function(){ $('.hive').removeClass('first-animate loaded-animate'); setTimeout(function(){ $('.hive').addClass('loaded-animate') }, 10) }
     if (!connect_animation) {
