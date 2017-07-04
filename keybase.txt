@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/bigomega
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://bharathraja.in
+  * I am bigomega (https://keybase.io/bigomega) on keybase.
+  * I have a public key with fingerprint 35B8 190F 23C3 8576 1E8C  8C8E 8EB4 BBCA 4DF5 E11C
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101a52f454e01c1f2e69cdbc89d36dded69bcee1eaf8425d91a75c94fdfba7ae5ca0a",
+            "fingerprint": "35b8190f23c385761e8c8c8e8eb4bbca4df5e11c",
+            "host": "keybase.io",
+            "key_id": "8eb4bbca4df5e11c",
+            "kid": "0101a52f454e01c1f2e69cdbc89d36dded69bcee1eaf8425d91a75c94fdfba7ae5ca0a",
+            "uid": "5a4a0000390efb549c13fe1769707d19",
+            "username": "bigomega"
+        },
+        "service": {
+            "hostname": "bharathraja.in",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1499163118,
+    "expire_in": 157680000,
+    "prev": "da0f975b14fe7b3f3b4986438a41b16723927be7b56458dcc27eac5387c6b0d6",
+    "seqno": 8,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.72
+Comment: https://keybase.io/crypto
+
+yMIpAnicrVJbSFRRFJ3pYWQUlqQRUXLTfGAz98x9z0dqKBESYUhhTk3nOd4c5053
+rpqUoT0QtId9FFGBEfSAiqLCgorsQRQWRmgUFj2hxJKiIpLKzpX867NzPg5n77XW
+Xnuzb08d70n25jWnnSibkznk7b5xoNZTUWkObRKQRRqE4Cahmo4+NEpowglXm0QI
+CiIQAVQCTFZkKgIMWICqBiYI6waRVEIoUQ2EKQUUMl0OKMQAUFOwITPCENQgVTAU
+oZAvMDMWoXbcNmMOl5UUpANDZAEJS7qiqYDqmF+qUyQjhKFMmEIBwJxYZSVcBjeH
+YIL6TIvH+Cc8au8f+P/su3ZUToEyFPmRDJEypMgGBhKjQFMNTdQIMFxggtoxWEM5
+GpkRq4ZGoNCYL/BonYmpO1i3kzFEFbShU2XD9dBnxjg7bluOha0oz1U5TjzoUp2G
+uIutpyj8VyWMzBjhg+SEOmonTCsmBAFHYsd0ZYFsGECVANDzBboxbto0bLoIPmDd
+de+WoXVckkCRGZqCgMyohiQmIdnQVVnSoQwQULWAZAQ0xFOKKis6wTigUYgVSdew
+ikSiCm5fG2KWEOSVHBjhkgkzEoNOrU2FxptdoQkeb7InaeI4d8E8yZNTxtbOf2XS
+yHL11cLNn7tWHPr1M9S5Mvyk5XLPxbvRtqa2Uxeyi4d/LPv0tPde+aLDefsXfm04
+t6Xou1HckjkjpXVfWUP92VX+gfLB98TfvuZnx+JC9rIl8uJ+/7FcOhCaMmt43fPV
+Apv7+2RJIN5YOvPo9x0PStMKLrV/uZ/qO+jJKnmxs/7tzL3V039nlORM67vqz1VW
+LGjb8QF04aFrsz3PSo9Lj7z96ZEcvW/yh2hGujbvysetuyPRnl6UXTh8KjSrW1ha
+NPL6rG9ze3RJyq7hQv+7yqSLd1rz11ZkFPpqvl3Ys3Hbke7MkcfenO0LHjpdt950
+ppY1sc9f7w529Jw5ej6rr6BZvH56PvsDr7lE3Q==
+=Ibdq
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/bigomega
+
+==================================================================
