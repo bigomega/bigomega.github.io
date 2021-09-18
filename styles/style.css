@@ -425,6 +425,9 @@ a.disabled,
     top: 0.7em;
   }
 }
+#desc {
+  margin-bottom: 4em;
+}
 #desc span {
   font-weight: 600;
 }
