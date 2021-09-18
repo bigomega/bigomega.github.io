@@ -92,7 +92,7 @@
 
     &,
     &:before ,
-    &:after , {
+    &:after {
       width: 99px;
       height: 58px;
       z-index: -2;
@@ -132,9 +132,9 @@
   @import "hexagon-icons";
 
 
-  .hex-container.icon:hover .hex {
-    // background: $primary;
-  }
+  // .hex-container.icon:hover .hex {
+  //   background: $primary;
+  // }
 
   .level-0 {
     // width: 99px;

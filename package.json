@@ -4,8 +4,8 @@
   "description": "Personal site",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass styles/style.scss styles/style.css",
-    "watch": "node-sass -w --include-path styles styles/style.scss styles/style.css",
+    "sass": "sass styles/style.scss styles/style.css",
+    "watch": "sass -w styles/style.scss styles/style.css",
     "start": "python -m SimpleHTTPServer",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,8 +18,5 @@
   "bugs": {
     "url": "https://github.com/bigomega/bigomega.github.io/issues"
   },
-  "homepage": "https://github.com/bigomega/bigomega.github.io#readme",
-  "devDependencies": {
-    "node-sass": "^3.6.0"
-  }
+  "homepage": "https://github.com/bigomega/bigomega.github.io#readme"
 }
