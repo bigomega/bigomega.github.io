@@ -85,6 +85,11 @@ a,
   a {
     text-decoration: none;
 
+    img {
+      width: 10px;
+      opacity: 0.3;
+    }
+
     &.active {
       border-bottom: 2px solid;
     }

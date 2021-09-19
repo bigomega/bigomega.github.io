@@ -83,6 +83,10 @@ a.disabled,
 .header a {
   text-decoration: none;
 }
+.header a img {
+  width: 10px;
+  opacity: 0.3;
+}
 .header a.active {
   border-bottom: 2px solid;
 }
