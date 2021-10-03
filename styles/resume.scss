@@ -1,0 +1,369 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Raleway:300,600,800);
+
+@import "variables";
+@import "mixins";
+
+::-moz-selection { background: lighten($primary, 20%)}
+::selection { background: lighten($primary, 20%); }
+
+$open-sans : 'Open Sans', helvetica, sans-serif;
+$raleway: 'Raleway', 'Open Sans', helvetica, sans-serif;
+
+$primary: #73bf00;
+
+// $proto: #84a64f;
+// $design: #b85ec9;
+// $app: #cd4d7b;
+// $api: #419bc1;
+// $devops: #cdb63b;
+// $marketing: #45c2a6;
+
+$skill-colors: (
+  "proto": #bcd98fff,
+  "design": #ea8bfdff,
+  "app": #fc7aa9ff,
+  "api": #67cffbff,
+  "devops": #fee666ff,
+  "marketing": #68fbdaff,
+);
+
+body {
+  margin: 0;
+  font-family: $open-sans;
+  background: #525659;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $raleway;
+}
+
+#resume {
+  // #86d216
+  // #73bf00
+  max-width: 680px;
+  margin: 10px auto;
+  padding: 20px 60px;
+  background: #fff;
+  color: #333;
+  box-shadow: 0 0 10px 0;
+  -webkit-print-color-adjust: exact;
+}
+
+#header {
+  text-align: center;
+  border-bottom: 1px solid #a2a2a2;
+  margin-bottom: 10px;
+
+  .name {
+    font-size: 3em;
+    font-weight: 700;
+    color: $primary;
+    margin-bottom: 0;
+    color: $primary;
+  }
+
+  .title {
+    font-size: 1.7em;
+    font-weight: 400;
+    margin-top: 0em;
+    margin-bottom: 0.3em;
+  }
+
+  .website {
+    font-size: 1.3em;
+  }
+  .contact {
+    display: flex;
+    justify-content: space-between;
+    margin: 2em 0 0.5em;
+    font-size: .85em;
+
+    a {
+      position: relative;
+    }
+  }
+
+  @media print {
+    .linkedin, .skype {
+      display: none;
+    }
+  }
+}
+
+#skill-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  background-color: #fff;
+  padding: 40px;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+  overflow: auto;
+
+  &:target {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  a {
+    display: block;
+    height: 100%;
+  }
+}
+
+#life-so-far {
+  border-top: 1px solid #a2a2a2;
+  padding-top: 20px;
+  margin-top: 20px;
+
+  .title {
+    color: $primary;
+    font-size: 1.5em;
+    font-family: $raleway;
+  }
+
+  .filters {
+    float: right;
+    margin-top: 5px;
+
+    > span {
+      opacity: 0.35;
+    }
+
+    label {
+      cursor: pointer;
+
+      input { display: none; }
+      span {
+        height: 10px;
+        width: 20px;
+        background-color: #fff;
+        border: 2px solid #666;
+        display: inline-block;
+        border-radius: 20px;
+        margin-left: 10px;
+      }
+
+      @each $skill, $color in $skill-colors {
+        &.#{$skill} span {border-color: darken($color, 0%);}
+        &.#{$skill} input:checked + span {border-color: darken($color, 30%);}
+        &.#{$skill} input:checked + span {background-color: $color;}
+      }
+
+      &:hover span { border-color: #333;}
+    }
+
+    .reset {
+      cursor: pointer;
+      background-image: url(/images/resume/redo.svg);
+      width: 15px;
+      height: 15px;
+      display: inline-block;
+      margin-left: 10px;
+      opacity: 0.35;
+      &:hover {
+        opacity: 1;
+      }
+      input { display: none; }
+    }
+
+    @media print {
+      display: none;
+    }
+  }
+
+  .events {
+    border-left: 2px solid $primary;
+    padding-left: 30px;
+    margin-left: 30px;
+  }
+
+  .event {
+    margin-top: 35px;
+    position: relative;
+    display: block;
+    cursor: pointer;
+
+    &.hide { display: none; }
+
+    &:first-child {
+      margin-top: 0;
+      padding-top: 20px;
+    }
+
+    // &:active {
+    //   background: #e4e4e4;
+    // }
+  }
+  label.event:hover .event-title {
+    background: #eee;
+    // color: #fff;
+  }
+
+  .event input {
+    display: none;
+  }
+
+  .logo {
+    width: 45px;
+    height: 45px;
+    background-size: 45px;
+    background-image: url(/images/heart.gif);
+    position: absolute;
+    left: -53px;
+    top: 5px;
+
+    &.peritus {
+      background-image: url(/images/resume/c-peritus.jpeg);
+    }
+    &.freshworks {
+      background-image: url(/images/resume/c-freshworks.jpeg);
+    }
+    &.indix {
+      background-image: url(/images/resume/c-indix.jpeg);
+      background-color: #fff;
+      border: 2px solid $primary;
+      left: -55px;
+    }
+    &.ssn {
+      background-image: url(/images/resume/c-ssn.jpeg);
+      background-color: #fff;
+      border: 2px solid $primary;
+      left: -55px;
+    }
+    &.thoughtworks {
+      background-image: url(/images/resume/c-thoughtworks.jpeg);
+    }
+    &.baby {
+      background-image: url(/images/resume/baby.png);
+      background-repeat: no-repeat;
+      background-size: 35px;
+      background-position: center;
+      background-color: #fff;
+      border: 2px solid $primary;
+      left: -55px;
+      box-shadow: 0px 30px 0px 0px #fff;
+    }
+    &.mitosis {
+      background-image: url(/images/resume/c-mitosis.jpg);
+      background-color: #fff;
+      border: 2px solid $primary;
+      left: -55px;
+    }
+    &.india {
+      background-image: url(/images/resume/india.png);
+      border: 2px solid $primary;
+      left: -55px;
+    }
+  }
+  .event:first-child .logo {
+    top: 25px;
+  }
+
+  a.logo:hover ~ a.event-location,
+  a.event-location:hover {
+    background: #d9efff;
+  }
+
+  .event-title {
+    font-weight: 300;
+    font-size: 1.5em;
+
+    > span {
+      width: 10px;
+      height: 10px;
+      // margin-left: 10px;
+      border-radius: 10px;
+      // border: 2px solid;
+      background-color: #fff0;
+      display: inline-block;
+
+      &:first-child {
+        margin-left: 5px;
+      }
+
+      @each $skill, $color in $skill-colors {
+        &.#{$skill} {
+          background-color: $color;
+          border-color: darken($color, 30%);
+        }
+      }
+    }
+  }
+  .event-subtitle {
+    margin-bottom: 10px;
+    // color: #b3b3b3;
+  }
+  .event input:checked ~ .event-subtitle {
+    color: inherit;
+  }
+  .duration {
+    // display: none;
+    color: #b3b3b3;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  .event input:checked ~ .event-subtitle .duration {
+    display: inline;
+  }
+
+  .event-content {
+    max-height: 0px;
+    overflow: hidden;
+    height: auto;
+    transition: all .5s linear;
+    color: #333;
+  }
+  .event input:checked ~ .event-content {
+    max-height: 300px;
+  }
+
+  .toggle-icon {
+    content: '';
+    background-image: url(/images/icons/chevron-down.svg);
+    position: absolute;
+    right: 10px;
+    top: 28px;
+    width: 20px;
+    height: 20px;
+    background-size: 20px;
+    @media print {
+      display: none;
+    }
+  }
+  .event:first-child .toggle-icon {
+    top: 48px;
+  }
+  .event input:checked ~ .toggle-icon {
+    background-image: url(/images/icons/chevron-up.svg);
+  }
+}
+
+#about-me {
+  border-top: 1px solid #a2a2a2;
+  border-bottom: 1px solid #a2a2a2;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 20px;
+
+  .title {
+    color: $primary;
+    font-size: 1.5em;
+    font-family: $raleway;
+    margin-bottom: 10px;
+  }
+}
+
+#footer {
+  margin: auto;
+  width: 70px;
+  margin-top: 20px;
+
+  img { width: 100%; }
+}

@@ -1,0 +1,389 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Raleway:300,600,800);
+::-moz-selection {
+  background: #bdda91;
+}
+
+::selection {
+  background: #bdda91;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", helvetica, sans-serif;
+  background: #525659;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", "Open Sans", helvetica, sans-serif;
+}
+
+#resume {
+  max-width: 680px;
+  margin: 10px auto;
+  padding: 20px 60px;
+  background: #fff;
+  color: #333;
+  box-shadow: 0 0 10px 0;
+  -webkit-print-color-adjust: exact;
+}
+
+#header {
+  text-align: center;
+  border-bottom: 1px solid #a2a2a2;
+  margin-bottom: 10px;
+}
+#header .name {
+  font-size: 3em;
+  font-weight: 700;
+  color: #73bf00;
+  margin-bottom: 0;
+  color: #73bf00;
+}
+#header .title {
+  font-size: 1.7em;
+  font-weight: 400;
+  margin-top: 0em;
+  margin-bottom: 0.3em;
+}
+#header .website {
+  font-size: 1.3em;
+}
+#header .contact {
+  display: flex;
+  justify-content: space-between;
+  margin: 2em 0 0.5em;
+  font-size: 0.85em;
+}
+#header .contact a {
+  position: relative;
+}
+@media print {
+  #header .linkedin, #header .skype {
+    display: none;
+  }
+}
+
+#skill-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  background-color: #fff;
+  padding: 40px;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+  overflow: auto;
+}
+#skill-modal:target {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+#skill-modal a {
+  display: block;
+  height: 100%;
+}
+
+#life-so-far {
+  border-top: 1px solid #a2a2a2;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+#life-so-far .title {
+  color: #73bf00;
+  font-size: 1.5em;
+  font-family: "Raleway", "Open Sans", helvetica, sans-serif;
+}
+#life-so-far .filters {
+  float: right;
+  margin-top: 5px;
+}
+#life-so-far .filters > span {
+  opacity: 0.35;
+}
+#life-so-far .filters label {
+  cursor: pointer;
+}
+#life-so-far .filters label input {
+  display: none;
+}
+#life-so-far .filters label span {
+  height: 10px;
+  width: 20px;
+  background-color: #fff;
+  border: 2px solid #666;
+  display: inline-block;
+  border-radius: 20px;
+  margin-left: 10px;
+}
+#life-so-far .filters label.proto span {
+  border-color: #bcd98f;
+}
+#life-so-far .filters label.proto input:checked + span {
+  border-color: #739b34;
+}
+#life-so-far .filters label.proto input:checked + span {
+  background-color: #bcd98fff;
+}
+#life-so-far .filters label.design span {
+  border-color: #ea8bfd;
+}
+#life-so-far .filters label.design input:checked + span {
+  border-color: #c404eb;
+}
+#life-so-far .filters label.design input:checked + span {
+  background-color: #ea8bfdff;
+}
+#life-so-far .filters label.app span {
+  border-color: #fc7aa9;
+}
+#life-so-far .filters label.app input:checked + span {
+  border-color: #d80551;
+}
+#life-so-far .filters label.app input:checked + span {
+  background-color: #fc7aa9ff;
+}
+#life-so-far .filters label.api span {
+  border-color: #67cffb;
+}
+#life-so-far .filters label.api input:checked + span {
+  border-color: #058bc4;
+}
+#life-so-far .filters label.api input:checked + span {
+  background-color: #67cffbff;
+}
+#life-so-far .filters label.devops span {
+  border-color: #fee666;
+}
+#life-so-far .filters label.devops input:checked + span {
+  border-color: #caaa01;
+}
+#life-so-far .filters label.devops input:checked + span {
+  background-color: #fee666ff;
+}
+#life-so-far .filters label.marketing span {
+  border-color: #68fbda;
+}
+#life-so-far .filters label.marketing input:checked + span {
+  border-color: #05c59a;
+}
+#life-so-far .filters label.marketing input:checked + span {
+  background-color: #68fbdaff;
+}
+#life-so-far .filters label:hover span {
+  border-color: #333;
+}
+#life-so-far .filters .reset {
+  cursor: pointer;
+  background-image: url(/images/resume/redo.svg);
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  margin-left: 10px;
+  opacity: 0.35;
+}
+#life-so-far .filters .reset:hover {
+  opacity: 1;
+}
+#life-so-far .filters .reset input {
+  display: none;
+}
+@media print {
+  #life-so-far .filters {
+    display: none;
+  }
+}
+#life-so-far .events {
+  border-left: 2px solid #73bf00;
+  padding-left: 30px;
+  margin-left: 30px;
+}
+#life-so-far .event {
+  margin-top: 35px;
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+#life-so-far .event.hide {
+  display: none;
+}
+#life-so-far .event:first-child {
+  margin-top: 0;
+  padding-top: 20px;
+}
+#life-so-far label.event:hover .event-title {
+  background: #eee;
+}
+#life-so-far .event input {
+  display: none;
+}
+#life-so-far .logo {
+  width: 45px;
+  height: 45px;
+  background-size: 45px;
+  background-image: url(/images/heart.gif);
+  position: absolute;
+  left: -53px;
+  top: 5px;
+}
+#life-so-far .logo.peritus {
+  background-image: url(/images/resume/c-peritus.jpeg);
+}
+#life-so-far .logo.freshworks {
+  background-image: url(/images/resume/c-freshworks.jpeg);
+}
+#life-so-far .logo.indix {
+  background-image: url(/images/resume/c-indix.jpeg);
+  background-color: #fff;
+  border: 2px solid #73bf00;
+  left: -55px;
+}
+#life-so-far .logo.ssn {
+  background-image: url(/images/resume/c-ssn.jpeg);
+  background-color: #fff;
+  border: 2px solid #73bf00;
+  left: -55px;
+}
+#life-so-far .logo.thoughtworks {
+  background-image: url(/images/resume/c-thoughtworks.jpeg);
+}
+#life-so-far .logo.baby {
+  background-image: url(/images/resume/baby.png);
+  background-repeat: no-repeat;
+  background-size: 35px;
+  background-position: center;
+  background-color: #fff;
+  border: 2px solid #73bf00;
+  left: -55px;
+  box-shadow: 0px 30px 0px 0px #fff;
+}
+#life-so-far .logo.mitosis {
+  background-image: url(/images/resume/c-mitosis.jpg);
+  background-color: #fff;
+  border: 2px solid #73bf00;
+  left: -55px;
+}
+#life-so-far .logo.india {
+  background-image: url(/images/resume/india.png);
+  border: 2px solid #73bf00;
+  left: -55px;
+}
+#life-so-far .event:first-child .logo {
+  top: 25px;
+}
+#life-so-far a.logo:hover ~ a.event-location,
+#life-so-far a.event-location:hover {
+  background: #d9efff;
+}
+#life-so-far .event-title {
+  font-weight: 300;
+  font-size: 1.5em;
+}
+#life-so-far .event-title > span {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: #fff0;
+  display: inline-block;
+}
+#life-so-far .event-title > span:first-child {
+  margin-left: 5px;
+}
+#life-so-far .event-title > span.proto {
+  background-color: #bcd98fff;
+  border-color: #739b34;
+}
+#life-so-far .event-title > span.design {
+  background-color: #ea8bfdff;
+  border-color: #c404eb;
+}
+#life-so-far .event-title > span.app {
+  background-color: #fc7aa9ff;
+  border-color: #d80551;
+}
+#life-so-far .event-title > span.api {
+  background-color: #67cffbff;
+  border-color: #058bc4;
+}
+#life-so-far .event-title > span.devops {
+  background-color: #fee666ff;
+  border-color: #caaa01;
+}
+#life-so-far .event-title > span.marketing {
+  background-color: #68fbdaff;
+  border-color: #05c59a;
+}
+#life-so-far .event-subtitle {
+  margin-bottom: 10px;
+}
+#life-so-far .event input:checked ~ .event-subtitle {
+  color: inherit;
+}
+#life-so-far .duration {
+  color: #b3b3b3;
+  font-size: 1rem;
+  font-weight: 400;
+}
+#life-so-far .event input:checked ~ .event-subtitle .duration {
+  display: inline;
+}
+#life-so-far .event-content {
+  max-height: 0px;
+  overflow: hidden;
+  height: auto;
+  transition: all 0.5s linear;
+  color: #333;
+}
+#life-so-far .event input:checked ~ .event-content {
+  max-height: 300px;
+}
+#life-so-far .toggle-icon {
+  content: "";
+  background-image: url(/images/icons/chevron-down.svg);
+  position: absolute;
+  right: 10px;
+  top: 28px;
+  width: 20px;
+  height: 20px;
+  background-size: 20px;
+}
+@media print {
+  #life-so-far .toggle-icon {
+    display: none;
+  }
+}
+#life-so-far .event:first-child .toggle-icon {
+  top: 48px;
+}
+#life-so-far .event input:checked ~ .toggle-icon {
+  background-image: url(/images/icons/chevron-up.svg);
+}
+
+#about-me {
+  border-top: 1px solid #a2a2a2;
+  border-bottom: 1px solid #a2a2a2;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 20px;
+}
+#about-me .title {
+  color: #73bf00;
+  font-size: 1.5em;
+  font-family: "Raleway", "Open Sans", helvetica, sans-serif;
+  margin-bottom: 10px;
+}
+
+#footer {
+  margin: auto;
+  width: 70px;
+  margin-top: 20px;
+}
+#footer img {
+  width: 100%;
+}
+
+/*# sourceMappingURL=resume.css.map */

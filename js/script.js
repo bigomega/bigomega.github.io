@@ -334,7 +334,7 @@ var hexval = {
     ['tumblr', 'http://big0mega.tumblr.com'],
     ['linkedin', 'https://www.linkedin.com/in/bigomega'],
     ['reddit', 'https://www.reddit.com/user/big_omega/'],
-    ['skype', 'skype:bigOmega3?chat'],
+    ['skype', 'https://join.skype.com/invite/Q4JtzyJcyudT'],
     ['soundcloud', 'https://soundcloud.com/big0mega/'],
     ['facebook', 'https://www.facebook.com/big0mega'],
     ['instagram', 'https://instagram.com/big0mega/'],
