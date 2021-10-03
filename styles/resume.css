@@ -29,6 +29,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 650px) {
   #resume {
     padding: 20px;
+    margin: 0;
   }
 }
 
@@ -107,6 +108,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #73bf00;
   font-size: 1.5em;
   font-family: "Raleway", "Open Sans", helvetica, sans-serif;
+  font-weight: 600;
 }
 #life-so-far .filters {
   float: right;
@@ -215,6 +217,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 470px) {
   #life-so-far .filters {
     float: none;
+    margin-bottom: 5px;
   }
 }
 #life-so-far .events {
@@ -302,38 +305,42 @@ h1, h2, h3, h4, h5, h6 {
 #life-so-far .event-title {
   font-weight: 300;
   font-size: 1.5em;
+  margin-right: 40px;
 }
-#life-so-far .event-title > span {
+#life-so-far .event-title div {
+  display: inline-block;
+}
+#life-so-far .event-title span {
   width: 10px;
   height: 10px;
   border-radius: 10px;
   background-color: #fff0;
   display: inline-block;
 }
-#life-so-far .event-title > span:first-child {
+#life-so-far .event-title span:first-child {
   margin-left: 5px;
 }
-#life-so-far .event-title > span.proto {
+#life-so-far .event-title span.proto {
   background-color: #bcd98fff;
   border-color: #739b34;
 }
-#life-so-far .event-title > span.design {
+#life-so-far .event-title span.design {
   background-color: #ea8bfdff;
   border-color: #c404eb;
 }
-#life-so-far .event-title > span.app {
+#life-so-far .event-title span.app {
   background-color: #fc7aa9ff;
   border-color: #d80551;
 }
-#life-so-far .event-title > span.api {
+#life-so-far .event-title span.api {
   background-color: #67cffbff;
   border-color: #058bc4;
 }
-#life-so-far .event-title > span.devops {
+#life-so-far .event-title span.devops {
   background-color: #fee666ff;
   border-color: #caaa01;
 }
-#life-so-far .event-title > span.marketing {
+#life-so-far .event-title span.marketing {
   background-color: #68fbdaff;
   border-color: #05c59a;
 }
@@ -395,6 +402,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.5em;
   font-family: "Raleway", "Open Sans", helvetica, sans-serif;
   margin-bottom: 10px;
+  font-weight: 600;
 }
 
 #footer {

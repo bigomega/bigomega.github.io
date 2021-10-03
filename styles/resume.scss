@@ -50,6 +50,7 @@ h1, h2, h3, h4, h5, h6 {
 
   @media (max-width: 650px) {
     padding: 20px;
+    margin: 0;
   }
 }
 
@@ -135,6 +136,7 @@ h1, h2, h3, h4, h5, h6 {
     color: $primary;
     font-size: 1.5em;
     font-family: $raleway;
+    font-weight: 600;
   }
 
   .filters {
@@ -192,6 +194,7 @@ h1, h2, h3, h4, h5, h6 {
 
     @media (max-width: 470px) {
       float: none;
+      margin-bottom: 5px;
     }
   }
 
@@ -291,8 +294,12 @@ h1, h2, h3, h4, h5, h6 {
   .event-title {
     font-weight: 300;
     font-size: 1.5em;
+    margin-right: 40px;
 
-    > span {
+    div {
+      display: inline-block;
+    }
+    span {
       width: 10px;
       height: 10px;
       // margin-left: 10px;
@@ -374,6 +381,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.5em;
     font-family: $raleway;
     margin-bottom: 10px;
+    font-weight: 600;
   }
 }
 
