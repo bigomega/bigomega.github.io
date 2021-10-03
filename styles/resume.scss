@@ -47,6 +47,10 @@ h1, h2, h3, h4, h5, h6 {
   color: #333;
   box-shadow: 0 0 10px 0;
   -webkit-print-color-adjust: exact;
+
+  @media (max-width: 650px) {
+    padding: 20px;
+  }
 }
 
 #header {
@@ -81,7 +85,12 @@ h1, h2, h3, h4, h5, h6 {
     a {
       position: relative;
     }
+
+    @media (max-width: 650px) {
+      flex-direction: column;
+    }
   }
+
 
   @media print {
     .linkedin, .skype {
@@ -148,6 +157,10 @@ h1, h2, h3, h4, h5, h6 {
         display: inline-block;
         border-radius: 20px;
         margin-left: 10px;
+        @media (max-width: 470px) {
+          // width: 10px;
+          margin-left: 5px;
+        }
       }
 
       @each $skill, $color in $skill-colors {
@@ -175,6 +188,10 @@ h1, h2, h3, h4, h5, h6 {
 
     @media print {
       display: none;
+    }
+
+    @media (max-width: 470px) {
+      float: none;
     }
   }
 

@@ -26,6 +26,11 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 0 10px 0;
   -webkit-print-color-adjust: exact;
 }
+@media (max-width: 650px) {
+  #resume {
+    padding: 20px;
+  }
+}
 
 #header {
   text-align: center;
@@ -56,6 +61,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 #header .contact a {
   position: relative;
+}
+@media (max-width: 650px) {
+  #header .contact {
+    flex-direction: column;
+  }
 }
 @media print {
   #header .linkedin, #header .skype {
@@ -119,6 +129,11 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
   border-radius: 20px;
   margin-left: 10px;
+}
+@media (max-width: 470px) {
+  #life-so-far .filters label span {
+    margin-left: 5px;
+  }
 }
 #life-so-far .filters label.proto span {
   border-color: #bcd98f;
@@ -195,6 +210,11 @@ h1, h2, h3, h4, h5, h6 {
 @media print {
   #life-so-far .filters {
     display: none;
+  }
+}
+@media (max-width: 470px) {
+  #life-so-far .filters {
+    float: none;
   }
 }
 #life-so-far .events {
