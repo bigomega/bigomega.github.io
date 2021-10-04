@@ -17,9 +17,62 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", "Open Sans", helvetica, sans-serif;
 }
 
+.header {
+  font-family: "Raleway", "Open Sans", helvetica, sans-serif;
+  background: #383a3c;
+  text-transform: capitalize;
+  box-shadow: 0 0 10px 0px #000;
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+@media print {
+  .header {
+    display: none;
+  }
+}
+.header.minimized {
+  background: rgba(255, 255, 255, 0.7);
+}
+.header.minimized ul {
+  max-width: 40em;
+}
+.header ul {
+  display: flex;
+  justify-content: space-around;
+  -moz-transition: 0.35s ease-out all;
+  -o-transition: 0.35s ease-out all;
+  -webkit-transition: 0.35s ease-out all;
+  transition: 0.35s ease-out all;
+  padding: 14px 40px;
+  margin: 0;
+}
+.header li {
+  list-style: none;
+}
+.header a {
+  text-decoration: none;
+  color: #73bf00;
+}
+.header a img {
+  width: 10px;
+  opacity: 0.3;
+  filter: invert(100%);
+}
+.header a.active {
+  border-bottom: 2px solid;
+  color: #fff;
+}
+.header a.active:hover {
+  cursor: default;
+}
+.header a:not(.active):hover {
+  color: #bdff59;
+}
+
 #resume {
   max-width: 680px;
-  margin: 10px auto;
+  margin: 40px auto 10px;
   padding: 20px 60px;
   background: #fff;
   color: #333;
@@ -69,6 +122,9 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 @media print {
+  #header .contact {
+    flex-direction: row;
+  }
   #header .linkedin, #header .skype {
     display: none;
   }

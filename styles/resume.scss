@@ -37,11 +37,68 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $raleway;
 }
 
+.header {
+  font-family: $raleway;
+  background: #383a3c;
+  text-transform: capitalize;
+  box-shadow: 0 0 10px 0px #000;
+  position: absolute;
+  width: 100%;
+  top: 0;
+
+  @media print {
+    display: none;
+  }
+
+  &.minimized {
+    background: rgba(255, 255, 255, 0.7);
+
+    ul {
+      max-width: 40em;
+    }
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+    @include transition(0.35s ease-out all);
+    padding: 14px 40px;
+    margin: 0;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: $primary;
+
+    img {
+      width: 10px;
+      opacity: 0.3;
+      filter: invert(100%);
+    }
+
+    &.active {
+      border-bottom: 2px solid;
+      color: #fff;
+      &:hover {
+        cursor: default;
+      }
+    }
+
+    &:not(.active):hover {
+      color: lighten($primary, 30%);
+    }
+  }
+}
+
 #resume {
   // #86d216
   // #73bf00
   max-width: 680px;
-  margin: 10px auto;
+  margin: 40px auto 10px;
   padding: 20px 60px;
   background: #fff;
   color: #333;
@@ -94,6 +151,9 @@ h1, h2, h3, h4, h5, h6 {
 
 
   @media print {
+    .contact {
+      flex-direction: row;
+    }
     .linkedin, .skype {
       display: none;
     }
