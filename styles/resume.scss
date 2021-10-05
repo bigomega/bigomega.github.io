@@ -92,6 +92,13 @@ h1, h2, h3, h4, h5, h6 {
       color: lighten($primary, 30%);
     }
   }
+
+  @media (max-width: $dp-hides-width) {
+    position: fixed;
+    bottom: 0;
+    top: auto;
+    z-index: 5;
+  }
 }
 
 #resume {

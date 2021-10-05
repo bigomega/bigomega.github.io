@@ -69,6 +69,14 @@ h1, h2, h3, h4, h5, h6 {
 .header a:not(.active):hover {
   color: #bdff59;
 }
+@media (max-width: 720px) {
+  .header {
+    position: fixed;
+    bottom: 0;
+    top: auto;
+    z-index: 5;
+  }
+}
 
 #resume {
   max-width: 680px;
