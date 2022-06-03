@@ -314,6 +314,9 @@ h1, h2, h3, h4, h5, h6 {
   left: -53px;
   top: 5px;
 }
+#life-so-far .logo.browserstack {
+  background-image: url(/images/resume/c-browserstack.jpeg);
+}
 #life-so-far .logo.peritus {
   background-image: url(/images/resume/c-peritus.jpeg);
 }

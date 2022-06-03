@@ -2506,6 +2506,7 @@ a.disabled,
 }
 .hive .level-3 .hex {
   background: #ccc;
+  background: #efefef;
 }
 .hive.first-animate .level-0 .hex-border {
   -webkit-animation: hex_boom_1 1s 0.5s ease-out, visible 2s 0.5s ease-in-out;
