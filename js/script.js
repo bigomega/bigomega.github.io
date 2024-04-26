@@ -324,7 +324,7 @@ var hexval = {
     ['mail', 'mailto:bharathraja04@gmail.com'],
     ['medium', 'https://medium.com/@bigomega/'],
     ['twitter', 'https://twitter.com/bigomega'],
-    ['flickr', 'https://www.flickr.com/photos/bigomega/albums']
+    ['youtube', 'https://www.youtube.com/c/bigomega'],
   ],
   2: [
     ['deviantart', 'http://bigomega.deviantart.com/'],
@@ -338,7 +338,7 @@ var hexval = {
     ['soundcloud', 'https://soundcloud.com/big0mega/'],
     ['facebook', 'https://www.facebook.com/big0mega'],
     ['instagram', 'https://instagram.com/big0mega/'],
-    ['youtube', 'https://www.youtube.com/c/bigomega'],
+    ['flickr', 'https://www.flickr.com/photos/bigomega/albums'],
     // ['imgur', 'http://big0mega.imgur.com/'],
     // ['quora', 'https://www.quora.com/profile/Bharath-Raja'],
   ],
